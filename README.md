@@ -41,5 +41,3 @@ Estado del Proyecto
 En desarrollo - Parte de un proyecto universitario para la clase de Computación Móvil.
 Licencia
 Este proyecto es de uso exclusivo para fines educativos dentro de la Universidad Javeriana.
-Contacto
-Para más información, contacta a [correo del representante del equipo].
