@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Línea cuando el campo está enfocado -->
+    <item android:color="@color/white" android:state_focused="true" />
+    <!-- Línea cuando el campo no está enfocado -->
+    <item android:color="@color/input_inactive" />
+</selector>
