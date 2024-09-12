@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Unibox</string>
+    <string name="bienvenido_a_unibox">Bienvenido a Unibox</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="registrarse">Registrarse</string>
 </resources>
