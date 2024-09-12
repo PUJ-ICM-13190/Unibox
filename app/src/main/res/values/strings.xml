@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Unibox</string>
+    <string name="bienvenido_a_unibox">Bienvenido a Unibox</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="usuario">Usuario</string>
+    <string name="telefono">Teléfono</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="acepto_los_terminos_y_condiciones">Acepto los términos y condiciones</string>
+    <string name="email">Email</string>
+    <string name="recuerdame">Recuérdame</string>
 </resources>

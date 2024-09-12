@@ -10,6 +10,19 @@
     tools:context=".RegisterActivity">
 
     <!-- Logo UniBox -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_circle_left_yellow"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
     <ImageView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
@@ -38,6 +51,52 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:drawableStart="@drawable/ic_person"
+            android:textCursorDrawable="@null"
+            android:drawablePadding="8dp"
+            android:textColor="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Teléfono -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/telefono"
+        style="@style/TextInputStyle"
+        app:layout_constraintTop_toBottomOf="@id/usernameInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="8dp"
+            android:textCursorDrawable="@null"
+            android:textColor="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Email -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        style="@style/TextInputStyle"
+        app:layout_constraintTop_toBottomOf="@id/phoneInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:drawableStart="@drawable/ic_mail"
             android:drawablePadding="8dp"
             android:textCursorDrawable="@null"
             android:textColor="@color/white"/>
@@ -50,7 +109,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/contrasena"
         style="@style/TextInputStyle"
-        app:layout_constraintTop_toBottomOf="@id/usernameInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/emailInputLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp">
@@ -68,40 +127,25 @@
 
     <!-- Checkbox términos y condiciones -->
     <CheckBox
-        android:id="@+id/rememberCheckBox"
+        android:id="@+id/termsCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/recuerdame"
+        android:text="@string/acepto_los_terminos_y_condiciones"
         android:layout_marginTop="10dp"
-        style="@style/ParagraphStyleWhite"
         app:layout_constraintTop_toBottomOf="@id/passwordInputLayout"
         app:layout_constraintStart_toStartOf="parent"
+        style="@style/ParagraphStyleWhite"
         app:buttonTint="@color/yellow"/>
 
-    <!-- Botón de Iniciar Sesión -->
+    <!-- Botón Registrarse -->
     <Button
-        android:id="@+id/btn_iniciar_sesion"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/iniciar_sesion"
-        style="@style/BtnYellow"
-        app:layout_constraintTop_toBottomOf="@id/rememberCheckBox"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"
-        android:layout_marginHorizontal="16dp" />
-
-    <!-- Botón de Registrarse -->
-    <Button
-        android:id="@+id/btn_registrarse"
+        android:id="@+id/registerButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/registrarse"
         style="@style/BtnYellow"
-        app:layout_constraintTop_toBottomOf="@id/btn_iniciar_sesion"
+        app:layout_constraintTop_toBottomOf="@id/termsCheckBox"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"
-        android:layout_marginHorizontal="16dp" />
-
+        android:layout_marginTop="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
