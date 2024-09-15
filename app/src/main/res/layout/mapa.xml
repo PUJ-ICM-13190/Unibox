@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mapa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="#FFFFFF" >
+
+    <ImageView
+        android:id="@+id/rectangle"
+        android:layout_width="47dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle"
+        android:src="@drawable/boton" />
+
+    <TextView
+        android:id="@+id/tu_ubicaci_"
+        android:layout_width="222dp"
+        android:layout_height="29dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="73dp"
+        android:layout_marginTop="16dp"
+        android:gravity="top"
+        android:text="@string/tu_ubicaci_"
+        android:textAppearance="@style/tu_ubicaci_" />
+
+    <TextView
+        android:id="@+id/pontificia_"
+        android:layout_width="197dp"
+        android:layout_height="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="94dp"
+        android:layout_marginTop="45dp"
+        android:gravity="top"
+        android:text="@string/pontificia_"
+        android:textAppearance="@style/pontificia_" />
+
+    <ImageView
+        android:id="@+id/locationIcon"
+        android:layout_width="21dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/rectangle"
+        android:src="@drawable/mapa" />
+
+    <View
+        android:id="@+id/rectangle_7"
+        android:layout_width="296dp"
+        android:layout_height="136dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="187dp"
+        android:background="@drawable/rectangle_7"
+        />
+
+</RelativeLayout>
+
