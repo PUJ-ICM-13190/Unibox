@@ -9,4 +9,20 @@
     <string name="acepto_los_terminos_y_condiciones">Acepto los términos y condiciones</string>
     <string name="email">Email</string>
     <string name="recuerdame">Recuérdame</string>
+    <string name="hola_jhon">Hola Jhon</string>
+    <string name="qu_se_antoj">¿Qué se te antoja hoy?</string>
+    <string name="categor_as">Categorias</string>
+    <string name="cajas_de_la">CAJAS DE LA CONFIANZA</string>
+    <string name="mapa">MAPA</string>
+    <string name="cafe_teria">PROMOCIONES</string>
+    <string name="los_4_m_s_e">¡Los 4 más elegidos!</string>
+    <string name="ponti_gomit">Ponti Gomitas</string>
+    <string name="candy">Candy Puj</string>
+    <string name="dani_po">DaniPostres</string>
+    <string name="capri">Capricho</string>
+    <string name="capri2">Capricho</string>
+    <string name="emprendimie">Emprendimientos cerca de mi (12)</string>
+    <string name="atrio_de_in">UBICACIÓN ACTUAL: Atrio de Ingenieria $10.000 - 17.000</string>
+    <string name="cubos">UBICACIÓN ACTUAL: Cubos $5.000 - 10.000</string>
+    <string name="dani2">DaniPostres</string>
 </resources>
