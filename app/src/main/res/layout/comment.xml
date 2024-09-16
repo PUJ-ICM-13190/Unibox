@@ -104,7 +104,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="34dp"
         android:layout_marginTop="800dp"
-        android:background="@drawable/rectangle_11" />
+        android:background="@drawable/rectangle_12" />
 
     <TextView
         android:id="@+id/tu_feedback"

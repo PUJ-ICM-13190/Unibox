@@ -275,4 +275,64 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="disponible">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="und_">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="amount">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="simbolo">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="simboloMas">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="dulces2">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="es_un_caram">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="price">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#C9284F</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="comentarios">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="a_adir">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="postre">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
