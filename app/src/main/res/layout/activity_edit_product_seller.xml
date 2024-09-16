@@ -56,7 +56,7 @@
         android:layout_marginRight="20dp"
         android:layout_above="@+id/edit_product_name"
         android:layout_marginBottom="30dp"
-        android:text="Añadir producto"
+        android:text="Editar producto"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -143,7 +143,7 @@
         android:layout_marginBottom="30dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
-        android:text="Añadir"
+        android:text="Aceptar"
         android:layout_alignParentBottom="true"
         android:backgroundTint="@color/salmon"
         android:textColor="@color/white"
