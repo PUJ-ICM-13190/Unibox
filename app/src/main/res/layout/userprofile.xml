@@ -72,16 +72,16 @@
         android:layout_marginLeft="7dp"
         android:layout_marginTop="21dp"
         android:background="@drawable/rectangle"
-        android:src="@drawable/Frame" />
+        android:src="@drawable/frame" />
 
-    <View
+    <Button
         android:layout_width="296dp"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="411dp"
-        android:background="@drawable/rectanglegris" />
+        android:backgroundTint="#E9E9E9" />
 
 
     <TextView
@@ -169,14 +169,14 @@
         android:layout_marginTop="280dp"
         android:background="#FFFFFF" />
 
-    <View
+    <Button
         android:layout_width="296dp"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="470dp"
-        android:background="@drawable/rectanglegris" />
+        android:backgroundTint="#E9E9E9" />
     <TextView
         android:layout_width="205dp"
         android:layout_height="38dp"
@@ -199,14 +199,14 @@
         android:background="@drawable/rectangle"
         android:src="@drawable/flechaderecha" />
 
-    <View
+    <Button
         android:layout_width="296dp"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="530dp"
-        android:background="@drawable/rectanglegris" />
+        android:backgroundTint="#E9E9E9" />
     <TextView
         android:layout_width="205dp"
         android:layout_height="38dp"
@@ -229,14 +229,14 @@
         android:background="@drawable/rectangle"
         android:src="@drawable/soporte" />
 
-    <View
+    <Button
         android:layout_width="296dp"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="590dp"
-        android:background="@drawable/rectanglegris" />
+        android:backgroundTint="#E9E9E9" />
 
     <TextView
         android:layout_width="205dp"
@@ -260,14 +260,16 @@
         android:background="@drawable/rectangle"
         android:src="@drawable/flechaderecha" />
 
-    <View
+    <Button
         android:layout_width="296dp"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="650dp"
-        android:background="@drawable/rectarojoclaro" />
+        android:backgroundTint="#FF6666" />
+
+
 
     <TextView
         android:layout_width="205dp"

@@ -52,7 +52,7 @@
         android:layout_marginLeft="344dp"
         android:layout_marginTop="-12dp"
         android:background="@drawable/rectangle"
-        android:src="@drawable/daniPostres" />
+        android:src="@drawable/danipostres" />
 
     <TextView
         android:id="@+id/categor_as"
@@ -110,7 +110,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="17dp"
         android:layout_marginTop="140dp"
-        android:background="@drawable/cajaConfianza" />
+        android:background="@drawable/cajaconfianza" />
 
     <View
         android:id="@+id/image_46"

@@ -154,7 +154,7 @@
             android:layout_width="400dp"
             android:layout_height="160dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/comidaCaprichos" />
+            android:src="@drawable/comidacaprichos" />
 
         <TextView
             android:id="@+id/capri2"
@@ -255,7 +255,7 @@
             android:layout_marginTop="163dp"
             android:layout_marginRight="12dp"
             android:layout_marginBottom="569dp"
-            android:background="@drawable/daniPostres" />
+            android:background="@drawable/danipostres" />
 
         <TextView
             android:id="@+id/cubos"
@@ -302,7 +302,7 @@
             android:layout_width="400dp"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/galletaRed" />
+            android:src="@drawable/galletared" />
 
     </androidx.cardview.widget.CardView>
 
@@ -326,7 +326,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="17dp"
         android:layout_marginTop="140dp"
-        android:background="@drawable/cajaConfianza" />
+        android:background="@drawable/cajaconfianza" />
 
     <View
         android:id="@+id/image_46"
@@ -414,7 +414,7 @@
         android:layout_marginTop="238dp"
         android:layout_marginRight="305dp"
         android:layout_marginBottom="569dp"
-        android:background="@drawable/pontiGomitas" />
+        android:background="@drawable/pontigomitas" />
 
     <View
         android:id="@+id/avatars_2_"
@@ -428,7 +428,7 @@
         android:layout_marginTop="238dp"
         android:layout_marginRight="214dp"
         android:layout_marginBottom="569dp"
-        android:background="@drawable/candyPuj" />
+        android:background="@drawable/candypuj" />
 
     <View
         android:id="@+id/avatars_1_"
@@ -442,7 +442,7 @@
         android:layout_marginTop="238dp"
         android:layout_marginRight="125dp"
         android:layout_marginBottom="569dp"
-        android:background="@drawable/daniPostres" />
+        android:background="@drawable/danipostres" />
 
     <View
         android:id="@+id/avatars_3d_"
@@ -481,7 +481,7 @@
         android:layout_marginLeft="19dp"
         android:layout_marginTop="342dp"
         android:gravity="top"
-        android:text="@string/emprendimie"
-        android:textAppearance="@style/emprendimie" />
+        android:text="@string/emprendimie1"
+        android:textAppearance="@style/emprendimie1" />
 
 </RelativeLayout>
