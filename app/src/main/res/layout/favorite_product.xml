@@ -78,7 +78,7 @@
         android:layout_marginTop="217dp"
         android:layout_marginRight="335dp"
         android:layout_marginBottom="619dp"
-        android:background="@drawable/donas" />
+        android:background="@drawable/donuts" />
 
     <ImageView
         android:id="@+id/imgProducto"
