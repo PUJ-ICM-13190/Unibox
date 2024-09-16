@@ -53,7 +53,7 @@
         android:textAppearance="@style/favoritos" />
 
     <ImageView
-        android:id="@+id/imgProducto"
+        android:id="@+id/imgProducto3"
         android:layout_width="56dp"
         android:layout_height="55dp"
         android:layout_alignParentLeft="true"
@@ -67,7 +67,7 @@
         android:background="@drawable/cupcakes" />
 
     <ImageView
-        android:id="@+id/imgProducto"
+        android:id="@+id/imgProducto4"
         android:layout_width="56dp"
         android:layout_height="55dp"
         android:layout_alignParentLeft="true"
@@ -78,10 +78,10 @@
         android:layout_marginTop="217dp"
         android:layout_marginRight="335dp"
         android:layout_marginBottom="619dp"
-        android:background="@drawable/donas" />
+        android:background="@drawable/donuts" />
 
     <ImageView
-        android:id="@+id/imgProducto"
+        android:id="@+id/imgProducto2"
         android:layout_width="56dp"
         android:layout_height="55dp"
         android:layout_alignParentLeft="true"
@@ -95,7 +95,7 @@
         android:background="@drawable/revolcon" />
 
     <ImageView
-        android:id="@+id/imgProducto"
+        android:id="@+id/imgProducto1"
         android:layout_width="56dp"
         android:layout_height="55dp"
         android:layout_alignParentLeft="true"
@@ -109,7 +109,7 @@
         android:background="@drawable/sandwich" />
 
     <ImageView
-        android:id="@+id/imgProducto"
+        android:id="@+id/imgProducto5"
         android:layout_width="56dp"
         android:layout_height="55dp"
         android:layout_alignParentLeft="true"
@@ -123,7 +123,7 @@
         android:background="@drawable/okaloca" />
 
     <ImageView
-        android:id="@+id/imgProducto"
+        android:id="@+id/imgProducto6"
         android:layout_width="56dp"
         android:layout_height="55dp"
         android:layout_alignParentLeft="true"
@@ -137,7 +137,7 @@
         android:background="@drawable/nucita" />
 
     <ImageView
-        android:id="@+id/imgProducto"
+        android:id="@+id/imgProducto7"
         android:layout_width="56dp"
         android:layout_height="55dp"
         android:layout_alignParentLeft="true"
@@ -151,7 +151,7 @@
         android:background="@drawable/pielimon" />
 
     <ImageView
-        android:id="@+id/imgProducto"
+        android:id="@+id/imgProducto8"
         android:layout_width="56dp"
         android:layout_height="55dp"
         android:layout_alignParentLeft="true"
@@ -165,7 +165,7 @@
         android:background="@drawable/bowl" />
 
     <ImageView
-        android:id="@+id/imgProducto"
+        android:id="@+id/imgProducto9"
         android:layout_width="56dp"
         android:layout_height="55dp"
         android:layout_alignParentLeft="true"
@@ -179,7 +179,7 @@
         android:background="@drawable/cupcakes" />
 
     <TextView
-        android:id="@+id/txtNombreProducto"
+        android:id="@+id/txtNombreProducto10"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_alignParentLeft="true"
@@ -195,7 +195,7 @@
         android:textAppearance="@style/cupcakes" />
 
     <TextView
-        android:id="@+id/txtNombreProducto"
+        android:id="@+id/txtNombreProducto11"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_alignParentLeft="true"
@@ -211,7 +211,7 @@
         android:textAppearance="@style/cupcakes" />
 
     <TextView
-        android:id="@+id/txtNombreProducto"
+        android:id="@+id/txtNombreProducto12"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_alignParentLeft="true"
@@ -227,7 +227,7 @@
         android:textAppearance="@style/cupcakes" />
 
     <TextView
-        android:id="@+id/txtNombreProducto"
+        android:id="@+id/txtNombreProducto13"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_alignParentLeft="true"
@@ -243,7 +243,7 @@
         android:textAppearance="@style/cupcakes" />
 
     <TextView
-        android:id="@+id/txtNombreProducto"
+        android:id="@+id/txtNombreProducto44"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_alignParentLeft="true"
@@ -259,7 +259,7 @@
         android:textAppearance="@style/cupcakes" />
 
     <TextView
-        android:id="@+id/txtNombreProducto"
+        android:id="@+id/txtNombreProducto45"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_alignParentLeft="true"
@@ -275,7 +275,7 @@
         android:textAppearance="@style/cupcakes" />
 
     <TextView
-        android:id="@+id/txtNombreProducto"
+        android:id="@+id/txtNombreProducto23"
         android:layout_width="wrap_content"
         android:layout_height="31dp"
         android:layout_alignParentLeft="true"
@@ -291,7 +291,7 @@
         android:textAppearance="@style/cupcakes" />
 
     <TextView
-        android:id="@+id/txtNombreProducto"
+        android:id="@+id/txtNombreProducto22"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_alignParentLeft="true"
@@ -307,7 +307,7 @@
         android:textAppearance="@style/cupcakes" />
 
     <TextView
-        android:id="@+id/txtNombreProducto"
+        android:id="@+id/txtNombreProducto20"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_alignParentLeft="true"
@@ -323,7 +323,7 @@
         android:textAppearance="@style/cupcakes" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto56"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -339,7 +339,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto67"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -355,7 +355,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto68"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -371,7 +371,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto78"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -387,7 +387,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto77"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -403,7 +403,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -419,7 +419,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto55"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -435,7 +435,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto99"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -451,7 +451,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -467,7 +467,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <ImageView
-        android:id="@+id/btnFavorito"
+        android:id="@+id/btnFavorito98"
         android:layout_width="67dp"
         android:layout_height="56dp"
         android:layout_alignParentLeft="true"
@@ -477,7 +477,7 @@
         android:background="@drawable/like_1" />
 
     <ImageView
-        android:id="@+id/btnFavorito"
+        android:id="@+id/btnFavorito91"
         android:layout_width="67dp"
         android:layout_height="56dp"
         android:layout_alignParentLeft="true"
@@ -487,7 +487,7 @@
         android:background="@drawable/like_1" />
 
     <ImageView
-        android:id="@+id/btnFavorito"
+        android:id="@+id/btnFavorito92"
         android:layout_width="67dp"
         android:layout_height="56dp"
         android:layout_alignParentLeft="true"
@@ -497,7 +497,7 @@
         android:background="@drawable/like_1" />
 
     <ImageView
-        android:id="@+id/btnFavorito"
+        android:id="@+id/btnFavorito08"
         android:layout_width="67dp"
         android:layout_height="56dp"
         android:layout_alignParentLeft="true"
@@ -507,7 +507,7 @@
         android:background="@drawable/like_1" />
 
     <ImageView
-        android:id="@+id/btnFavorito"
+        android:id="@+id/btnFavorito06"
         android:layout_width="67dp"
         android:layout_height="56dp"
         android:layout_alignParentLeft="true"
@@ -517,7 +517,7 @@
         android:background="@drawable/like_1" />
 
     <ImageView
-        android:id="@+id/btnFavorito"
+        android:id="@+id/btnFavorito01"
         android:layout_width="67dp"
         android:layout_height="56dp"
         android:layout_alignParentLeft="true"
@@ -527,7 +527,7 @@
         android:background="@drawable/like_1" />
 
     <ImageView
-        android:id="@+id/btnFavorito"
+        android:id="@+id/btnFavorito04"
         android:layout_width="67dp"
         android:layout_height="56dp"
         android:layout_alignParentLeft="true"
@@ -537,7 +537,7 @@
         android:background="@drawable/like_1" />
 
     <ImageView
-        android:id="@+id/btnFavorito"
+        android:id="@+id/btnFavorito09"
         android:layout_width="67dp"
         android:layout_height="56dp"
         android:layout_alignParentLeft="true"
@@ -547,7 +547,7 @@
         android:background="@drawable/like_1" />
 
     <ImageView
-        android:id="@+id/btnFavorito"
+        android:id="@+id/btnFavorito010"
         android:layout_width="67dp"
         android:layout_height="56dp"
         android:layout_alignParentLeft="true"
@@ -557,7 +557,7 @@
         android:background="@drawable/like_1" />
 
     <Button
-        android:id="@+id/txtPrecioProducto"
+        android:id="@+id/txtPrecioProducto011"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
@@ -572,7 +572,7 @@
         android:textColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/txtPrecioProducto"
+        android:id="@+id/txtPrecioProducto012"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
@@ -587,7 +587,7 @@
         android:textColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/txtPrecioProducto"
+        android:id="@+id/txtPrecioProducto013"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
@@ -602,7 +602,7 @@
         android:textColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/txtPrecioProducto"
+        android:id="@+id/txtPrecioProducto014"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
@@ -617,7 +617,7 @@
         android:textColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/txtPrecioProducto"
+        android:id="@+id/txtPrecioProducto015"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
@@ -632,7 +632,7 @@
         android:textColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/txtPrecioProducto"
+        android:id="@+id/txtPrecioProducto016"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
@@ -647,7 +647,7 @@
         android:textColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/txtPrecioProducto"
+        android:id="@+id/txtPrecioProducto1"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
@@ -662,7 +662,7 @@
         android:textColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/txtPrecioProducto"
+        android:id="@+id/txtPrecioProducto2"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
@@ -677,7 +677,7 @@
         android:textColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/txtPrecioProducto"
+        android:id="@+id/txtPrecioProducto3"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"

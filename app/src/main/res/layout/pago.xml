@@ -84,7 +84,7 @@
         android:layout_marginLeft="7dp"
         android:layout_marginTop="21dp"
         android:background="@drawable/rectangle"
-        android:src="@drawable/Frame" />
+        android:src="@drawable/frame" />
 
     <View
         android:id="@+id/logos_banco"
@@ -181,7 +181,7 @@
         android:layout_marginLeft="303dp"
         android:layout_marginTop="659dp"
         android:background="@drawable/rectangle"
-        android:src="@drawable/WhatsApp" />
+        android:src="@drawable/whatsapp" />
 
     <TextView
         android:id="@+id/actualmente"
