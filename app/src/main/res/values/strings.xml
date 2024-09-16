@@ -45,4 +45,15 @@
     <string name="actualmente">Actualmente eres</string>
     <string name="comprador">Comprador</string>
     <string name="user">JOHN DOE</string>
+    <string name="disponible">Disponible</string>
+    <string name="und_">24 unds.</string>
+    <string name="amount">2</string>
+    <string name="simbolo">-</string>
+    <string name="simboloMas">+</string>
+    <string name="dulces2">Dulces</string>
+    <string name="es_un_caram">Es un caramelo relleno de chicle, ademas de su inconfundible sabor.\n</string>
+    <string name="price">$500</string>
+    <string name="comentarios">11 Comentarios</string>
+    <string name="a_adir">Añadir</string>
+    <string name="postre">Postre de Maracuya</string>
 </resources>
