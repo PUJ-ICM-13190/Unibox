@@ -56,4 +56,15 @@
     <string name="comentarios">11 Comentarios</string>
     <string name="a_adir">Añadir</string>
     <string name="postre">Postre de Maracuya</string>
+    <string name="buscar_en_f">Buscar en favoritos</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="cupcakes">Cupcakes</string>
+    <string name="categoriaProducto">Postres</string>
+    <string name="nucita">Nucita</string>
+    <string name="okaloca">Oka Loca</string>
+    <string name="sandwich">Sandwich</string>
+    <string name="bowl">Bowl</string>
+    <string name="pielimon">Pie de Limón</string>
+    <string name="revolcon">Revolcon</string>
+    <string name="donuts">Donas</string>
 </resources>
