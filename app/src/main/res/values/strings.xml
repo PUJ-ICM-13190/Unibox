@@ -56,4 +56,9 @@
     <string name="comentarios">11 Comentarios</string>
     <string name="a_adir">Añadir</string>
     <string name="postre">Postre de Maracuya</string>
+    <string-array name="categorias">
+        <item>Comida</item>
+        <item>Dulces</item>
+        <item>Postres</item>
+    </string-array>
 </resources>

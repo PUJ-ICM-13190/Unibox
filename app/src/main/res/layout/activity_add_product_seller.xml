@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context=".AddProductSellerActivity"
+    android:layout_margin="12dp"
+    android:backgroundTint="@color/white">
+
+    <!-- Botón de Retroceso -->
+
+    <!-- Contenedor para la imagen y el icono de la cámara -->
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="44dp"
+        android:layout_height="41dp"
+        android:layout_gravity="start"
+        android:background="@drawable/round_button_background"
+        android:contentDescription="Volver"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        android:padding="4dp"
+        android:src="@drawable/boton" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_rectangle_white">
+
+
+        <ImageView
+            android:id="@+id/img_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/camera_icon"
+            android:contentDescription="Imagen del Producto"
+            android:scaleType="centerInside"
+            />
+    </FrameLayout>
+
+    <!-- Título de la sección -->
+
+    <!-- Campo Nombre -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Añadir producto"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edit_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/rectanglegris"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Spinner para Categoría -->
+    <Spinner
+        android:id="@+id/spinner_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectanglegris"
+        android:entries="@array/categorias"
+        android:textColor="@color/gray"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Campo Cantidad Disponible -->
+    <EditText
+        android:id="@+id/edit_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad Disponible"
+        android:inputType="number"
+        android:padding="12dp"
+        android:background="@drawable/rectanglegris"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Campo Precio -->
+    <EditText
+        android:id="@+id/edit_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@drawable/rectanglegris"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Campo Descripción -->
+    <EditText
+        android:id="@+id/edit_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción"
+        android:inputType="textMultiLine"
+        android:paddingLeft="12dp"
+        android:paddingTop="5dp"
+        android:minLines="3"
+        android:background="@drawable/rectanglegris"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón Añadir -->
+    <Button
+        android:id="@+id/btn_add_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Añadir"
+        android:backgroundTint="@color/salmon"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

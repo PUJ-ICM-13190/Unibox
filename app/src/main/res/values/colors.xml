@@ -7,6 +7,13 @@
     <color name="bg_blue">#519DD6</color>
     <color name="yellow">#EFB156</color>
     <color name="red">#EB4B4B</color>
+    <color name="roseRed">#C9284F</color>
+    <color name="salmon">#FF6666</color>
+    <color name="sandyBrown">#FFB072</color>
+    <color name="peach">#FFE3B3</color>
+    <color name="magnolia">#FCF7FF</color>
+    <color name="brown">#541c0a</color>
+    <color name="gray">#9E9D9B</color>
 
 
     <!--Colores de Campos de Text-->
