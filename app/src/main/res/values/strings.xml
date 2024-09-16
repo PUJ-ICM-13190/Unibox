@@ -21,13 +21,13 @@
     <string name="dani_po">DaniPostres</string>
     <string name="capri">Capricho</string>
     <string name="capri2">Capricho</string>
-    <string name="emprendimie">Emprendimientos cerca de mi (12)</string>
+    <string name="emprendimie1">Emprendimientos cerca de mi (12)</string>
     <string name="atrio_de_in">UBICACIÓN ACTUAL: Atrio de Ingenieria $10.000 - 17.000</string>
     <string name="cubos">UBICACIÓN ACTUAL: Cubos $5.000 - 10.000</string>
     <string name="dani2">DaniPostres</string>
     <string name="tu_ubicaci_">Tu ubicación actual</string>
     <string name="pontificia_">Pontificia Universidad Javeriana</string>
-    <string name="emprendimie">Emprendimientos cerca de ti</string>
+    <string name="emprendimie2">Emprendimientos cerca de ti</string>
     <string name="comida">Comida</string>
     <string name="dulces">Dulces</string>
     <string name="caja_de_con">CAJA DE CONFIANZA:</string>
