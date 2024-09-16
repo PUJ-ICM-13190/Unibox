@@ -38,4 +38,11 @@
     <string name="describe_tu">Describe tu experiencia (opcional)</string>
     <string name="tu_feedback">Tu feedback es muy valioso para el vendedor... Recuerda que sera visto por todos los usuarios de marketplace</string>
     <string name="publicar_co">Publicar comentario</string>
+    <string name="realiza_tu_">Realiza tu pago</string>
+    <string name="some_id">3003130680</string>
+    <string name="comunicate_">Comunicate con el vendedor</string>
+    <string name="pago">Pagar</string>
+    <string name="actualmente">Actualmente eres</string>
+    <string name="comprador">Comprador</string>
+    <string name="user">JOHN DOE</string>
 </resources>
