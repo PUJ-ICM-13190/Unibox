@@ -231,8 +231,4 @@
         android:layout_marginBottom="0dp"
         android:src="@drawable/jave" />
 
-
-
-
 </RelativeLayout>
-

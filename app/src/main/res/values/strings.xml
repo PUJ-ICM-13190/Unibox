@@ -33,4 +33,9 @@
     <string name="caja_de_con">CAJA DE CONFIANZA:</string>
     <string name="edificio_12">Edificio 12</string>
     <string name="edificio_67">Edificio 67</string>
+    <string name="bombon">Bombon</string>
+    <string name="dulceComment">Dulces</string>
+    <string name="describe_tu">Describe tu experiencia (opcional)</string>
+    <string name="tu_feedback">Tu feedback es muy valioso para el vendedor... Recuerda que sera visto por todos los usuarios de marketplace</string>
+    <string name="publicar_co">Publicar comentario</string>
 </resources>
