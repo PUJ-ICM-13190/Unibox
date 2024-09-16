@@ -58,4 +58,6 @@
     <string name="postre">Postre de Maracuya</string>
     <string name="buscar_en_f">Buscar en favoritos</string>
     <string name="favoritos">Favoritos</string>
+    <string name="cupcakes">Cupcakes</string>
+    <string name="categoriaProducto">Postres</string>
 </resources>
