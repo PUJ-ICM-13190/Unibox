@@ -56,4 +56,6 @@
     <string name="comentarios">11 Comentarios</string>
     <string name="a_adir">Añadir</string>
     <string name="postre">Postre de Maracuya</string>
+    <string name="buscar_en_f">Buscar en favoritos</string>
+    <string name="favoritos">Favoritos</string>
 </resources>
