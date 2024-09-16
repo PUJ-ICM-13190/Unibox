@@ -7,14 +7,27 @@
     android:clipToOutline="true"
     android:background="#FFFFFF">
 
+
+    <!-- Imagen del dulce -->
     <View
         android:id="@+id/image_21"
         android:layout_width="500dp"
         android:layout_height="440dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="-15dp"
         android:background="@drawable/dulce" />
+
+    <!-- Imagen del botón, colocada después para estar encima del dulce -->
+    <ImageView
+        android:id="@+id/rectangle"
+        android:layout_width="47dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle"
+        android:src="@drawable/boton" />
 
     <View
         android:id="@+id/rectangle_9"
