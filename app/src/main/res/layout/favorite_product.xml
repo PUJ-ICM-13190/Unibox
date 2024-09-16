@@ -277,15 +277,15 @@
     <TextView
         android:id="@+id/txtNombreProducto"
         android:layout_width="wrap_content"
-        android:layout_height="33dp"
+        android:layout_height="31dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="87dp"
         android:layout_marginTop="661dp"
-        android:layout_marginRight="228dp"
-        android:layout_marginBottom="197dp"
+        android:layout_marginRight="197dp"
+        android:layout_marginBottom="199dp"
         android:gravity="top"
         android:text="@string/pielimon"
         android:textAppearance="@style/cupcakes" />
