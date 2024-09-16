@@ -218,8 +218,8 @@
             android:layout_marginLeft="32dp"
             android:layout_marginTop="88dp"
             android:gravity="top"
-            android:text="@string/emprendimie"
-            android:textAppearance="@style/emprendimie" />
+            android:text="@string/emprendimie2"
+            android:textAppearance="@style/emprendimie2" />
 
     </FrameLayout>
 

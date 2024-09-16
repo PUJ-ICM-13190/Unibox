@@ -110,7 +110,7 @@
         android:background="@drawable/gusanitos" />
 
     <ImageView
-        android:id="@+id/imgProducto"
+        android:id="@+id/imgProducto1"
         android:layout_width="56dp"
         android:layout_height="55dp"
         android:layout_alignParentLeft="true"
@@ -124,7 +124,7 @@
         android:background="@drawable/empanadas" />
 
     <ImageView
-        android:id="@+id/imgProducto"
+        android:id="@+id/imgProducto2"
         android:layout_width="56dp"
         android:layout_height="55dp"
         android:layout_alignParentLeft="true"
@@ -138,7 +138,7 @@
         android:background="@drawable/chebei" />
 
     <ImageView
-        android:id="@+id/imgProducto"
+        android:id="@+id/imgProducto3"
         android:layout_width="56dp"
         android:layout_height="55dp"
         android:layout_alignParentLeft="true"
@@ -152,7 +152,7 @@
         android:background="@drawable/bowllevar" />
 
     <ImageView
-        android:id="@+id/imgProducto"
+        android:id="@+id/imgProducto4"
         android:layout_width="56dp"
         android:layout_height="55dp"
         android:layout_alignParentLeft="true"
@@ -241,7 +241,7 @@
         android:textAppearance="@style/cupcakes" />
 
     <TextView
-        android:id="@+id/txtNombreProducto"
+        android:id="@+id/txtNombreProducto5"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_alignParentLeft="true"
@@ -257,7 +257,7 @@
         android:textAppearance="@style/cupcakes" />
 
     <TextView
-        android:id="@+id/txtNombreProducto"
+        android:id="@+id/txtNombreProducto6"
         android:layout_width="176dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -273,7 +273,7 @@
         android:textAppearance="@style/cupcakes" />
 
     <TextView
-        android:id="@+id/txtNombreProducto"
+        android:id="@+id/txtNombreProducto7"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_alignParentLeft="true"
@@ -289,7 +289,7 @@
         android:textAppearance="@style/cupcakes" />
 
     <TextView
-        android:id="@+id/txtNombreProducto"
+        android:id="@+id/txtNombreProducto8"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_alignParentLeft="true"
@@ -320,7 +320,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -366,7 +366,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -382,7 +382,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -398,7 +398,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -414,7 +414,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -430,7 +430,7 @@
         android:textAppearance="@style/categoriaProducto" />
 
     <TextView
-        android:id="@+id/txtCategoriaProducto"
+        android:id="@+id/txtCategoriaProducto05"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -475,7 +475,7 @@
         android:textColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/txtPrecioProducto"
+        android:id="@+id/txtPrecioProducto06"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
@@ -518,7 +518,7 @@
         android:textColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/txtPrecioProducto"
+        android:id="@+id/txtPrecioProducto07"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
@@ -533,7 +533,7 @@
         android:textColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/txtPrecioProducto"
+        android:id="@+id/txtPrecioProducto08"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
@@ -548,7 +548,7 @@
         android:textColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/txtPrecioProducto"
+        android:id="@+id/txtPrecioProducto09"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
