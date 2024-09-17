@@ -326,7 +326,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="17dp"
         android:layout_marginTop="140dp"
-        android:background="@drawable/cajaconfianza" />
+        android:background="@drawable/cajaConfianza" />
 
     <View
         android:id="@+id/image_46"
