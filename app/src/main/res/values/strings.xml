@@ -67,6 +67,7 @@
     <string name="pielimon">Pie de Limón</string>
     <string name="revolcon">Revolcon</string>
     <string name="donuts">Donas</string>
+    <string name="tus_cajitas">Tus Cajitas</string>
     <string-array name="categorias">
         <item>Comida</item>
         <item>Dulces</item>

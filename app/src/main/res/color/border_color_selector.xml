@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Borde cuando el campo está enfocado -->
-    <item android:color="@color/white" android:state_focused="true" />
+    <item android:color="@color/roseRed" android:state_focused="true" />
     <!-- Borde cuando el campo no está enfocado -->
     <item android:color="@color/input_inactive" />
 </selector>

@@ -2,8 +2,8 @@
 <resources>
 
     <!-- Estilos de Botones -->
-    <style name="BtnYellow" parent="Widget.MaterialComponents.Button">
-        <item name="backgroundTint">@color/yellow</item>
+    <style name="BtnRed" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/roseRed</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:fontFamily">@font/rubik_bold</item>
         <item name="android:textSize">14sp</item>
@@ -25,6 +25,12 @@
         <item name="android:fontFamily">@font/rubik_bold</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TitleStyleRoseRed">
+        <item name="android:fontFamily">@font/rubik_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/roseRed</item>
     </style>
 
     <style name="TitleStyleWhite">
@@ -57,6 +63,12 @@
         <item name="android:fontFamily">@font/rubik_regular</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ParagraphStyleRoseRed">
+        <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/roseRed</item>
     </style>
 
     <!-- Estilos para campos de texto -->

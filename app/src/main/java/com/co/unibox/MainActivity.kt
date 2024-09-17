@@ -35,7 +35,8 @@ class MainActivity : AppCompatActivity() {
 
             if ((enteredUsername == vendedorUser && enteredPassword == vendedorPass) ||
                 (enteredUsername == clienteUser && enteredPassword == clientePass)) {
-                // Credenciales correctas, puedes proceder con la siguiente acción
+                val intent = Intent(this, HomeSellerActivity::class.java)
+                startActivity(intent)
                 Toast.makeText(this, "Login exitoso", Toast.LENGTH_SHORT).show()
             } else {
                 // Mostrar el diálogo de error

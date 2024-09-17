@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_pie_chart"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_cajitas"
+            android:icon="@drawable/ic_boxes"
+            android:title="Tus Cajitas" />
+        <item
+            android:id="@+id/nav_productos"
+            android:icon="@drawable/ic_products"
+            android:title="Tus Productos" />
+        <item
+            android:id="@+id/nav_ventas"
+            android:icon="@drawable/ic_sales"
+            android:title="Tus Ventas" />
+    </group>
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Salir" />
+</menu>

@@ -13,12 +13,6 @@
         android:theme="@style/Theme.Unibox"
         tools:targetApi="31">
         <activity
-            android:name=".EditProductSeller"
-            android:exported="false" />
-        <activity
-            android:name=".AddProductSellerActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -27,7 +21,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".RegisterActivity" />
+
+        <activity
+            android:name=".EditProductSeller"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddProductSellerActivity"
+            android:exported="false" />
+
+        <activity android:name=".HomeSellerActivity" />
+
+        <activity android:name=".MisCajitasSellerActivity" />
     </application>
 
 </manifest>
