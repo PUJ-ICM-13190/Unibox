@@ -55,6 +55,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_above="@+id/edit_product_name"
+        android:textAppearance="@style/price"
         android:layout_marginBottom="30dp"
         android:text="Añadir producto"
         android:textColor="@color/black"
