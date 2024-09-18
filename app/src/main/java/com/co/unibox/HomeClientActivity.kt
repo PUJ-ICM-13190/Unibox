@@ -3,10 +3,7 @@ package com.co.unibox
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.GravityCompat
-import com.co.unibox.databinding.ActivityMainBinding
 import com.co.unibox.databinding.HomeBinding
-import com.co.unibox.databinding.RegisterBinding
 
 class HomeClientActivity: AppCompatActivity() {
 
@@ -20,6 +17,11 @@ class HomeClientActivity: AppCompatActivity() {
 
         binding.btnMapa.setOnClickListener{
             val intent = Intent(this, MapClientActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnDaniPostres.setOnClickListener{
+            val intent = Intent(this, ListDaniPostresClientActivity::class.java)
             startActivity(intent)
         }
 

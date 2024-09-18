@@ -433,7 +433,7 @@
         android:background="@drawable/candypuj" />
 
     <View
-        android:id="@+id/avatars_1_"
+        android:id="@+id/btnDaniPostres"
         android:layout_width="84dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"

@@ -39,6 +39,8 @@
         <activity android:name=".HomeClientActivity" />
 
         <activity android:name=".MapClientActivity" />
+
+        <activity android:name=".ListDaniPostresClientActivity" />
     </application>
 
 </manifest>
