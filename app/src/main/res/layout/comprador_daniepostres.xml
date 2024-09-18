@@ -7,7 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToOutline="true"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    tools:context=".ListDaniPostresClientActivity">
 
     <TextView
         android:id="@+id/hola_jhon"
@@ -40,7 +41,6 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/rectangle"
         android:src="@drawable/usuario" />
 
     <ImageView
@@ -51,7 +51,6 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="344dp"
         android:layout_marginTop="-12dp"
-        android:background="@drawable/rectangle"
         android:src="@drawable/danipostres" />
 
     <TextView
@@ -487,70 +486,5 @@
         android:textAppearance="@style/mapa"
         android:translationY="-0.97sp" />
 
-    <TextView
-        android:layout_width="170dp"
-        android:layout_height="23dp"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="604dp"
-        android:gravity="top"
-        android:text="Alcohol"
-        android:textAppearance="@style/los_4_m_s_e" />
-
-    <Button
-        android:layout_width="136dp"
-        android:layout_height="134dp"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="630dp"
-        android:backgroundTint="#94C9284F"
-        android:contentDescription="Limón"
-        android:elevation="4dp"
-        app:cornerRadius="5dp" />
-
-    <View
-        android:layout_width="114dp"
-        android:layout_height="88dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="640dp"
-        android:background="@drawable/chebei" />
-
-    <Button
-        android:layout_width="136dp"
-        android:layout_height="134dp"
-        android:layout_marginLeft="160dp"
-        android:layout_marginTop="630dp"
-        android:backgroundTint="#94C9284F"
-        android:contentDescription="Limón"
-        android:elevation="4dp"
-        app:cornerRadius="5dp" />
-
-    <View
-        android:layout_width="114dp"
-        android:layout_height="88dp"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="640dp"
-        android:background="@drawable/chebarcardi" />
-
-    <Button
-        android:layout_width="136dp"
-        android:layout_height="134dp"
-        android:layout_marginLeft="304dp"
-        android:layout_marginTop="630dp"
-        android:backgroundTint="#94C9284F"
-        android:contentDescription="Limón"
-        android:elevation="4dp"
-        app:cornerRadius="5dp" />
-
-    <View
-        android:layout_width="114dp"
-        android:layout_height="88dp"
-        android:layout_marginLeft="315dp"
-        android:layout_marginTop="640dp"
-        android:background="@drawable/cherosa" />
-
-
-
-
-
 
 </RelativeLayout>
-
