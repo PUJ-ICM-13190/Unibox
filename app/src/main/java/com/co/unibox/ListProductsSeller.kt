@@ -38,6 +38,7 @@ class ListProductsSeller : AppCompatActivity() {
         val btnEditarOreo = findViewById<ImageButton>(R.id.btn_edit_image_oreo)
         val btnEditarMango = findViewById<ImageButton>(R.id.btn_edit_image_mango)
         val btnEditarTira = findViewById<ImageButton>(R.id.btn_edit_image_tiramisu)
+
         btnEditarMaracuya.setOnClickListener {
             val intent = Intent(this, EditProductSeller::class.java)
             startActivity(intent)

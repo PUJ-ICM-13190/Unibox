@@ -58,11 +58,11 @@
             android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/chemara" />
 
         <LinearLayout
-            android:layout_width="170dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
@@ -122,11 +122,11 @@
             android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/chelimon" />
 
         <LinearLayout
-            android:layout_width="170dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
@@ -185,11 +185,11 @@
             android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/chelulo" />
 
         <LinearLayout
-            android:layout_width="170dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
@@ -258,11 +258,11 @@
             android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/cheoreo" />
 
         <LinearLayout
-            android:layout_width="170dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
@@ -321,11 +321,11 @@
             android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/chemango" />
 
         <LinearLayout
-            android:layout_width="170dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
@@ -384,11 +384,11 @@
             android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/chetira" />
 
         <LinearLayout
-            android:layout_width="170dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
