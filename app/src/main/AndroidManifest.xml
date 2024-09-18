@@ -47,6 +47,9 @@
         <activity android:name=".ViewGeneralClientActivity" />
         <activity android:name=".UserProfileClient" />
         <activity android:name=".UpdateUserProfileActivity" />
+        <activity android:name=".DetailsCajitaSeller" />
+        <activity android:name=".ActivityLocationSeller" />
+        <activity android:name=".ActivityProductsSeller" />
 
     </application>
 
