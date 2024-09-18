@@ -42,7 +42,8 @@ class HomeSellerActivity: AppCompatActivity(){
                     startActivity(intent)
                 }
                 R.id.nav_productos -> {
-                    // Acción para ver los productos
+                    val intent = Intent(this, ListProductsSeller::class.java)
+                    startActivity(intent)
                 }
                 R.id.nav_ventas -> {
                     // Acción para ver las ventas

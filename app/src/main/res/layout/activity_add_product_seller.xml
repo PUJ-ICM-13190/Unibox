@@ -17,79 +17,35 @@
 
         />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+    <!-- Botón de Retroceso -->
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="56dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_button_background"
+        android:contentDescription="Volver"
+        android:cropToPadding="true"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/boton" />
 
         <!-- Botón de Retroceso -->
-        <ImageButton
-            android:id="@+id/btn_back"
-            android:layout_width="56dp"
-            android:layout_height="46dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/round_button_background"
-            android:contentDescription="Volver"
-            android:cropToPadding="true"
-            android:padding="4dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/boton" />
 
-        <!-- Botón de Retroceso -->
-        <ImageButton
-            android:id="@+id/btn_eliminar"
-            android:layout_width="56dp"
-            android:layout_height="46dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="250dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/round_button_background"
-            android:contentDescription="Volver"
-            android:cropToPadding="true"
-            android:padding="4dp"
-            android:scaleType="centerCrop"
-            app:srcCompat="@android:drawable/ic_menu_delete" />
-
-    </LinearLayout>
-
-
-
-
-    <FrameLayout
-        android:id="@+id/img_product_container"
-        android:layout_width="260dp"
-        android:layout_height="181dp"
-        android:layout_below="@+id/linearLayout"
+    <ImageButton
+        android:id="@+id/btn_add_image"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/btn_back"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rectanglegris">
-
-        <!-- Imagen del producto -->
-        <ImageView
-            android:id="@+id/img_product"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="Imagen del Producto"
-            android:scaleType="centerCrop"
-            android:src="@drawable/burrito" />
-
-        <!-- Botón de editar sobre la imagen -->
-        <ImageButton
-            android:id="@+id/btn_edit_image"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            android:background="@drawable/round_button_background"
-            app:srcCompat="@android:drawable/ic_menu_edit"
-            android:contentDescription="Editar imagen" />
-    </FrameLayout>
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_rectangle_white"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:contentDescription="Editar imagen" />
 
 
     <!-- Título de la sección -->
@@ -102,7 +58,7 @@
         android:textAppearance="@style/price"
         android:layout_above="@+id/edit_product_name"
         android:layout_marginBottom="20dp"
-        android:text="Editar producto"
+        android:text="Agregar producto"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -172,7 +128,7 @@
         android:id="@+id/edit_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_save"
+        android:layout_above="@+id/btn_add_product"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:text="Vegetariano, pollo, carne, mixto"
@@ -184,9 +140,9 @@
         android:background="@drawable/rectanglegris"
         android:layout_marginBottom="25dp" />
 
-    <!-- Botón Guardar -->
+    <!-- Botón Añadir -->
     <Button
-        android:id="@+id/btn_save"
+        android:id="@+id/btn_add_product"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -194,7 +150,7 @@
         android:layout_marginBottom="30dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
-        android:text="Guardar"
+        android:text="Agregar"
         android:layout_alignParentBottom="true"
         android:backgroundTint="@color/salmon"
         android:textColor="@color/white"
