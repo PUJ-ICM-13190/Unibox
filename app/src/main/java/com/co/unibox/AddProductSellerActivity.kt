@@ -1,6 +1,7 @@
 package com.co.unibox
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -26,7 +27,7 @@ class AddProductSellerActivity : AppCompatActivity() {
     }
 
     private fun configureBackAdd() {
-        val btnAgregar = findViewById<ImageButton>(R.id.btn_add)
+        val btnAgregar = findViewById<Button>(R.id.btn_add_product)
         btnAgregar.setOnClickListener {
             finish()
         }

@@ -26,8 +26,8 @@ class EditProductSeller : AppCompatActivity() {
     }
 
     private fun configureBackSave() {
-        val btnEditarMaracuya = findViewById<Button>(R.id.btn_save)
-        btnEditarMaracuya.setOnClickListener {
+        val btnSave = findViewById<Button>(R.id.btn_save)
+        btnSave.setOnClickListener {
             val intent = Intent(this, EditProductSeller::class.java)
             startActivity(intent)
         }
