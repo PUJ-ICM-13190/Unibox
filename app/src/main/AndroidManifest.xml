@@ -49,6 +49,10 @@
         <activity android:name=".WhatsAppClientActivity" />
 
         <activity android:name=".ChatWhatsAppClientActivity" />
+
+        <activity android:name=".UserProfileClient" />
+
+        <activity android:name=".UpdateUserProfileActivity" />
     </application>
 
 </manifest>
