@@ -27,6 +27,10 @@
         <activity
             android:name=".EditProductSeller"
             android:exported="false" />
+        <activity
+            android:name=".DetailsCajitaSeller"/>
+
+
 
         <activity
             android:name=".AddProductSellerActivity"
