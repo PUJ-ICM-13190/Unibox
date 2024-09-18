@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_2_0"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToOutline="true"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    tools:context=".HomeClientActivity">
 
     <TextView
         android:id="@+id/hola_jhon"
@@ -128,6 +129,7 @@
         app:cornerRadius="7dp" />
 
     <Button
+        android:id="@+id/btn_mapa"
         android:layout_width="119.42dp"
         android:layout_height="80dp"
         android:layout_alignParentLeft="true"
@@ -326,7 +328,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="17dp"
         android:layout_marginTop="140dp"
-        android:background="@drawable/cajaConfianza" />
+        android:background="@drawable/cajaconfianza" />
 
     <View
         android:id="@+id/image_46"

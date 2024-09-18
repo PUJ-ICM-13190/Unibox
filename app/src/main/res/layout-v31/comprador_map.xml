@@ -1,9 +1,235 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mapa"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToOutline="true"
-    android:background="#FFFFFF" />
+    android:background="#FFFFFF"
+    tools:context=".MapClientActivity">
 
+    <ImageView
+        android:id="@+id/btn_regresar"
+        android:layout_width="47dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle"
+        android:src="@drawable/boton" />
+
+    <TextView
+        android:id="@+id/tu_ubicaci_"
+        android:layout_width="222dp"
+        android:layout_height="29dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="73dp"
+        android:layout_marginTop="16dp"
+        android:gravity="top"
+        android:text="@string/tu_ubicaci_"
+        android:textAppearance="@style/tu_ubicaci_" />
+
+    <TextView
+        android:id="@+id/pontificia_"
+        android:layout_width="197dp"
+        android:layout_height="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="94dp"
+        android:layout_marginTop="45dp"
+        android:gravity="top"
+        android:text="@string/pontificia_"
+        android:textAppearance="@style/pontificia_" />
+
+    <ImageView
+        android:id="@+id/locationIcon"
+        android:layout_width="21dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/rectangle"
+        android:src="@drawable/mapa" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Fondo con bordes redondeados -->
+        <View
+            android:id="@+id/rectangle_7"
+            android:layout_width="349dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="165dp"
+            android:background="@drawable/rectangle_7" />
+
+        <!-- Imagen sobre el rectángulo -->
+        <ImageView
+            android:id="@+id/image_over_rectangle"
+            android:layout_width="121dp"
+            android:layout_height="106dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-2dp"
+            android:layout_marginTop="-270dp"
+            android:src="@drawable/capricho" />
+
+        <!-- Texto dentro del rectángulo -->
+        <TextView
+            android:id="@+id/text_inside_rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-205dp"
+            android:gravity="center"
+            android:text="CAPRICHO"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="318dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="255dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/comida"
+            android:layout_width="147dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="274dp"
+            android:text="@string/comida"
+            android:textAppearance="@style/comida"
+            android:lineSpacingExtra="2sp"
+            android:translationY="-0.97sp"
+            android:gravity="top"
+            />
+
+        <TextView
+            android:id="@+id/caja_de_con"
+            android:layout_width="147dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="293dp"
+            android:text="@string/caja_de_con"
+            android:textAppearance="@style/caja_de_con"
+            android:lineSpacingExtra="0sp"
+            android:gravity="top"
+            />
+
+        <TextView
+            android:id="@+id/edificio_12"
+            android:layout_width="66dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="196dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="294dp"
+            android:text="@string/edificio_12"
+            android:textAppearance="@style/edificio_12"
+            android:lineSpacingExtra="2sp"
+            android:translationY="-0.97sp"
+            android:gravity="top"
+            />
+
+        <View
+            android:id="@+id/rectangle_8"
+            android:layout_width="349dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="390dp"
+            android:background="@drawable/rectangle_7" />
+
+        <ImageView
+            android:id="@+id/image_over_rectangle_2"
+            android:layout_width="121dp"
+            android:layout_height="106dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-2dp"
+            android:layout_marginTop="-50dp"
+            android:src="@drawable/pontigomitas" />
+
+        <TextView
+            android:id="@+id/text_inside_rectangle_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="PONTIGOMITAS"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="318dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="485dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/comida_2"
+            android:layout_width="147dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="504dp"
+            android:text="@string/dulces"
+            android:textAppearance="@style/dulces"
+            android:lineSpacingExtra="2sp"
+            android:translationY="-0.97sp"
+            android:gravity="top" />
+
+        <TextView
+            android:id="@+id/caja_de_con_2"
+            android:layout_width="147dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="523dp"
+            android:text="@string/caja_de_con"
+            android:textAppearance="@style/caja_de_con"
+            android:lineSpacingExtra="0sp"
+            android:gravity="top" />
+
+        <TextView
+            android:id="@+id/edificio_12_2"
+            android:layout_width="66dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="196dp"
+            android:layout_marginTop="524dp"
+            android:text="@string/edificio_67"
+            android:textAppearance="@style/edificio_67"
+            android:lineSpacingExtra="2sp"
+            android:translationY="-0.97sp"
+            android:gravity="top" />
+
+        <TextView
+            android:id="@+id/emprendimie"
+            android:layout_width="240dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="88dp"
+            android:gravity="top"
+            android:text="@string/emprendimie2"
+            android:textAppearance="@style/emprendimie2" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/final_image"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/jave" />
+
+</RelativeLayout>

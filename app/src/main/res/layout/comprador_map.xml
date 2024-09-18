@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mapa"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToOutline="true"
-    android:background="#FFFFFF" >
+    android:background="#FFFFFF"
+    tools:context=".MapClientActivity">
 
     <ImageView
-        android:id="@+id/rectangle"
+        android:id="@+id/btn_regresar"
         android:layout_width="47dp"
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"

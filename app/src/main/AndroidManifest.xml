@@ -35,6 +35,10 @@
         <activity android:name=".HomeSellerActivity" />
 
         <activity android:name=".MisCajitasSellerActivity" />
+
+        <activity android:name=".HomeClientActivity" />
+
+        <activity android:name=".MapClientActivity" />
     </application>
 
 </manifest>

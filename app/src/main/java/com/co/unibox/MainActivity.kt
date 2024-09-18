@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
             if ((enteredUsername == vendedorUser && enteredPassword == vendedorPass) ||
                 (enteredUsername == clienteUser && enteredPassword == clientePass)) {
-                val intent = Intent(this, HomeSellerActivity::class.java)
+                val intent = Intent(this, HomeClientActivity::class.java)
                 startActivity(intent)
                 Toast.makeText(this, "Login exitoso", Toast.LENGTH_SHORT).show()
             } else {
