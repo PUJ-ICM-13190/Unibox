@@ -13,7 +13,7 @@ class ListProductsSeller : AppCompatActivity() {
 
         configureBackButton()
         configureAddButton()
-        configureEditButton(1)
+        configureEditButton()
     }
 
     private fun configureBackButton() {
@@ -31,11 +31,10 @@ class ListProductsSeller : AppCompatActivity() {
         }
     }
 
-    private fun configureEditButton(productId: Int) {
+    private fun configureEditButton() {
         val btnEditar = findViewById<ImageButton>(R.id.btn_edit_image)
         btnEditar.setOnClickListener {
             val intent = Intent(this, EditProductSeller::class.java)
-            intent.putExtra("PRODUCT_ID", productId)
             startActivity(intent)
         }
     }
