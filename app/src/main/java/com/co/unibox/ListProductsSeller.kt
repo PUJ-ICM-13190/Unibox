@@ -32,8 +32,33 @@ class ListProductsSeller : AppCompatActivity() {
     }
 
     private fun configureEditButton() {
-        val btnEditar = findViewById<ImageButton>(R.id.btn_edit_image)
-        btnEditar.setOnClickListener {
+        val btnEditarMaracuya = findViewById<ImageButton>(R.id.btn_edit_image)
+        val btnEditarLimon = findViewById<ImageButton>(R.id.btn_edit_image_limon)
+        val btnEditarLulo = findViewById<ImageButton>(R.id.btn_edit_image_lulo)
+        val btnEditarOreo = findViewById<ImageButton>(R.id.btn_edit_image_oreo)
+        val btnEditarMango = findViewById<ImageButton>(R.id.btn_edit_image_mango)
+        val btnEditarTira = findViewById<ImageButton>(R.id.btn_edit_image_tiramisu)
+        btnEditarMaracuya.setOnClickListener {
+            val intent = Intent(this, EditProductSeller::class.java)
+            startActivity(intent)
+        }
+        btnEditarLimon.setOnClickListener {
+            val intent = Intent(this, EditProductSeller::class.java)
+            startActivity(intent)
+        }
+        btnEditarLulo.setOnClickListener {
+            val intent = Intent(this, EditProductSeller::class.java)
+            startActivity(intent)
+        }
+        btnEditarOreo.setOnClickListener {
+            val intent = Intent(this, EditProductSeller::class.java)
+            startActivity(intent)
+        }
+        btnEditarMango.setOnClickListener {
+            val intent = Intent(this, EditProductSeller::class.java)
+            startActivity(intent)
+        }
+        btnEditarTira.setOnClickListener {
             val intent = Intent(this, EditProductSeller::class.java)
             startActivity(intent)
         }
