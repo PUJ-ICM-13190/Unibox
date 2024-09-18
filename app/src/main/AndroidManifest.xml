@@ -28,9 +28,9 @@
             android:name=".EditProductSeller"
             android:exported="false" />
 
-        <activity
-            android:name=".AddProductSellerActivity"
-            android:exported="false" />
+        <activity android:name=".DetailsCajitaSeller" />
+        <activity android:name=".ActivityLocationSeller" />
+        <activity android:name=".ActivityProductsSeller" />
 
         <activity android:name=".HomeSellerActivity" />
 
