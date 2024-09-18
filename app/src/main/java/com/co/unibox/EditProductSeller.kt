@@ -1,7 +1,9 @@
 package com.co.unibox
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -11,12 +13,9 @@ import androidx.core.view.WindowInsetsCompat
 class EditProductSeller : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_edit_product_seller)
-
         configureBackButton()
         configureBackSave()
-
     }
 
     private fun configureBackButton() {
@@ -26,11 +25,11 @@ class EditProductSeller : AppCompatActivity() {
         }
     }
 
-    @SuppressLint("WrongViewCast")
     private fun configureBackSave() {
-        val btnGuardar = findViewById<ImageButton>(R.id.btn_save)
-        btnGuardar.setOnClickListener {
-            finish()
+        val btnEditarMaracuya = findViewById<Button>(R.id.btn_save)
+        btnEditarMaracuya.setOnClickListener {
+            val intent = Intent(this, EditProductSeller::class.java)
+            startActivity(intent)
         }
     }
 }

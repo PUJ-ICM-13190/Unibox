@@ -2,8 +2,10 @@ package com.co.unibox
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.helper.widget.MotionEffect.TAG
 
 class ListProductsSeller : AppCompatActivity() {
 
@@ -25,8 +27,14 @@ class ListProductsSeller : AppCompatActivity() {
 
     private fun configureAddButton() {
         val btnAgregar = findViewById<ImageButton>(R.id.btn_add)
+        if (btnAgregar == null) {
+            Log.e(TAG, "Add button not found in layout")
+            return
+        }
         btnAgregar.setOnClickListener {
+            Log.d(TAG, "Add button clicked")
             val intent = Intent(this, AddProductSellerActivity::class.java)
+            Log.d(TAG, "Navigating to AddProductSellerActivity")
             startActivity(intent)
         }
     }
