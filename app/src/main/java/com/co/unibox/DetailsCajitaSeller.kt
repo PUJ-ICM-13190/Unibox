@@ -1,40 +1,37 @@
 package com.co.unibox
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
 
 class DetailsCajitaSeller : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_details_cajita_seller)
 
-        // Configura el botón de retroceso
+        // Configurar el botón de retroceso
         val btnBack = findViewById<ImageButton>(R.id.btn_back)
         btnBack.setOnClickListener {
-            // Finaliza la actividad y regresa a la pantalla anterior
-            finish()
+            finish() // Volver atrás
         }
 
-        // Configura el botón de "Ubicación"
+        // Botón de Ubicación: Navega a la pantalla de Ubicación
         val btnUbicacion = findViewById<Button>(R.id.btn_ubicacion)
         btnUbicacion.setOnClickListener {
-            // Acción al presionar el botón "Ubicación"
+            val intent = Intent(this, ActivityLocationSeller::class.java)
+            startActivity(intent)
         }
 
-        // Configura el botón de "Productos"
+        // Botón de Productos: Navega a la pantalla de Productos
         val btnProductos = findViewById<Button>(R.id.btn_productos)
         btnProductos.setOnClickListener {
-            // Acción al presionar el botón "Productos"
+            val intent = Intent(this, ActivityProductsSeller::class.java)
+            startActivity(intent)
         }
 
-        // Configura el botón de "Transacciones"
-        val btnTransacciones = findViewById<Button>(R.id.btn_transacciones)
-        btnTransacciones.setOnClickListener {
-            // Acción al presionar el botón "Transacciones"
-        }
+        // Aquí puedes agregar más funcionalidad si lo necesitas
     }
 }
