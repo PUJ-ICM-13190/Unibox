@@ -1,5 +1,6 @@
 package com.co.unibox
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.co.unibox.databinding.ViewSellerMisCajitasBinding
@@ -20,7 +21,11 @@ class MisCajitasSellerActivity:AppCompatActivity() {
             finish()
         }
 
-        // Configurar el título de la toolbar
         binding.topAppBar.title = getString(R.string.tus_cajitas)
+
+        binding.cardCajita1.setOnClickListener {
+            val intent = Intent(this, DetailsCajitaSeller::class.java)
+            startActivity(intent)
+        }
     }
 }

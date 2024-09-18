@@ -9,7 +9,7 @@ class DetailsCajitaSeller : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Establece el layout de la actividad como el archivo XML llamado activity_details_cajita_seller
+
         setContentView(R.layout.activity_details_cajita_seller)
 
         // Configura el botón de retroceso

@@ -14,7 +14,7 @@
         android:layout_height="60dp"
         android:layout_gravity="center_vertical"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_product_placeholder" />
+        android:src="@drawable/logo_boxi_circulo" />
 
     <!-- Información del producto -->
     <LinearLayout

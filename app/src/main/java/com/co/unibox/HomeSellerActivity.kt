@@ -48,7 +48,8 @@ class HomeSellerActivity: AppCompatActivity(){
                     // Acción para ver las ventas
                 }
                 R.id.nav_logout -> {
-                    // Acción para cerrar sesión
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
                 }
             }
             drawerLayout.closeDrawer(GravityCompat.START)
