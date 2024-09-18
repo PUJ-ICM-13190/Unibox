@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToOutline="true"
-    android:background="#FFFFFF" >
+    android:background="#FFFFFF"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".UpdateUserProfileActivity">
 
     <View
         android:id="@+id/rectangle_1"
@@ -46,7 +48,6 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="6dp"
         android:layout_marginTop="0dp"
-        android:background="@drawable/rectangle"
         android:src="@drawable/perfilperroeditar" />
 
     <TextView
@@ -116,14 +117,13 @@
 
 
     <ImageView
-        android:id="@+id/rectangle3"
+        android:id="@+id/btn_regresar"
         android:layout_width="34dp"
         android:layout_height="20dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="7dp"
         android:layout_marginTop="21dp"
-        android:background="@drawable/rectangle"
         android:src="@drawable/frame" />
 
 
@@ -226,7 +226,6 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="303dp"
         android:layout_marginTop="680dp"
-        android:background="@drawable/rectangle"
         android:src="@drawable/flechaderecha" />
 
 

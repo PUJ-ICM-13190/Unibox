@@ -18,6 +18,12 @@ class HomeClientActivity: AppCompatActivity() {
         setContentView(binding.root)
 
 
+        binding.userProfile.setOnClickListener{
+            val intent = Intent(this, UserProfileClient::class.java)
+            startActivity(intent)
+        }
+
+
         binding.btnMapa.setOnClickListener{
             val intent = Intent(this, MapClientActivity::class.java)
             startActivity(intent)
