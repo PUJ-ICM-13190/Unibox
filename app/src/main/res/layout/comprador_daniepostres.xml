@@ -263,6 +263,7 @@
         android:translationY="-0.97sp" />
 
     <Button
+        android:id="@+id/btnMaracuya"
         android:layout_width="74dp"
         android:layout_height="33dp"
         android:layout_marginLeft="190dp"

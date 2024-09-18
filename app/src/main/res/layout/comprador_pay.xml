@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mapa"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToOutline="true"
-    android:background="#FFFFFF" >
+    android:background="#FFFFFF"
+    tools:context=".PayClientActivity">
 
     <View
         android:id="@+id/rectangle_1"
@@ -76,14 +77,13 @@
         android:textAppearance="@style/realiza_tu_" />
 
     <ImageView
-        android:id="@+id/rectangle3"
+        android:id="@+id/btnHome"
         android:layout_width="34dp"
         android:layout_height="20dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="7dp"
         android:layout_marginTop="21dp"
-        android:background="@drawable/rectangle"
         android:src="@drawable/frame" />
 
     <View
@@ -173,7 +173,7 @@
         android:textAppearance="@style/comunicate_" />
 
     <ImageView
-        android:id="@+id/rectangle21"
+        android:id="@+id/btnWhat"
         android:layout_width="52dp"
         android:layout_height="57dp"
         android:layout_alignParentLeft="true"

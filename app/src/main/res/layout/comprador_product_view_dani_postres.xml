@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/user_profil"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToOutline="true"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    tools:context=".ProductViewDaniPostresClientActivity">
 
     <View
         android:id="@+id/image_21"
@@ -26,7 +27,7 @@
         android:background="@drawable/rectangle_9" />
 
     <ImageView
-        android:id="@+id/rectangle"
+        android:id="@+id/btnHome"
         android:layout_width="47dp"
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
@@ -217,7 +218,7 @@
         android:background="@drawable/rectangle_99" />
 
     <TextView
-        android:id="@+id/a_adir"
+        android:id="@+id/btnPago"
         android:layout_width="199dp"
         android:layout_height="25dp"
         android:layout_alignParentLeft="true"

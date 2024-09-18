@@ -41,6 +41,14 @@
         <activity android:name=".MapClientActivity" />
 
         <activity android:name=".ListDaniPostresClientActivity" />
+
+        <activity android:name=".ProductViewDaniPostresClientActivity" />
+
+        <activity android:name=".PayClientActivity" />
+
+        <activity android:name=".WhatsAppClientActivity" />
+
+        <activity android:name=".ChatWhatsAppClientActivity" />
     </application>
 
 </manifest>
