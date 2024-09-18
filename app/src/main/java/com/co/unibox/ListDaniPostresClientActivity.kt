@@ -13,6 +13,4 @@ class ListDaniPostresClientActivity : AppCompatActivity() {
         binding = CompradorDaniepostresBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
-
-
 }

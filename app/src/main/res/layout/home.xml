@@ -58,7 +58,7 @@
         android:textAppearance="@style/candy" />
 
     <TextView
-        android:id="@+id/dani_po"
+        android:id="@+id/btn"
         android:layout_width="60dp"
         android:layout_height="16dp"
         android:layout_alignParentLeft="true"
@@ -433,7 +433,7 @@
         android:background="@drawable/candypuj" />
 
     <View
-        android:id="@+id/btnDaniPostres"
+        android:id="@+id/btn_DaniPostres"
         android:layout_width="84dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
