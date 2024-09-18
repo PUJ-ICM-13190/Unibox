@@ -25,5 +25,10 @@ class HomeClientActivity: AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.lupabuscar.setOnClickListener{
+            val intent = Intent(this, SearchAllClientActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

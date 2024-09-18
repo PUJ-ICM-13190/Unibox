@@ -41,6 +41,15 @@
         <activity android:name=".MapClientActivity" />
 
         <activity android:name=".ListDaniPostresClientActivity" />
+
+        <activity android:name=".SearchAllClientActivity" />
+
+        <activity android:name=".SearchBClientActivity"/>
+
+        <activity android:name=".ViewGeneralClientActivity"/>
+
+
+
     </application>
 
 </manifest>

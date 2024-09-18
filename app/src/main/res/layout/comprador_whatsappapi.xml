@@ -24,8 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="7dp"
         android:layout_marginTop="30dp"
-        android:background="@drawable/rectangle"
-        android:src="@drawable/frame" />
+        android:src="@drawable/Frame" />
 
     <View
         android:layout_width="match_parent"
@@ -41,8 +40,7 @@
         android:layout_height="57dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="90dp"
-        android:background="@drawable/rectangle"
-        android:src="@drawable/whatsapp" />
+        android:src="@drawable/WhatsApp" />
 
     <TextView
         android:id="@+id/comprador"
@@ -64,7 +62,6 @@
         android:layout_height="81dp"
         android:layout_marginLeft="350dp"
         android:layout_marginTop="75dp"
-        android:background="@drawable/rectangle"
         android:src="@drawable/menuicono" />
 
     <TextView
