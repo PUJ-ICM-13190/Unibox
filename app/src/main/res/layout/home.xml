@@ -83,13 +83,14 @@
 
 
     <ImageView
-        android:id="@+id/rectangle"
+        android:id="@+id/user_profile"
         android:layout_width="47.16dp"
         android:layout_height="50.13dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+
         android:src="@drawable/usuario" />
 
     <ImageView
@@ -100,6 +101,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="350dp"
         android:layout_marginTop="31dp"
+
         android:src="@drawable/lupa" />
 
     <TextView
