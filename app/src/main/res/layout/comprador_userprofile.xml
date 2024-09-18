@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mapa"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToOutline="true"
-    android:background="#FFFFFF" >
+    android:background="#FFFFFF"
+    tools:context=".UserProfileClient">
 
     <View
         android:id="@+id/rectangle_1"
@@ -46,7 +48,6 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="146dp"
         android:layout_marginTop="130dp"
-        android:background="@drawable/rectangle"
         android:src="@drawable/usuario" />
 
     <TextView
@@ -64,17 +65,17 @@
 
 
     <ImageView
-        android:id="@+id/rectangle3"
+        android:id="@+id/btn_regresar"
         android:layout_width="34dp"
         android:layout_height="20dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="7dp"
         android:layout_marginTop="21dp"
-        android:background="@drawable/rectangle"
         android:src="@drawable/frame" />
 
     <Button
+        android:id="@+id/btn_mi_cuenta"
         android:layout_width="296dp"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"
@@ -103,7 +104,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="303dp"
         android:layout_marginTop="412dp"
-        android:background="@drawable/rectangle"
+
         android:src="@drawable/flechaderecha" />
 
 
@@ -196,7 +197,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="303dp"
         android:layout_marginTop="470dp"
-        android:background="@drawable/rectangle"
+
         android:src="@drawable/flechaderecha" />
 
     <Button
@@ -226,7 +227,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="303dp"
         android:layout_marginTop="535dp"
-        android:background="@drawable/rectangle"
+
         android:src="@drawable/soporte" />
 
     <Button
@@ -257,10 +258,11 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="303dp"
         android:layout_marginTop="590dp"
-        android:background="@drawable/rectangle"
+
         android:src="@drawable/flechaderecha" />
 
     <Button
+        android:id="@+id/btn_modo_vendedor"
         android:layout_width="296dp"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"
@@ -291,7 +293,6 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="303dp"
         android:layout_marginTop="650dp"
-        android:background="@drawable/rectangle"
         android:src="@drawable/flechaderecha" />
 
     <View
