@@ -1,489 +1,359 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/home_2_0"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:clipToOutline="true"
-    android:background="#FFFFFF"
-    tools:context=".HomeClientActivity">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/hola_jhon"
-        android:layout_width="115dp"
-        android:layout_height="29dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="73dp"
-        android:layout_marginTop="16dp"
-        android:gravity="top"
-        android:text="@string/hola_jhon"
-        android:textAppearance="@style/hola_jhon" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/qu_se_antoj"
-        android:layout_width="135dp"
-        android:layout_height="16dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="73dp"
-        android:layout_marginTop="45dp"
-        android:gravity="top"
-        android:text="@string/qu_se_antoj"
-        android:textAppearance="@style/qu_se_antoj" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/ponti_gomit"
-        android:layout_width="65dp"
-        android:layout_height="16dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="324dp"
-        android:gravity="top"
-        android:text="@string/ponti_gomit"
-        android:textAppearance="@style/ponti_gomit" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp">
 
-    <TextView
-        android:id="@+id/candy"
-        android:layout_width="55dp"
-        android:layout_height="16dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="132dp"
-        android:layout_marginTop="326dp"
-        android:gravity="top"
-        android:text="@string/candy"
-        android:textAppearance="@style/candy" />
+                <ImageView
+                    android:id="@+id/userProfile"
+                    android:layout_width="59dp"
+                    android:layout_height="64dp"
+                    app:srcCompat="@drawable/usuario"
+                    tools:layout_editor_absoluteX="-1dp"
+                    tools:layout_editor_absoluteY="-1dp" />
 
-    <TextView
-        android:id="@+id/btn"
-        android:layout_width="60dp"
-        android:layout_height="16dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="216dp"
-        android:layout_marginTop="326dp"
-        android:gravity="top"
-        android:text="@string/dani_po"
-        android:textAppearance="@style/dani_po" />
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="¿Qué se te antoja hoy?"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.255"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.636" />
 
-    <TextView
-        android:id="@+id/capri"
-        android:layout_width="50dp"
-        android:layout_height="16dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="317dp"
-        android:layout_marginTop="326dp"
-        android:gravity="top"
-        android:text="@string/capri"
-        android:textAppearance="@style/capri" />
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Hola Jhon"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.207"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.027" />
 
+                <ImageView
+                    android:id="@+id/btnLupa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.952"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.41"
+                    app:srcCompat="@drawable/lupa" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/user_profile"
-        android:layout_width="47.16dp"
-        android:layout_height="50.13dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:text="Categorias"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
-        android:src="@drawable/usuario" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/lupabuscar"
-        android:layout_width="34dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="350dp"
-        android:layout_marginTop="31dp"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/btn_background1">
 
-        android:src="@drawable/lupa" />
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/cajaconfianza" />
 
-    <TextView
-        android:id="@+id/categor_as"
-        android:layout_width="88dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="19dp"
-        android:layout_marginTop="81dp"
-        android:gravity="top"
-        android:text="@string/categor_as"
-        android:textAppearance="@style/categor_as" />
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="CAJAS DE LA CONFIANZA"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:layout_width="119.42dp"
-        android:layout_height="80dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="114dp"
-        android:backgroundTint="#ffb072"
-        android:contentDescription="CajaConfianza"
-        android:elevation="4dp"
-        app:cornerRadius="7dp" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/btn_background1">
 
-    <Button
-        android:id="@+id/btn_mapa"
-        android:layout_width="119.42dp"
-        android:layout_height="80dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="144dp"
-        android:layout_marginTop="114dp"
-        android:backgroundTint="#ff6666"
-        android:contentDescription="Mapa"
-        android:elevation="4dp"
-        app:cornerRadius="7dp" />
+                    <ImageView
+                        android:id="@+id/btnMapa"
+                        android:layout_width="75dp"
+                        android:layout_height="87dp"
+                        android:layout_marginBottom="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/mapa" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="373dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="374dp"
-        android:elevation="4dp"
-        app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="#ffe3b3">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="MAPA"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.797"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!-- Contenido de la tarjeta con imagen -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/btn_background1">
 
-        <ImageView
-            android:layout_width="400dp"
-            android:layout_height="160dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/comidacaprichos" />
+                    <ImageView
+                        android:layout_width="68dp"
+                        android:layout_height="58dp"
+                        android:layout_marginBottom="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/promociones" />
 
-        <TextView
-            android:id="@+id/capri2"
-            android:layout_width="50dp"
-            android:layout_height="16dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="165dp"
-            android:gravity="top"
-            android:text="@string/capri2"
-            android:textAppearance="@style/capri2" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="PROMOCIONES"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.498"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_weight="1"
+                android:text="¡Los 4 más elegidos!"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
-        <View
-            android:id="@+id/avatars_13d_"
-            android:layout_width="30dp"
-            android:layout_height="29dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="163dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginBottom="569dp"
-            android:background="@drawable/capricho" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="-22dp"
+                android:layout_marginEnd="24dp"
+                android:textStyle="bold"
+                android:text="Ver todos" />
 
-        <TextView
-            android:id="@+id/atrio_de_in"
-            android:layout_width="200dp"
-            android:layout_height="10dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="178dp"
-            android:gravity="top"
-            android:text="@string/atrio_de_in"
-            android:textAppearance="@style/atrio_de_in" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="horizontal">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="125dp"
-            android:layout_marginTop="160dp"
-            android:backgroundTint="#ff6666"
-            android:drawablePadding="10dp"
-            android:elevation="4dp"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="Ver más"
-            android:textColor="#FFFFFF"
-            app:cornerRadius="7dp" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="85dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/btn_background2">
 
-    </androidx.cardview.widget.CardView>
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="73dp"
+                        android:layout_height="83dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.49"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/pontigomitas" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="373dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="581dp"
-        android:elevation="4dp"
-        app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="#ffe3b3">
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!-- Contenido de la tarjeta con imagen -->
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="159dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/postre" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="85dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/btn_background2">
 
-        <TextView
-            android:id="@+id/dani2"
-            android:layout_width="60dp"
-            android:layout_height="16dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="165dp"
-            android:gravity="top"
-            android:text="@string/dani2"
-            android:textAppearance="@style/dani2" />
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="73dp"
+                        android:layout_height="83dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.333"
+                        app:srcCompat="@drawable/candypuj" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="85dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/btn_background2">
 
-        <View
-            android:id="@+id/avatars_0d_"
-            android:layout_width="30dp"
-            android:layout_height="29dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="163dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginBottom="569dp"
-            android:background="@drawable/danipostres" />
+                    <ImageView
+                        android:id="@+id/btnDaniPostres"
+                        android:layout_width="73dp"
+                        android:layout_height="83dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/danipostres" />
 
-        <TextView
-            android:id="@+id/cubos"
-            android:layout_width="200dp"
-            android:layout_height="10dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="178dp"
-            android:gravity="top"
-            android:text="@string/cubos"
-            android:textAppearance="@style/cubos" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="125dp"
-            android:layout_marginTop="160dp"
-            android:backgroundTint="#ff6666"
-            android:drawablePadding="10dp"
-            android:elevation="4dp"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="Ver más"
-            android:textColor="#FFFFFF"
-            app:cornerRadius="7dp" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="85dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/btn_background2">
 
-    </androidx.cardview.widget.CardView>
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="73dp"
+                        android:layout_height="83dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/capricho" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="373dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="21dp"
-        android:layout_marginTop="789dp"
-        android:elevation="4dp"
-        app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="#ffe3b3">
+            </LinearLayout>
 
-        <!-- Contenido de la tarjeta con imagen -->
-        <ImageView
-            android:layout_width="400dp"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/galletared" />
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:text="PontiGomitas"
+                android:textSize="10dp"
+                android:textStyle="bold"/>
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="135dp"
+                android:layout_marginTop="-13dp"
+                android:layout_marginEnd="230dp"
+                android:text="CandyPuj"
+                android:textSize="10sp"
+                android:textStyle="bold"/>
 
-    <Button
-        android:layout_width="119.42dp"
-        android:layout_height="80dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="271dp"
-        android:layout_marginTop="114dp"
-        android:backgroundTint="#c9284f"
-        android:contentDescription="Promociones"
-        android:elevation="4dp"
-        app:cornerRadius="5dp" />
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="-13dp"
+                android:layout_marginEnd="135dp"
+                android:text="DaniPostres"
+                android:textSize="10sp"
+                android:textStyle="bold"/>
 
-    <View
-        android:id="@+id/image_28"
-        android:layout_width="119dp"
-        android:layout_height="55dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="140dp"
-        android:background="@drawable/cajaconfianza" />
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="-13dp"
+                android:layout_marginEnd="50dp"
+                android:text="Capricho"
+                android:textSize="10sp"
+                android:textStyle="bold"/>
 
-    <View
-        android:id="@+id/image_46"
-        android:layout_width="69dp"
-        android:layout_height="67dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="146dp"
-        android:layout_marginTop="125dp"
-        android:background="@drawable/mapa" />
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:text="Emprendimientos cerca de mi (12)"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="18dp"/>
 
-    <View
-        android:id="@+id/image_32"
-        android:layout_width="49dp"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="145dp"
-        android:background="@drawable/promociones" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewEmprendimientos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"/>
+        </LinearLayout>
+    </ScrollView>
 
-    <TextView
-        android:id="@+id/cajas_de_la"
-        android:layout_width="86dp"
-        android:layout_height="32dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="33dp"
-        android:layout_marginTop="116dp"
-        android:gravity="center_horizontal|top"
-        android:lineSpacingExtra="2sp"
-        android:text="@string/cajas_de_la"
-        android:textAppearance="@style/cajas_de_la"
-        android:translationY="-0.97sp" />
-
-    <TextView
-        android:id="@+id/mapa"
-        android:layout_width="40dp"
-        android:layout_height="14dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="211dp"
-        android:layout_marginTop="145dp"
-        android:gravity="top"
-        android:lineSpacingExtra="2sp"
-        android:text="@string/mapa"
-        android:textAppearance="@style/mapa"
-        android:translationY="-0.97sp" />
-
-    <TextView
-        android:id="@+id/cafe_teria"
-        android:layout_width="90dp"
-        android:layout_height="17dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="286dp"
-        android:layout_marginTop="123dp"
-        android:gravity="top"
-        android:lineSpacingExtra="2sp"
-        android:text="@string/cafe_teria"
-        android:textAppearance="@style/cafe_teria"
-        android:translationY="-0.97sp" />
-
-    <TextView
-        android:id="@+id/los_4_m_s_e"
-        android:layout_width="170dp"
-        android:layout_height="23dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="204dp"
-        android:gravity="top"
-        android:text="@string/los_4_m_s_e"
-        android:textAppearance="@style/los_4_m_s_e" />
-
-    <View
-        android:id="@+id/avatars_4d_"
-        android:layout_width="84dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="238dp"
-        android:layout_marginRight="305dp"
-        android:layout_marginBottom="569dp"
-        android:background="@drawable/pontigomitas" />
-
-    <View
-        android:id="@+id/avatars_2_"
-        android:layout_width="84dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="113dp"
-        android:layout_marginTop="238dp"
-        android:layout_marginRight="214dp"
-        android:layout_marginBottom="569dp"
-        android:background="@drawable/candypuj" />
-
-    <View
-        android:id="@+id/btn_DaniPostres"
-        android:layout_width="84dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="202dp"
-        android:layout_marginTop="238dp"
-        android:layout_marginRight="125dp"
-        android:layout_marginBottom="569dp"
-        android:background="@drawable/danipostres" />
-
-    <View
-        android:id="@+id/avatars_3d_"
-        android:layout_width="84dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="294dp"
-        android:layout_marginTop="238dp"
-        android:layout_marginRight="33dp"
-        android:layout_marginBottom="569dp"
-        android:background="@drawable/capricho" />
-
-    <View
-        android:id="@+id/avatars_01d_"
-        android:layout_width="84dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="294dp"
-        android:layout_marginTop="238dp"
-        android:layout_marginRight="33dp"
-        android:layout_marginBottom="569dp"
-        android:background="@drawable/capricho" />
-
-    <TextView
-        android:id="@+id/emprendimie"
-        android:layout_width="282dp"
-        android:layout_height="21dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="19dp"
-        android:layout_marginTop="342dp"
-        android:gravity="top"
-        android:text="@string/emprendimie1"
-        android:textAppearance="@style/emprendimie1" />
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
