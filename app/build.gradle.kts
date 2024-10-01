@@ -43,6 +43,7 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation("com.github.bumptech.glide:glide:4.12.0")
+    implementation ("androidx.appcompat:appcompat:1.6.1")
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)

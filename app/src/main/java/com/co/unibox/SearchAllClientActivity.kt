@@ -1,34 +1,33 @@
 package com.co.unibox
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.co.unibox.databinding.CompradorDaniepostresBinding
-import com.co.unibox.databinding.CompradorViewallproductswithsearchBinding
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.co.unibox.databinding.CompradorViewAllproductswithsearchBinding
 
-class SearchAllClientActivity : AppCompatActivity(){
+class SearchAllClientActivity : AppCompatActivity() {
 
-    private lateinit var binding: CompradorViewallproductswithsearchBinding
+    private lateinit var binding: CompradorViewAllproductswithsearchBinding
+    private lateinit var adapter: ProductsAdapter
+    private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = CompradorViewallproductswithsearchBinding.inflate(layoutInflater)
+        binding = CompradorViewAllproductswithsearchBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupRecyclerView()
+    }
 
-        binding.buscarporb.setOnClickListener{
-            val intent = Intent(this, SearchBClientActivity::class.java)
-            startActivity(intent)
-        }
+    private fun setupRecyclerView() {
+        recyclerView = binding.recyclerViewProductos
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        binding.verbombombum.setOnClickListener{
-            val intent = Intent(this, ViewGeneralClientActivity::class.java)
-            startActivity(intent)
-        }
+        val products = ArrayList<ProductDomain>()
+        products.add(ProductDomain("Galleta", "Dulce", "boliqueso", "$1.00"))
 
-
-        binding.btnRegresar?.setOnClickListener {
-            finish()
-        }
+        adapter = ProductsAdapter(products)
+        recyclerView.adapter = adapter
     }
 }
