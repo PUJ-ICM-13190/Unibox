@@ -41,7 +41,7 @@
         <activity android:name=".WhatsAppClientActivity" />
         <activity android:name=".ChatWhatsAppClientActivity" />
         <activity android:name=".SearchAllClientActivity" />
-        <activity android:name=".SearchBClientActivity" />
+        <activity android:name=".ActivityShopperFavoriteProducts" />
         <activity android:name=".ViewGeneralClientActivity" />
         <activity android:name=".UserProfileClient" />
         <activity android:name=".UpdateUserProfileActivity" />

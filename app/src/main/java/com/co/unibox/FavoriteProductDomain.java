@@ -1,21 +1,20 @@
 package com.co.unibox;
 
-public class ProductDomain {
+public class FavoriteProductDomain {
 
     private String nameProduct;
     private String categoriaProduct;
     private String pic;
     private String price;
+    private String picLike;
 
-
-    // Constructor completo
-    public ProductDomain(String nameProduct, String categoriaProduct, String pic, String price) {
+    public FavoriteProductDomain(String nameProduct, String categoriaProduct, String pic, String price, String picLike) {
         this.nameProduct = nameProduct;
         this.categoriaProduct = categoriaProduct;
         this.pic = pic;
         this.price = price;
+        this.picLike = picLike;
     }
-
 
     public String getNameProduct() {
         return nameProduct;
@@ -47,5 +46,13 @@ public class ProductDomain {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getPicLike() {
+        return picLike;
+    }
+
+    public void setPicLike(String picLike) {
+        this.picLike = picLike;
     }
 }

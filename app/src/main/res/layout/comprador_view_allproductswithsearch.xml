@@ -52,7 +52,7 @@
                 android:layout_weight="1"
                 android:text="Productos"
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="24dp"
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
