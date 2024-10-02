@@ -54,7 +54,6 @@
         tools:layout_editor_absoluteY="261dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout4"
             android:layout_width="213dp"
             android:layout_height="69dp"
             android:layout_marginStart="8dp"
@@ -65,7 +64,6 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
-                android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="PAGAR"
@@ -80,7 +78,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout4"
             android:layout_width="341dp"
             android:layout_height="44dp"
             android:background="@drawable/rectangle_11"
@@ -91,7 +88,6 @@
             app:layout_constraintVertical_bias="0.81">
 
             <TextView
-                android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Comunicate con el vendedor"
