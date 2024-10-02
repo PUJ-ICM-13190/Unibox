@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.co.unibox.databinding.CompradorProductViewGeneralBinding
-import com.co.unibox.databinding.CompradorViewallproductswithsearchBoliquesoBinding
 
 class ViewGeneralClientActivity  : AppCompatActivity() {
 
