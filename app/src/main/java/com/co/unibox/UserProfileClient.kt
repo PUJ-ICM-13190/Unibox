@@ -2,31 +2,33 @@ package com.co.unibox
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.co.unibox.databinding.CompradorUserprofileBinding
 
-class UserProfileClient: AppCompatActivity() {
-
-    private lateinit var binding: CompradorUserprofileBinding
+class UserProfileClient : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = CompradorUserprofileBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_shopper_user_profile)
 
-        binding.btnRegresar.setOnClickListener {
-            finish()
+        // Botón de retroceso
+        val btnRegresar = findViewById<ImageView>(R.id.btn_regresar)
+        btnRegresar.setOnClickListener {
+            finish() // Vuelve atrás cuando se hace clic en el ImageView
         }
 
-        binding.btnMiCuenta.setOnClickListener {
+        // Botón de Mi Cuenta
+        val btnMiCuenta = findViewById<ImageView>(R.id.btn_mi_cuenta)
+        btnMiCuenta.setOnClickListener {
             val intent = Intent(this, UpdateUserProfileActivity::class.java)
-            startActivity(intent)
+            startActivity(intent) // Inicia la actividad para actualizar el perfil
         }
 
-        binding.btnModoVendedor.setOnClickListener {
+        // Botón de Modo Vendedor
+        val btnModoVendedor = findViewById<ImageView>(R.id.btn_modo_vendedor)
+        btnModoVendedor.setOnClickListener {
             val intent = Intent(this, HomeSellerActivity::class.java)
-            startActivity(intent)
+            startActivity(intent) // Inicia la actividad del vendedor
         }
-
     }
 }

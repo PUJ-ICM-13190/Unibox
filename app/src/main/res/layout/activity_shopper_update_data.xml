@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserProfileClient">
+    tools:context=".UpdateUserProfileActivity">
 
 
     <ScrollView
@@ -38,7 +38,7 @@
                     android:layout_height="0dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Tu perfil"
+                    android:text="Actualizar datos"
                     android:textColor="#FFFFFF"
                     android:textSize="25dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -55,107 +55,66 @@
                 android:background="@drawable/rectangle_9" >
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="275dp"
+                    android:layout_height="62dp"
+                    android:background="@drawable/rectangle_4"
+                    tools:layout_editor_absoluteX="75dp"
+                    tools:layout_editor_absoluteY="521dp">
+
+                    <TextView
+                        android:layout_width="145dp"
+                        android:layout_height="38dp"
+                        android:text="Actualizar"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.407" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="190dp"
+                    android:layout_height="45dp"
+                    android:text="Nuevo Telefono: "
+                    android:textColor="#C9284F"
+                    android:textSize="26sp"
+                    tools:layout_editor_absoluteX="39dp"
+                    tools:layout_editor_absoluteY="239dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btn_mi_cuenta"
+                    android:layout_width="364dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rectanglegris"
+                    tools:layout_editor_absoluteX="23dp"
+                    tools:layout_editor_absoluteY="280dp">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/btn_modo_vendedor"
                     android:layout_width="364dp"
                     android:layout_height="60dp"
                     android:background="@drawable/rectarojoclaro"
                     tools:layout_editor_absoluteX="23dp"
-                    tools:layout_editor_absoluteY="447dp">
+                    tools:layout_editor_absoluteY="386dp">
 
                     <TextView
-                        android:layout_width="312dp"
-                        android:layout_height="42dp"
-                        android:layout_marginEnd="30dp"
-                        android:text="Inicia modo vendedor"
+                        android:layout_width="286dp"
+                        android:layout_height="33dp"
+                        android:text="Quiero ser vendedor"
                         android:textColor="#FFFFFF"
                         android:textSize="30sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.407" />
 
-                    <ImageView
-                        android:layout_width="82dp"
-                        android:layout_height="55dp"
-                        android:layout_marginEnd="-9dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:srcCompat="@drawable/flechaderecha" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="364dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/rectanglegris"
-                    tools:layout_editor_absoluteX="26dp"
-                    tools:layout_editor_absoluteY="181dp">
-
-                    <TextView
-                        android:layout_width="219dp"
-                        android:layout_height="44dp"
-                        android:layout_marginEnd="120dp"
-                        android:text="Documentación"
-                        android:textSize="30sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:layout_width="82dp"
-                        android:layout_height="55dp"
-                        android:layout_marginEnd="10dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:srcCompat="@drawable/flechaderecha" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="364dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/rectanglegris"
-                    tools:layout_editor_absoluteX="26dp"
-                    tools:layout_editor_absoluteY="257dp">
-
-                    <TextView
-                        android:layout_width="219dp"
-                        android:layout_height="44dp"
-                        android:layout_marginEnd="120dp"
-                        android:text="Ayuda"
-                        android:textSize="30sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:layout_width="72dp"
-                        android:layout_height="44dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="5dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:srcCompat="@drawable/soporte" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="364dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/rectanglegris"
-                    tools:layout_editor_absoluteX="23dp"
-                    tools:layout_editor_absoluteY="334dp">
-
-                    <TextView
-                        android:layout_width="312dp"
-                        android:layout_height="42dp"
-                        android:layout_marginEnd="30dp"
-                        android:text="Reportar un error"
-                        android:textSize="30sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:layout_width="82dp"
-                        android:layout_height="55dp"
-                        android:layout_marginEnd="10dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:srcCompat="@drawable/flechaderecha" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -163,28 +122,20 @@
                     android:layout_width="364dp"
                     android:layout_height="60dp"
                     android:background="@drawable/rectanglegris"
-                    tools:layout_editor_absoluteX="26dp"
-                    tools:layout_editor_absoluteY="102dp">
+                    tools:layout_editor_absoluteX="23dp"
+                    tools:layout_editor_absoluteY="125dp">
 
-                    <TextView
-                        android:id="@+id/textView6"
-                        android:layout_width="155dp"
-                        android:layout_height="49dp"
-                        android:layout_marginEnd="190dp"
-                        android:text="Mi Cuenta"
-                        android:textSize="30sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="82dp"
-                        android:layout_height="55dp"
-                        android:layout_marginEnd="10dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:srcCompat="@drawable/flechaderecha" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="155dp"
+                    android:layout_height="49dp"
+                    android:text="Nuevo Email: "
+                    android:textColor="#C9284F"
+                    android:textSize="26sp"
+                    tools:layout_editor_absoluteX="39dp"
+                    tools:layout_editor_absoluteY="88dp" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
@@ -226,7 +177,7 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jhon Doe"
+            android:text="JHON DOE"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:visibility="visible"
@@ -239,8 +190,9 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="127dp"
-        android:layout_height="91dp"
+        android:layout_width="308dp"
+        android:layout_height="257dp"
+        android:layout_marginTop="-80dp"
         android:layout_marginBottom="32dp"
         android:visibility="visible"
         app:flow_firstHorizontalBias="30"
@@ -249,6 +201,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.110000014"
-        app:srcCompat="@drawable/usuario" />
+        app:srcCompat="@drawable/perfilperroeditar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

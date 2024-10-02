@@ -1,23 +1,19 @@
 package com.co.unibox
 
-import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.co.unibox.databinding.CompradorUpdatedataBinding
-import com.co.unibox.databinding.CompradorUserprofileBinding
 
 class UpdateUserProfileActivity : AppCompatActivity() {
 
-    private lateinit var binding: CompradorUpdatedataBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = CompradorUpdatedataBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_shopper_update_data)
 
-        binding.btnRegresar.setOnClickListener {
-            finish()
+        // Botón de retroceso
+        val btn_regresar = findViewById<ImageView>(R.id.btn_regresar)
+        btn_regresar.setOnClickListener {
+            finish() // Vuelve atrás cuando se hace clic en el ImageView
         }
-
     }
 }
