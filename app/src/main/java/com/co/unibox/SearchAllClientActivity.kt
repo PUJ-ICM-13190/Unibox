@@ -1,5 +1,6 @@
 package com.co.unibox
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,6 +19,11 @@ class SearchAllClientActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupRecyclerView()
+
+        binding.recyclerViewProductos.setOnClickListener {
+            val intent = Intent(this, ViewProductActivity::class.java)
+            startActivity(intent)
+        }
 
         // Verifica si el botón funciona
         binding.btnRegresar?.setOnClickListener {
