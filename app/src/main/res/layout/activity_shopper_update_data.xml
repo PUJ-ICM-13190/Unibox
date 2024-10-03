@@ -76,7 +76,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
-                    android:id="@+id/textView6"
                     android:layout_width="190dp"
                     android:layout_height="45dp"
                     android:text="Nuevo Telefono: "
@@ -86,7 +85,6 @@
                     tools:layout_editor_absoluteY="239dp" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/btn_mi_cuenta"
                     android:layout_width="364dp"
                     android:layout_height="60dp"
                     android:background="@drawable/rectanglegris"
