@@ -31,6 +31,7 @@ class ActivityTrustsBoxes : AppCompatActivity(){
         boxes.add(BoxesDomain("Caja #3", "Barón", "like"))
         boxes.add(BoxesDomain("Caja #4", "Basicas", "like"))
         boxes.add(BoxesDomain("Caja #5", "Artes", "like"))
+        boxes.add(BoxesDomain("Caja #6", "67", "like"))
     }
 
 }
