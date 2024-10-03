@@ -10,8 +10,7 @@ class ViewProductActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = CompradorProductViewGeneralBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.comprador_product_view_general)
 
         // Verifica si el botón funciona
         binding.btnRegresar?.setOnClickListener {

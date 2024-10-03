@@ -20,11 +20,6 @@ class SearchAllClientActivity : AppCompatActivity() {
 
         setupRecyclerView()
 
-        binding.recyclerViewProductos.setOnClickListener {
-            val intent = Intent(this, ViewProductActivity::class.java)
-            startActivity(intent)
-        }
-
         // Verifica si el botón funciona
         binding.btnRegresar?.setOnClickListener {
             finish()

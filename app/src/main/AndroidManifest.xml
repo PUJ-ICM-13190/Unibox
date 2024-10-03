@@ -36,6 +36,7 @@
         <activity android:name=".HomeClientActivity" />
         <activity android:name=".MapClientActivity" />
         <activity android:name=".ListDaniPostresClientActivity" />
+        <activity android:name=".ViewProductActivity" />
         <activity android:name=".ProductViewDaniPostresClientActivity" />
         <activity android:name=".PayClientActivity" />
         <activity android:name=".WhatsAppClientActivity" />
