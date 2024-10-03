@@ -24,7 +24,7 @@
             android:cropToPadding="true"
             android:padding="4dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/boton" />
+            android:src="@drawable/btn_back" />
 
         <TextView
             android:layout_width="wrap_content"

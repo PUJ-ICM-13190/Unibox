@@ -24,7 +24,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/rectangle"
-        android:src="@drawable/boton" />
+        android:src="@drawable/btn_back" />
 
     <View
         android:id="@+id/rectangle_9"

@@ -28,7 +28,7 @@
                         android:id="@+id/btnRegresar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/boton" />
+                        app:srcCompat="@drawable/btn_back" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

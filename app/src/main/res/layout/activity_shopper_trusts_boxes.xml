@@ -24,7 +24,7 @@
                     android:id="@+id/btnRegresar"
                     android:layout_width="60dp"
                     android:layout_height="45dp"
-                    app:srcCompat="@drawable/boton" />
+                    app:srcCompat="@drawable/btn_back" />
 
                 <TextView
                     android:id="@+id/textView3"

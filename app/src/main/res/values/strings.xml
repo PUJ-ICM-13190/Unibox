@@ -68,6 +68,9 @@
     <string name="revolcon">Revolcon</string>
     <string name="donuts">Donas</string>
     <string name="tus_cajitas">Tus Cajitas</string>
+    <string name="nombre_del_negocio">Nombre de tu negocio</string>
+    <string name="seleccionar_categorias">Seleccionar Categorias</string>
+    <string name="registrate_como_vendedor">Registrate Como Vendedor!</string>
     <string-array name="categorias">
         <item>Comida</item>
         <item>Dulces</item>

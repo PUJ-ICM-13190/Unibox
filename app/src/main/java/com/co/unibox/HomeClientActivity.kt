@@ -5,16 +5,17 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.co.unibox.databinding.HomeBinding
+import com.co.unibox.databinding.ActivityShopperHomeBinding
+
 
 class HomeClientActivity : AppCompatActivity() {
-    private lateinit var binding: HomeBinding
+    private lateinit var binding: ActivityShopperHomeBinding
     private lateinit var adapter: EmprendimientosAdapter
     private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = HomeBinding.inflate(layoutInflater)
+        binding = ActivityShopperHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupRecyclerView()

@@ -30,7 +30,8 @@
                     android:id="@+id/btn_regresar"
                     android:layout_width="70dp"
                     android:layout_height="53dp"
-                    app:srcCompat="@drawable/boton" />
+                    app:srcCompat="@drawable/btn_back"
+                    />
 
                 <TextView
                     android:id="@+id/textView2"

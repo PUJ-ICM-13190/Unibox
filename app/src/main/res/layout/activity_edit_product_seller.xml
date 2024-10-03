@@ -38,7 +38,7 @@
             android:cropToPadding="true"
             android:padding="4dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/boton" />
+            android:src="@drawable/btn_back" />
 
         <!-- Botón de Retroceso -->
         <ImageButton

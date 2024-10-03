@@ -20,7 +20,7 @@
         android:layout_margin="16dp"
         android:background="@drawable/round_button_background"
         android:contentDescription="Volver"
-        android:src="@drawable/boton" />
+        android:src="@drawable/btn_back" />
 
     <!-- Imagen de la caja -->
     <ImageView

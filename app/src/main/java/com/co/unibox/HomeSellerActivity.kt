@@ -17,7 +17,7 @@ class HomeSellerActivity: AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home_seller)
+        setContentView(R.layout.activity_seller_home)
 
         drawerLayout = findViewById(R.id.drawer_layout)
         topAppBar = findViewById(R.id.topAppBar)
