@@ -47,14 +47,14 @@ class MainActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
+                    // Inicio de sesión exitoso
                     val user = auth.currentUser
                     Toast.makeText(this, "Login exitoso", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, HomeClientActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {
-                    // If sign in fails, display a message to the user.
+                    // Si el inicio de sesión falla, muestra un mensaje al usuario.
                     showErrorDialog()
                 }
             }
