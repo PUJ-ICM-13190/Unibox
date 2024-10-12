@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "71754031929",
+    "project_id": "compumovil-63204",
+    "storage_bucket": "compumovil-63204.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71754031929:android:2f63a903c6c8640cafbee8",
+        "android_client_info": {
+          "package_name": "com.co.unibox"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRSQAit47G4JjJSx3j_6zFIo08xJeuh7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

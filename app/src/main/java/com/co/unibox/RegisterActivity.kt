@@ -1,40 +1,78 @@
 package com.co.unibox
 
-import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.co.unibox.databinding.RegisterBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class RegisterActivity : AppCompatActivity() {
 
-    // Declarar la variable de binding
     private lateinit var binding: RegisterBinding
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = RegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Inicializar Firebase Auth
+        auth = Firebase.auth
+
         // Configurar la Toolbar como ActionBar
         setSupportActionBar(binding.toolbar)
-
-        // Eliminar el título
         supportActionBar?.setDisplayShowTitleEnabled(false)
-
-        // Habilitar el botón de navegación (volver)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        // Manejar el clic en el botón de volver
         binding.toolbar.setNavigationOnClickListener {
             finish()
         }
 
         binding.registerButton.setOnClickListener {
-            showSuccessDialog()
+            if (validateInputs()) {
+                registerUser()
+            }
         }
+    }
+
+    private fun validateInputs(): Boolean {
+        val username = binding.usernameEditText.text.toString().trim()
+        val phone = binding.phoneEditText.text.toString().trim()
+        val email = binding.emailEditText.text.toString().trim()
+        val password = binding.passwordEditText.text.toString().trim()
+
+        if (username.isEmpty() || phone.isEmpty() || email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        if (!binding.termsCheckBox.isChecked) {
+            Toast.makeText(this, "Por favor, acepte los términos y condiciones", Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        return true
+    }
+
+    private fun registerUser() {
+        val email = binding.emailEditText.text.toString().trim()
+        val password = binding.passwordEditText.text.toString().trim()
+
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    showSuccessDialog()
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Toast.makeText(baseContext, "Registro fallido: ${task.exception?.message}",
+                        Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 
     private fun showSuccessDialog() {
@@ -49,7 +87,6 @@ class RegisterActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    // Método para navegar a la página de inicio de sesión
     private fun navigateToLogin() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
