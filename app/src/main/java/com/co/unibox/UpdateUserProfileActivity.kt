@@ -79,3 +79,5 @@ class UpdateUserProfileActivity : AppCompatActivity() {
         biometricPrompt.authenticate(promptInfo)
     }
 }
+
+
