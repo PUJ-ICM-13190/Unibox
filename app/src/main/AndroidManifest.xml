@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permisos para cámara y sensores -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
 
     <application
         android:allowBackup="true"
@@ -20,6 +22,7 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD7P0JGn3HQtwoVhqwUtu8lytE3gKssBvw" />
+
         <activity
             android:name=".ListProductsSeller"
             android:exported="false" />
@@ -34,10 +37,8 @@
         </activity>
 
         <activity android:name=".RegisterActivity" />
-        <activity
-            android:name=".EditProductSeller"/>
-        <activity
-            android:name=".AddProductSellerActivity"/>
+        <activity android:name=".EditProductSeller"/>
+        <activity android:name=".AddProductSellerActivity"/>
         <activity android:name=".HomeSellerActivity" />
         <activity android:name=".MisCajitasSellerActivity" />
         <activity android:name=".HomeClientActivity" />
@@ -56,8 +57,6 @@
         <activity android:name=".DetailsCajitaSeller" />
         <activity android:name=".ActivityLocationSeller" />
         <activity android:name=".ActivityProductsSeller" />
-
-
 
     </application>
 
