@@ -5,17 +5,17 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.co.unibox.databinding.CompradorViewAllproductswithsearchBinding
+import com.co.unibox.databinding.CompradorViewAllproductswithsearchSsssBinding
 
 class SearchAllClientActivity : AppCompatActivity() {
 
-    private lateinit var binding: CompradorViewAllproductswithsearchBinding
+    private lateinit var binding: CompradorViewAllproductswithsearchSsssBinding
     private lateinit var adapter: ProductsAdapter
     private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = CompradorViewAllproductswithsearchBinding.inflate(layoutInflater)
+        binding = CompradorViewAllproductswithsearchSsssBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupRecyclerView()

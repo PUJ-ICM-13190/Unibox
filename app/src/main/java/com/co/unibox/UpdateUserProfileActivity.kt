@@ -1,6 +1,8 @@
 package com.co.unibox
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +24,12 @@ class UpdateUserProfileActivity : AppCompatActivity() {
         val btn_regresar = findViewById<ImageView>(R.id.btn_regresar)
         btn_regresar.setOnClickListener {
             finish() // Vuelve atrás cuando se hace clic en el ImageView
+        }
+
+        val button_seller_mode = findViewById<Button>(R.id.button_seller_mode)
+        button_seller_mode.setOnClickListener {
+            val intent = Intent(this, HomeSellerActivity::class.java)
+            startActivity(intent) // Inicia la actividad para actualizar el perfil
         }
 
         // Verificar si el dispositivo admite autenticación biométrica
