@@ -37,9 +37,6 @@ class ProductsAdapter(private val products: ArrayList<ProductDomain>) :
             .load(drawableResourceId)
             .into(holder.pic)
 
-
-        // You can remove this switch if you want all items to have the same background
-        // or modify it to apply different backgrounds based on your needs
         holder.price.setBackgroundResource(R.drawable.rounded_price_background)
     }
 

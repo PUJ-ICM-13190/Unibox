@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MapClientActivity">
 
-    <!-- Contenedor principal que permite superposición -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -18,7 +17,7 @@
             android:id="@+id/mapFragment"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
         <!-- Contenedor para el botón de regresar y el título encima del mapa -->
         <LinearLayout
@@ -36,10 +35,8 @@
                 android:layout_width="50dp"
                 android:layout_height="35dp"
                 app:srcCompat="@drawable/btn_back" />
-
         </LinearLayout>
 
-        <!-- Apartado para 'Emprendimientos cerca de ti' elevado sobre el mapa -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardView_emprendimientos"
             android:layout_width="match_parent"
@@ -47,17 +44,32 @@
             android:layout_gravity="bottom"
             android:layout_margin="16dp"
             app:cardCornerRadius="16dp"
-            app:cardElevation="8dp">
+            app:cardElevation="8dp"
+            android:visibility="gone"> <!-- Oculto inicialmente -->
 
-            <TextView
-                android:id="@+id/title_emprendimientos_cerca_de_ti"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:text="@string/emprendimie2"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@android:color/black"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/title_productos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Productos"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/black" />
+
+                <!-- Aquí irá la lista de productos -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
+
 
     </FrameLayout>
 

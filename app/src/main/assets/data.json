@@ -1,0 +1,297 @@
+{
+  "sellers": [
+    {
+      "id": 1,
+      "name": "Juan's Empanadas",
+      "email": "juan@empanadas.com",
+      "password": "123456",
+      "role": "Seller",
+      "cajitas": [
+        {
+          "id": 1,
+          "name": "Empanada Box",
+          "description": "A box with different types of empanadas",
+          "ubication": {
+            "latitude": 4.6285,
+            "longitude": -74.0647
+          },
+          "products": [
+            {
+              "id": 1,
+              "name": "Beef Empanada",
+              "description": "Crispy empanada filled with seasoned beef",
+              "category": "Empanadas",
+              "price": 3.99,
+              "stock": 50,
+              "image": "beef_empanada.jpg"
+            },
+            {
+              "id": 2,
+              "name": "Chicken Empanada",
+              "description": "Crispy empanada filled with seasoned chicken",
+              "category": "Empanadas",
+              "price": 3.49,
+              "stock": 40,
+              "image": "chicken_empanada.jpg"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Engineering Box",
+          "description": "Snacks for engineering students",
+          "ubication": {
+            "latitude": 4.6268,
+            "longitude": -74.0626
+          },
+          "products": [
+            {
+              "id": 3,
+              "name": "Energy Bar",
+              "description": "Perfect for a quick boost",
+              "category": "Snacks",
+              "price": 2.50,
+              "stock": 30,
+              "image": "energy_bar.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Maria's Sweets",
+      "email": "maria@sweets.com",
+      "password": "654321",
+      "role": "Seller",
+      "cajitas": [
+        {
+          "id": 3,
+          "name": "Dessert Box",
+          "description": "A box filled with delicious sweets",
+          "ubication": {
+            "latitude": 4.6345,
+            "longitude": -74.0678
+          },
+          "products": [
+            {
+              "id": 4,
+              "name": "Chocolate Cake",
+              "description": "Rich and moist chocolate cake",
+              "category": "Desserts",
+              "price": 5.00,
+              "stock": 25,
+              "image": "chocolate_cake.jpg"
+            },
+            {
+              "id": 5,
+              "name": "Lemon Pie",
+              "description": "Tangy lemon pie with a crispy crust",
+              "category": "Desserts",
+              "price": 4.50,
+              "stock": 30,
+              "image": "lemon_pie.jpg"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Felix Restrepo Box",
+          "description": "A variety of sweets near Felix Restrepo",
+          "ubication": {
+            "latitude": 4.6288,
+            "longitude": -74.0641
+          },
+          "products": [
+            {
+              "id": 6,
+              "name": "Brownie",
+              "description": "Delicious chocolate brownie",
+              "category": "Desserts",
+              "price": 3.00,
+              "stock": 40,
+              "image": "brownie.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Carlos' Snacks",
+      "email": "carlos@snacks.com",
+      "password": "password123",
+      "role": "Seller",
+      "cajitas": [
+        {
+          "id": 5,
+          "name": "Baron Box",
+          "description": "Snacks for a quick energy boost",
+          "ubication": {
+            "latitude": 4.6267,
+            "longitude": -74.0648
+          },
+          "products": [
+            {
+              "id": 7,
+              "name": "Protein Bar",
+              "description": "Healthy protein bar",
+              "category": "Snacks",
+              "price": 2.00,
+              "stock": 50,
+              "image": "protein_bar.jpg"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "Centro Deportivo Box",
+          "description": "Snacks near the sports center",
+          "ubication": {
+            "latitude": 4.6263,
+            "longitude": -74.0626
+          },
+          "products": [
+            {
+              "id": 8,
+              "name": "Granola Bar",
+              "description": "Healthy granola bar",
+              "category": "Snacks",
+              "price": 1.80,
+              "stock": 60,
+              "image": "granola_bar.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Luis' Drinks",
+      "email": "luis@drinks.com",
+      "password": "luisdrinks321",
+      "role": "Seller",
+      "cajitas": [
+        {
+          "id": 7,
+          "name": "Jorge Hoyos Box",
+          "description": "Refreshing drinks near Jorge Hoyos",
+          "ubication": {
+            "latitude": 4.6269,
+            "longitude": -74.0639
+          },
+          "products": [
+            {
+              "id": 9,
+              "name": "Iced Tea",
+              "description": "Cool and refreshing iced tea",
+              "category": "Drinks",
+              "price": 1.50,
+              "stock": 100,
+              "image": "iced_tea.jpg"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "Hospital San Ignacio Box",
+          "description": "Drinks for those visiting the hospital",
+          "ubication": {
+            "latitude": 4.6279,
+            "longitude": -74.0651
+          },
+          "products": [
+            {
+              "id": 10,
+              "name": "Bottled Water",
+              "description": "Fresh bottled water",
+              "category": "Drinks",
+              "price": 1.00,
+              "stock": 150,
+              "image": "bottled_water.jpg"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "Box 67",
+          "description": "Drinks and snacks near building 67",
+          "ubication": {
+            "latitude": 4.6305,
+            "longitude": -74.0641
+          },
+          "products": [
+            {
+              "id": 11,
+              "name": "Energy Drink",
+              "description": "Boost your energy with this drink",
+              "category": "Drinks",
+              "price": 2.50,
+              "stock": 80,
+              "image": "energy_drink.jpg"
+            },
+            {
+              "id": 12,
+              "name": "Gaseosa",
+              "description": "Boost your energy with this drink",
+              "category": "Drinks",
+              "price": 2.50,
+              "stock": 80,
+              "image": "energy_drink.jpg"
+            },
+            {
+              "id": 13,
+              "name": "Gaseosa",
+              "description": "Boost your energy with this drink",
+              "category": "Drinks",
+              "price": 2.50,
+              "stock": 80,
+              "image": "energy_drink.jpg"
+            },
+            {
+              "id": 14,
+              "name": "Gaseosa",
+              "description": "Boost your energy with this drink",
+              "category": "Drinks",
+              "price": 2.50,
+              "stock": 80,
+              "image": "energy_drink.jpg"
+            },
+            {
+              "id": 16,
+              "name": "Gaseosa",
+              "description": "Boost your energy with this drink",
+              "category": "Drinks",
+              "price": 2.50,
+              "stock": 80,
+              "image": "energy_drink.jpg"
+            }
+
+          ]
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Empanadas",
+      "products": [1, 2]
+    },
+    {
+      "id": 2,
+      "name": "Desserts",
+      "products": [3, 4, 5, 6]
+    },
+    {
+      "id": 3,
+      "name": "Snacks",
+      "products": [7, 8]
+    },
+    {
+      "id": 4,
+      "name": "Drinks",
+      "products": [9, 10, 11]
+    }
+  ]
+}
