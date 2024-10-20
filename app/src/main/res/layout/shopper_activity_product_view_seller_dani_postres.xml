@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_profil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="#FFFFFF"
+    tools:context=".Shopper_Activity_Product_View_DaniPostres">
+
+    <View
+        android:id="@+id/image_21"
+        android:layout_width="500dp"
+        android:layout_height="610dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/postre" />
+
+    <View
+        android:id="@+id/rectangle_9"
+        android:layout_width="match_parent"
+        android:layout_height="314dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="575dp"
+        android:background="@drawable/rectangle_9" />
+
+    <ImageView
+        android:id="@+id/btnHome"
+        android:layout_width="47dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle"
+        android:src="@drawable/btn_back" />
+
+    <View
+        android:id="@+id/rectangle_6"
+        android:layout_width="141dp"
+        android:layout_height="67dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="548dp"
+        android:background="@drawable/rectangle_6" />
+
+    <View
+        android:id="@+id/rectangle6.2"
+        android:layout_width="141dp"
+        android:layout_height="67dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="234dp"
+        android:layout_marginTop="547dp"
+        android:background="@drawable/rectangle_6" />
+
+    <TextView
+        android:id="@+id/disponible"
+        android:layout_width="70dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="559dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:lineSpacingExtra="38sp"
+        android:text="@string/disponible"
+        android:textAppearance="@style/disponible" />
+
+    <TextView
+        android:id="@+id/und_"
+        android:layout_width="72.81dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="580dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:lineSpacingExtra="2sp"
+        android:text="@string/und_"
+        android:textAppearance="@style/und_" />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="36.36dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="284dp"
+        android:layout_marginTop="562dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:lineSpacingExtra="-7sp"
+        android:text="@string/amount"
+        android:textAppearance="@style/amount" />
+
+    <TextView
+        android:id="@+id/simbolo"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="265dp"
+        android:layout_marginTop="548dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="-10sp"
+        android:text="@string/simbolo"
+        android:textAppearance="@style/simbolo" />
+
+    <TextView
+        android:id="@+id/simboloMas"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="324dp"
+        android:layout_marginTop="550dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="-10sp"
+        android:text="@string/simboloMas"
+        android:textAppearance="@style/simboloMas" />
+
+    <TextView
+        android:id="@+id/postre"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="626dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="-14sp"
+        android:text="@string/postre"
+        android:textAppearance="@style/postre" />
+
+    <TextView
+        android:id="@+id/dulces2"
+        android:layout_width="93dp"
+        android:layout_height="22dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="658dp"
+        android:gravity="top"
+        android:lineSpacingExtra="-7sp"
+        android:text="@string/dulces2"
+        android:textAppearance="@style/dulces2" />
+
+    <TextView
+        android:id="@+id/es_un_caram"
+        android:layout_width="341dp"
+        android:layout_height="41dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="696dp"
+        android:gravity="top"
+        android:lineSpacingExtra="-3sp"
+        android:text="@string/es_un_caram"
+        android:textAppearance="@style/es_un_caram" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="62dp"
+        android:layout_height="26dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="305dp"
+        android:layout_marginTop="637dp"
+        android:gravity="right|center_vertical"
+        android:lineSpacingExtra="-14sp"
+        android:text="@string/price"
+        android:textAppearance="@style/price" />
+
+    <View
+        android:id="@+id/subtract"
+        android:layout_width="19dp"
+        android:layout_height="19.91dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="751dp"
+        android:background="@drawable/comment" />
+
+    <TextView
+        android:id="@+id/comentarios"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="750dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="1sp"
+        android:text="@string/comentarios"
+        android:textAppearance="@style/comentarios" />
+
+    <View
+        android:id="@+id/like"
+        android:layout_width="29dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="326dp"
+        android:layout_marginTop="746dp"
+        android:background="@drawable/like" />
+
+    <View
+        android:id="@+id/rectangle_99"
+        android:layout_width="343dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="794dp"
+        android:background="@drawable/rectangle_99" />
+
+    <TextView
+        android:id="@+id/btnPago"
+        android:layout_width="199dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="109dp"
+        android:layout_marginTop="801dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/a_adir"
+        android:textAppearance="@style/a_adir" />
+
+
+</RelativeLayout>
