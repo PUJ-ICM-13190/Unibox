@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="Seller_Activity_Details_Cajita">
+    tools:context=".Seller_Activity_Details_Cajita">
 
     <!-- Fondo decorativo en la parte superior -->
     <View
@@ -46,7 +46,6 @@
         android:textStyle="bold" />
 
     <!-- Descripción con icono de modificar -->
-
     <EditText
         android:id="@+id/edt_descripcion_caja"
         android:layout_width="match_parent"
@@ -56,11 +55,10 @@
         android:layout_marginTop="103dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rectanglegris"
-        android:hint="La cajita contiene diferente variedad de postres"
+        android:hint="Descripción de la cajita"
         android:padding="10dp" />
 
     <!-- Cantidad de productos con icono de modificar -->
-
     <ImageButton
         android:id="@+id/btn_modificar_descripcion"
         android:layout_width="28dp"
@@ -81,7 +79,6 @@
         android:padding="10dp" />
 
     <!-- Ventas del día -->
-
     <ImageButton
         android:id="@+id/btn_modificar_cantidad"
         android:layout_width="24dp"
@@ -143,7 +140,6 @@
             android:backgroundTint="@color/salmon"
             android:textColor="@color/white"
             android:layout_marginTop="16dp" />
-
     </LinearLayout>
-
 </RelativeLayout>
+

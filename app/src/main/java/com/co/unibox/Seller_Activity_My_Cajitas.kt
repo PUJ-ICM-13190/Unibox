@@ -3,56 +3,46 @@ package com.co.unibox
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.MaterialToolbar
-import com.google.android.material.navigation.NavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class Seller_Activity_My_Cajitas : AppCompatActivity() {
 
-    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: Seller_Activity_Cajita_Adapter
     private lateinit var topAppBar: MaterialToolbar
-    private lateinit var navigationView: NavigationView
+    private lateinit var fabAddCajita: FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.seller_activity_list_cajitas)
 
-        drawerLayout = findViewById(R.id.drawer_layout)
         topAppBar = findViewById(R.id.topAppBar)
-        navigationView = findViewById(R.id.navigation_view)
+        recyclerView = findViewById(R.id.recyclerViewCajitas)
+        fabAddCajita = findViewById(R.id.fab_add_cajita)
 
+        // Lista de cajitas con su nombre y descripción
+        val cajitas = listOf(
+            "Cajita 1" to "Contiene postres variados",
+            "Cajita 2" to "Contiene productos electrónicos",
+            "Cajita 3" to "Contiene ropa y accesorios"
+        )
 
-        // Configuración del botón del menú lateral (Drawer)
-        topAppBar.setNavigationOnClickListener {
-            drawerLayout.openDrawer(GravityCompat.START)
+        adapter = Seller_Activity_Cajita_Adapter(cajitas) { position ->
+            // Abre la actividad de detalles de la cajita seleccionada
+            val intent = Intent(this, Seller_Activity_Details_Cajita::class.java)
+            intent.putExtra("cajaId", position + 1)  // Pasar el ID de la cajita
+            startActivity(intent)
         }
 
-        // Manejo de las opciones del menú lateral
-        navigationView.setNavigationItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.nav_dashboard -> {
-                    val intent = Intent(this, Seller_Activity_Home::class.java)
-                    startActivity(intent)
-                }
-                R.id.nav_cajitas -> {
-                    val intent = Intent(this, Seller_Activity_My_Cajitas::class.java)
-                    startActivity(intent)
-                }
-                R.id.nav_productos -> {
-                    // Acción para ver los productos
-                }
-                R.id.nav_ventas -> {
-                    // Acción para ver las ventas
-                }
-                R.id.nav_logout -> {
-                    val intent = Intent(this, Activity_Main::class.java)
-                    startActivity(intent)
-                }
-            }
-            drawerLayout.closeDrawer(GravityCompat.START)
-            true
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        // Acción del botón flotante para agregar una nueva cajita
+        fabAddCajita.setOnClickListener {
+            // Implementa la acción para agregar una nueva cajita
         }
     }
-
 }

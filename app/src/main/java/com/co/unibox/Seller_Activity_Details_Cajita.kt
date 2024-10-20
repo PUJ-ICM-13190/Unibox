@@ -1,102 +1,147 @@
 package com.co.unibox
 
+import android.content.Context
 import android.content.Intent
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
-import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class Seller_Activity_Details_Cajita : AppCompatActivity(), SensorEventListener {
 
     private lateinit var sensorManager: SensorManager
     private var accelerometer: Sensor? = null
     private var lastX: Float = 0.0f
-    private var cajaId: Int = 1 // Empezamos con la primera caja
-    private val totalCajas: Int = 5 // Número fijo de cajas (quemado)
+    private var cajaId: Int = 1 // Caja actual (se recibe desde el Intent)
+    private val totalCajas: Int = 3 // Cambia este valor según el número total de cajitas
+    private var lastMovementTime: Long = 0 // Control de tiempo para retrasar movimientos
+
+    // Umbral para definir un movimiento válido
+    private val movementThreshold = 4.0f // Ajuste del umbral para evitar movimientos falsos
+    private val movementCooldown = 1500 // 1500 ms = 1.5 segundos entre movimientos
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.seller_activity_details_cajita)
 
-        // Inicializamos el sensor del acelerómetro
-        sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
+        // Recibir el ID de la caja desde la actividad anterior
+        cajaId = intent.getIntExtra("cajaId", 1)
 
-        // Verificar si el acelerómetro está disponible en el dispositivo
-        if (sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) != null) {
-            accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
-            sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL)
-        } else {
-            // Si no está disponible, mostrar un mensaje al usuario
-            Toast.makeText(this, "Acelerómetro no disponible", Toast.LENGTH_SHORT).show()
+        // Inicializar el sensor del acelerómetro
+        sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+
+        accelerometer?.let {
+            sensorManager.registerListener(this, it, SensorManager.SENSOR_DELAY_NORMAL)
         }
 
-        // Botón de retroceso
+        // Mostrar la información de la caja actual
+        mostrarInformacionCaja(cajaId)
+
+        // Configurar el botón de retroceso
         val btnBack = findViewById<ImageButton>(R.id.btn_back)
         btnBack.setOnClickListener {
-            finish() // Vuelve atrás
-        }
-
-        // Botón de Ubicación: Navega a la pantalla de Ubicación
-        val btnUbicacion = findViewById<Button>(R.id.btn_ubicacion)
-        btnUbicacion.setOnClickListener {
-            val intent = Intent(this, Seller_Activity_Location::class.java)
-            startActivity(intent)
-        }
-
-        // Botón de Productos: Navega a la pantalla de Productos
-        val btnProductos = findViewById<Button>(R.id.btn_productos)
-        btnProductos.setOnClickListener {
-            val intent = Intent(this, Seller_Activity_Products::class.java)
-            startActivity(intent)
+            finish() // Cierra la actividad actual y regresa a la anterior
         }
     }
 
-    override fun onSensorChanged(event: SensorEvent) {
-        val x = event.values[0]
+    // Mostrar la información de la caja actual (nombre, descripción, etc.)
+    private fun mostrarInformacionCaja(cajaId: Int) {
+        val nombreCaja = findViewById<TextView>(R.id.txt_nombre_caja)
+        val descripcionCaja = findViewById<EditText>(R.id.edt_descripcion_caja)
+        val cantidadProductos = findViewById<EditText>(R.id.edt_cantidad_productos)
+        val ventasDelDia = findViewById<TextView>(R.id.txt_ventas_del_dia)
 
-        // Detectar si hay un movimiento de izquierda a derecha o derecha a izquierda
-        if (lastX - x > 5) {
-            cambiarCaja(cajaId - 1)  // Moverse a la caja anterior
-        } else if (x - lastX > 5) {
-            cambiarCaja(cajaId + 1)  // Moverse a la caja siguiente
+        // Actualizar con la información real de la cajita
+        when (cajaId) {
+            1 -> {
+                nombreCaja.text = "Cajita #1"
+                descripcionCaja.setText("Descripción de la cajita 1")
+                cantidadProductos.setText("Cant. productos: 10")
+                ventasDelDia.text = "Ventas del día: 5"
+            }
+            2 -> {
+                nombreCaja.text = "Cajita #2"
+                descripcionCaja.setText("Descripción de la cajita 2")
+                cantidadProductos.setText("Cant. productos: 12")
+                ventasDelDia.text = "Ventas del día: 7"
+            }
+            3 -> {
+                nombreCaja.text = "Cajita #3"
+                descripcionCaja.setText("Descripción de la cajita 3")
+                cantidadProductos.setText("Cant. productos: 8")
+                ventasDelDia.text = "Ventas del día: 3"
+            }
         }
-
-        lastX = x
     }
 
-    private fun cambiarCaja(nuevaCajaId: Int) {
-        // Verificar si la nueva caja está dentro de los límites
-        if (nuevaCajaId >= 1 && nuevaCajaId <= totalCajas) {
-            // Actualizar el ID de la caja
-            cajaId = nuevaCajaId
-            // Recargar la actividad con los detalles de la nueva caja
-            val intent = Intent(this, Seller_Activity_Details_Cajita::class.java)
-            intent.putExtra("cajaId", cajaId)  // Pasar el nuevo ID de la caja
-            startActivity(intent)
-            finish() // Cerrar la actividad actual para evitar acumulación en el stack
+    override fun onSensorChanged(event: SensorEvent?) {
+        event?.let {
+            val currentTime = System.currentTimeMillis()
+
+            // Solo permitir un movimiento si ha pasado el tiempo de cooldown
+            if (currentTime - lastMovementTime > movementCooldown) {
+                val x = it.values[0]
+
+                // Invertir la lógica:
+                // Izquierda (disminuir caja) ahora es si x > lastX
+                if (x - lastX > movementThreshold) {
+                    // Movimiento hacia la izquierda, disminuir caja
+                    if (cajaId > 1) {
+                        cambiarCaja(cajaId - 1)
+                    } else {
+                        Toast.makeText(this, "No hay más cajitas a la izquierda", Toast.LENGTH_SHORT).show()
+                    }
+                    lastMovementTime = currentTime
+                }
+                // Derecha (aumentar caja) es si x < lastX
+                else if (lastX - x > movementThreshold) {
+                    // Movimiento hacia la derecha, aumentar caja
+                    if (cajaId < totalCajas) {
+                        cambiarCaja(cajaId + 1)
+                    } else {
+                        Toast.makeText(this, "No hay más cajitas a la derecha", Toast.LENGTH_SHORT).show()
+                    }
+                    lastMovementTime = currentTime
+                }
+
+                lastX = x // Actualizar lastX con el valor actual del sensor
+            }
         }
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-        // No es necesario manejar esto en este caso
+        // No necesitamos implementar esto para este caso
+    }
+
+    private fun cambiarCaja(nuevaCajaId: Int) {
+        if (nuevaCajaId in 1..totalCajas) {
+            cajaId = nuevaCajaId
+            val intent = Intent(this, Seller_Activity_Details_Cajita::class.java)
+            intent.putExtra("cajaId", cajaId)
+            startActivity(intent)
+            finish() // Terminar la actividad actual para que no se pueda regresar con el botón de atrás
+        }
     }
 
     override fun onPause() {
         super.onPause()
-        // Detener el sensor cuando la actividad está en pausa
+        // Detener la escucha del sensor cuando la actividad esté pausada
         sensorManager.unregisterListener(this)
     }
 
     override fun onResume() {
         super.onResume()
-        // Registrar el sensor nuevamente cuando la actividad esté en uso
-        if (accelerometer != null) {
-            sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL)
+        // Registrar de nuevo el sensor cuando la actividad se reanude
+        accelerometer?.let {
+            sensorManager.registerListener(this, it, SensorManager.SENSOR_DELAY_NORMAL)
         }
     }
 }
+
