@@ -2,6 +2,7 @@ package com.co.unibox
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.location.Location
@@ -15,11 +16,8 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.BitmapDescriptor
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.Marker
-import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.*
+import com.google.android.gms.maps.model.MapStyleOptions
 import org.json.JSONObject
 import java.io.IOException
 import java.io.InputStream
@@ -30,6 +28,9 @@ class MapClientActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
     private lateinit var map: GoogleMap
     private lateinit var sellerData: JSONObject
     private lateinit var currentLocation: LatLng // Variable para almacenar la ubicación actual del cliente
+
+    // Lista para mantener referencias de los marcadores
+    private val markerList = mutableListOf<Marker>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +54,16 @@ class MapClientActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
 
+        val success = map.setMapStyle(
+            MapStyleOptions.loadRawResourceStyle(
+                this, R.raw.style // Archivo style.json en la carpeta raw
+            )
+        )
+        if (!success) {
+            println("Error al aplicar el estilo del mapa.")
+        }
+
+
         // Pedir permisos de localización
         if (ActivityCompat.checkSelfPermission(
                 this,
@@ -75,17 +86,40 @@ class MapClientActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
         // Obtener la ubicación actual del cliente
         map.setOnMyLocationChangeListener { location ->
             currentLocation = LatLng(location.latitude, location.longitude)
-            map.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation,16f))
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 16.0f))
 
-            // Llamar al método que agrega los marcadores solo si están en el rango de 100 metros
-            addMarkersFromJson(currentLocation)
+            updateMarkers(currentLocation)
         }
-
-        // Configurar el click listener para los marcadores
         map.setOnMarkerClickListener(this)
     }
 
+    private fun updateMarkers(currentLocation: LatLng) {
+        // Remover los marcadores que están fuera del rango
+        val maxDistance = 120
+        val iterator = markerList.iterator()
 
+        while (iterator.hasNext()) {
+            val marker = iterator.next()
+            val markerLocation = marker.position
+
+            val distance = FloatArray(1)
+            Location.distanceBetween(
+                currentLocation.latitude, currentLocation.longitude,
+                markerLocation.latitude, markerLocation.longitude,
+                distance
+            )
+
+            // Remover los marcadores que están fuera del rango
+            if (distance[0] > maxDistance) {
+                marker.remove()
+                iterator.remove()
+            }
+        }
+
+        addMarkersFromJson(currentLocation)
+    }
+
+    // Método para leer el JSON y agregar los marcadores que están dentro de 100 metros del cliente
     private fun addMarkersFromJson(currentLocation: LatLng) {
         val jsonString = loadJSONFromAsset("data.json")
         sellerData = JSONObject(jsonString!!)
@@ -115,14 +149,19 @@ class MapClientActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
                     distance
                 )
 
-                // Agregar el marcador solo si la distancia está dentro del rango de 100 metros
+                // Agregar el marcador solo si la distancia está dentro del rango de 120 metros
                 if (distance[0] <= maxDistance) {
-
-                    val marker = map.addMarker(MarkerOptions().
-                        position(location).
-                        title(cajitaName).icon(BitmapDescriptorFactory.fromBitmap(smallMarker)))
+                    val marker = map.addMarker(
+                        MarkerOptions()
+                            .position(location)
+                            .title(cajitaName)
+                            .icon(BitmapDescriptorFactory.fromBitmap(smallMarker))
+                    )
 
                     marker?.tag = cajita
+                    if (marker != null) {
+                        markerList.add(marker) // Agregar el marcador a la lista
+                    }
                 }
             }
         }
