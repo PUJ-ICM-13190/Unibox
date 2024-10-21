@@ -27,11 +27,11 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD7P0JGn3HQtwoVhqwUtu8lytE3gKssBvw" />
         <activity
-            android:name=".ListProductsSeller"
+            android:name=".Seller_Activity_List_Products"
             android:exported="false" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity_Main"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,29 +39,29 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".Activity_Register" />
         <activity
-            android:name=".EditProductSeller"/>
+            android:name=".Seller_Activity_Edit_Product"/>
         <activity
-            android:name=".AddProductSellerActivity"/>
-        <activity android:name=".HomeSellerActivity" />
-        <activity android:name=".MisCajitasSellerActivity" />
-        <activity android:name=".HomeClientActivity" />
-        <activity android:name=".MapClientActivity" />
-        <activity android:name=".ListDaniPostresClientActivity" />
-        <activity android:name=".ViewProductActivity" />
-        <activity android:name=".ProductViewDaniPostresClientActivity" />
-        <activity android:name=".PayClientActivity" />
-        <activity android:name=".WhatsAppClientActivity" />
-        <activity android:name=".ChatWhatsAppClientActivity" />
-        <activity android:name=".SearchAllClientActivity" />
-        <activity android:name=".ActivityShopperFavoriteProducts" />
-        <activity android:name=".ViewGeneralClientActivity" />
-        <activity android:name=".UserProfileClient" />
-        <activity android:name=".UpdateUserProfileActivity" />
-        <activity android:name=".DetailsCajitaSeller" />
-        <activity android:name=".ActivityLocationSeller" />
-        <activity android:name=".ActivityProductsSeller" />
+            android:name=".Seller_Activity_Add_Product"/>
+        <activity android:name=".Seller_Activity_Home" />
+        <activity android:name=".Seller_Activity_My_Cajitas" />
+        <activity android:name=".Shopper_Activity_Home" />
+        <activity android:name=".Shopper_Activity_Map" />
+        <activity android:name=".Shopper_Activity_ListDaniPostres" />
+        <activity android:name=".Activity_View_Product" />
+        <activity android:name=".Shopper_Activity_Product_View_DaniPostres" />
+        <activity android:name=".Shopper_Activity_Pay" />
+        <activity android:name=".Shopper_Activity_WhatsApp" />
+        <activity android:name=".Shopper_Activity_Chat_WhatsApp" />
+        <activity android:name=".Shopper_Activity_Search_All" />
+        <activity android:name=".Shopper_Activity_Favorite_Products" />
+        <activity android:name=".Shopper_Activity_View_General" />
+        <activity android:name=".Shopper_Activity_User_Profile" />
+        <activity android:name=".Activity_Update_User_Profile" />
+        <activity android:name=".Seller_Activity_Details_Cajita" />
+        <activity android:name=".Seller_Activity_Location" />
+        <activity android:name=".Seller_Activity_Products" />
 
 
 
