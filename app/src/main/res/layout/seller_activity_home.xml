@@ -21,7 +21,7 @@
             android:background="@android:color/transparent"
             android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar.Primary"
             app:navigationIcon="@drawable/ic_menu"
-            app:title="Hola Dani 😄"
+            app:title="Dashboard"
             style="@style/TitleStyleBlack"
             app:titleTextColor="@android:color/black"
             app:layout_constraintTop_toTopOf="parent"
@@ -50,67 +50,122 @@
                     android:textStyle="bold"
                     android:layout_marginBottom="16dp" />
 
-                <!-- Tarjeta Ventas del Día -->
+
+                <!-- Tarjeta dashboard Ventas del Día -->
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginBottom="16dp"
                     android:padding="16dp"
-                    app:cardBackgroundColor="@color/roseRed">
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/sandyBrown"> <!-- Fondo con gradiente -->
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
+                        <!-- Imagen en la parte superior derecha -->
+                        <ImageView
+                            android:id="@+id/ci1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_arrow_down"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!-- Texto en la parte inferior izquierda -->
                         <TextView
+                            android:id="@+id/st1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="  12 Ventas del día"
-                            style="@style/TitleStyleWhite" />
-                    </LinearLayout>
+                            android:layout_margin="8dp"
+                            android:text="12 Ventas del día"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Tarjeta Ventas del Mes -->
+                <!-- Puedes replicar el mismo patrón para las otras tarjetas -->
+
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginBottom="16dp"
                     android:padding="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/salmon">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/ci2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_arrow_up"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/st2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:text="89 Ventas del mes"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="16dp"
+                    android:padding="16dp"
+                    app:cardElevation="8dp"
+                    app:backgroundTint = "@color/green"
                     app:cardBackgroundColor="@color/red">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/ci3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_arrow_down"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
+                            android:id="@+id/st3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="  89 Ventas del mes"
-                            style="@style/TitleStyleWhite"/>
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                            android:layout_margin="8dp"
+                            android:text="267.000 Ingresos"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
 
-                <!-- Tarjeta Ingresos -->
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginBottom="16dp"
-                    android:padding="16dp"
-                    app:cardBackgroundColor="@color/sandyBrown">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="  267.000 Ingresos"
-                            style="@style/TitleStyleWhite"/>
-                    </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <!-- Sección Los más vendidos -->
