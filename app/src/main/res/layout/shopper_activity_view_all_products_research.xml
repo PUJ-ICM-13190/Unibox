@@ -51,6 +51,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_weight="1"
                 android:text="Productos"
+                android:textAppereance="@style/TitleStyleBlack"
                 android:textColor="@color/black"
                 android:textSize="24dp"
                 android:textStyle="bold" />

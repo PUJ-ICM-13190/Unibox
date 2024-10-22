@@ -36,6 +36,7 @@
                     android:layout_weight="1"
                     android:text="Cajas de Confianza"
                     android:textColor="@color/black"
+                    android:textAppearance="@style/SubtitleStyleBlack"
                     android:textSize="24dp"
                     android:textStyle="bold" />
 
@@ -46,6 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="24dp"
+                android:textAppearance="@style/ParagraphStyleBlack"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp" />
         </LinearLayout>

@@ -20,7 +20,7 @@
         android:layout_marginTop="16dp"
         android:gravity="top"
         android:text="@string/hola_jhon"
-        android:textAppearance="@style/hola_jhon" />
+        android:textAppearance="@style/SubtitleStyleBlack" />
 
     <TextView
         android:id="@+id/qu_se_antoj"
@@ -32,7 +32,7 @@
         android:layout_marginTop="45dp"
         android:gravity="top"
         android:text="Escogiste Dani Postres"
-        android:textAppearance="@style/qu_se_antoj" />
+        android:textAppearance="@style/ParagraphStyleBlack" />
     <ImageView
         android:id="@+id/rectangle"
         android:layout_width="47.16dp"
@@ -63,7 +63,8 @@
         android:layout_marginTop="81dp"
         android:gravity="top"
         android:text="@string/categor_as"
-        android:textAppearance="@style/categor_as" />
+        android:textAppearance="@style/SubtitleStyleBlack"
+        android:textStyle="bold"/>
 
     <Button
         android:layout_width="119.42dp"
@@ -141,7 +142,8 @@
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="2sp"
         android:text="@string/cajas_de_la"
-        android:textAppearance="@style/cajas_de_la"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="10dp"
         android:translationY="-0.97sp" />
 
     <TextView
@@ -154,7 +156,8 @@
         android:gravity="top"
         android:lineSpacingExtra="2sp"
         android:text="@string/mapa"
-        android:textAppearance="@style/mapa"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="10dp"
         android:translationY="-0.97sp" />
 
     <TextView
@@ -168,7 +171,8 @@
         android:gravity="top"
         android:lineSpacingExtra="2sp"
         android:text="@string/cafe_teria"
-        android:textAppearance="@style/cafe_teria"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="10dp"
         android:translationY="-0.97sp" />
 
     <!-- drawable/rccqjetbwyu.xml -->
@@ -183,7 +187,8 @@
         android:layout_marginTop="204dp"
         android:gravity="top"
         android:text="Light"
-        android:textAppearance="@style/los_4_m_s_e" />
+        android:textAppearance="@style/SubtitleStyleBlack"
+        android:textStyle="bold"/>
 
     <Button
         android:layout_width="136dp"
@@ -202,8 +207,8 @@
         android:layout_marginTop="330dp"
         android:gravity="top"
         android:text="Limón"
-        android:textAppearance="@style/cafe_teria"
-        android:textSize="20sp"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="15sp"
         android:translationY="-0.97sp" />
 
     <View
@@ -231,7 +236,8 @@
         android:gravity="top"
         android:lineSpacingExtra="2sp"
         android:text="$6.000"
-        android:textAppearance="@style/mapa"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="10sp"
         android:translationY="-0.97sp" />
 
     <Button
@@ -258,8 +264,9 @@
         android:layout_marginTop="330dp"
         android:gravity="top"
         android:text="Maracuya"
-        android:textAppearance="@style/cafe_teria"
-        android:textSize="20sp"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="15sp"
+
         android:translationY="-0.97sp" />
 
     <Button
@@ -281,7 +288,8 @@
         android:gravity="top"
         android:lineSpacingExtra="2sp"
         android:text="$6.000"
-        android:textAppearance="@style/mapa"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="10sp"
         android:translationY="-0.97sp" />
 
     <Button
@@ -308,8 +316,8 @@
         android:layout_marginTop="330dp"
         android:gravity="top"
         android:text="Lulo"
-        android:textAppearance="@style/cafe_teria"
-        android:textSize="20sp"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="15sp"
         android:translationY="-0.97sp" />
 
     <Button
@@ -330,7 +338,8 @@
         android:gravity="top"
         android:lineSpacingExtra="2sp"
         android:text="$6.000"
-        android:textAppearance="@style/mapa"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="10sp"
         android:translationY="-0.97sp" />
 
     <TextView
@@ -340,7 +349,8 @@
         android:layout_marginTop="404dp"
         android:gravity="top"
         android:text="Dulces"
-        android:textAppearance="@style/los_4_m_s_e" />
+        android:textAppearance="@style/SubtitleStyleBlack"
+        android:textStyle="bold"/>
 
     <Button
         android:layout_width="136dp"
@@ -366,8 +376,8 @@
         android:layout_marginTop="530dp"
         android:gravity="top"
         android:text="Oreo"
-        android:textAppearance="@style/cafe_teria"
-        android:textSize="20sp"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="15sp"
         android:translationY="-0.97sp" />
 
     <Button
@@ -388,7 +398,8 @@
         android:gravity="top"
         android:lineSpacingExtra="2sp"
         android:text="$6.000"
-        android:textAppearance="@style/mapa"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="10sp"
         android:translationY="-0.97sp" />
 
     <Button
@@ -408,8 +419,8 @@
         android:layout_marginTop="530dp"
         android:gravity="top"
         android:text="Mango"
-        android:textAppearance="@style/cafe_teria"
-        android:textSize="20sp"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="15sp"
         android:translationY="-0.97sp" />
 
     <View
@@ -437,7 +448,8 @@
         android:gravity="top"
         android:lineSpacingExtra="2sp"
         android:text="$6.000"
-        android:textAppearance="@style/mapa"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="10sp"
         android:translationY="-0.97sp" />
     <Button
         android:layout_width="136dp"
@@ -463,8 +475,8 @@
         android:layout_marginTop="530dp"
         android:gravity="top"
         android:text="Tiramisu"
-        android:textAppearance="@style/cafe_teria"
-        android:textSize="20sp"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="15sp"
         android:translationY="-0.97sp" />
     <Button
         android:layout_width="74dp"
@@ -484,7 +496,8 @@
         android:gravity="top"
         android:lineSpacingExtra="2sp"
         android:text="$6.000"
-        android:textAppearance="@style/mapa"
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="10sp"
         android:translationY="-0.97sp" />
 
 

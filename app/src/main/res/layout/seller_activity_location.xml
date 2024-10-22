@@ -28,6 +28,7 @@
         android:layout_marginTop="10dp"
         android:layout_toEndOf="@id/btn_back"
         android:text="Ubicación"
+        android:textAppearance="@style/SubtitleStyleBlack"
         android:textColor="@color/black"
         android:textSize="27sp"
         android:textStyle="bold" />

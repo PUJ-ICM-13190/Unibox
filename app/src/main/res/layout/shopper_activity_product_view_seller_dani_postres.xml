@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     android:clipToOutline="true"
     android:background="#FFFFFF"
-    tools:context=".Shopper_Activity_Product_View_DaniPostres">
+    tools:context=".Shopper_Activity_Product_View_DaniPostres"
+    tools:ignore="ExtraText">
 
     <View
         android:id="@+id/image_21"
         android:layout_width="500dp"
-        android:layout_height="610dp"
+        android:layout_height="450dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/postre" />
@@ -44,7 +45,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="44dp"
-        android:layout_marginTop="548dp"
+        android:layout_marginTop="430dp"
         android:background="@drawable/rectangle_6" />
 
     <View
@@ -54,7 +55,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="234dp"
-        android:layout_marginTop="547dp"
+        android:layout_marginTop="430dp"
         android:background="@drawable/rectangle_6" />
 
     <TextView
@@ -64,11 +65,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="79dp"
-        android:layout_marginTop="559dp"
+        android:layout_marginTop="440dp"
         android:gravity="center_horizontal|center_vertical"
         android:lineSpacingExtra="38sp"
         android:text="@string/disponible"
-        android:textAppearance="@style/disponible" />
+        android:textAppearance="@style/SubtitleStyleBlack" />
 
     <TextView
         android:id="@+id/und_"
@@ -77,11 +78,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="80dp"
-        android:layout_marginTop="580dp"
+        android:layout_marginTop="460dp"
         android:gravity="center_horizontal|center_vertical"
         android:lineSpacingExtra="2sp"
         android:text="@string/und_"
-        android:textAppearance="@style/und_" />
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/amount"
@@ -90,11 +92,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="284dp"
-        android:layout_marginTop="562dp"
+        android:layout_marginTop="450dp"
         android:gravity="center_horizontal|center_vertical"
         android:lineSpacingExtra="-7sp"
         android:text="@string/amount"
-        android:textAppearance="@style/amount" />
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/simbolo"
@@ -103,11 +106,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="265dp"
-        android:layout_marginTop="548dp"
+        android:layout_marginTop="440dp"
         android:gravity="center_vertical"
         android:lineSpacingExtra="-10sp"
         android:text="@string/simbolo"
-        android:textAppearance="@style/simbolo" />
+        android:textAppearance="@style/SubtitleStyleBlack" />
 
     <TextView
         android:id="@+id/simboloMas"
@@ -116,11 +119,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="324dp"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="440dp"
         android:gravity="center_vertical"
         android:lineSpacingExtra="-10sp"
         android:text="@string/simboloMas"
-        android:textAppearance="@style/simboloMas" />
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/postre"
@@ -129,11 +133,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="29dp"
-        android:layout_marginTop="626dp"
+        android:layout_marginTop="500dp"
         android:gravity="center_vertical"
         android:lineSpacingExtra="-14sp"
         android:text="@string/postre"
-        android:textAppearance="@style/postre" />
+        android:textAppearance="@style/SubtitleStyleBlack" />
 
     <TextView
         android:id="@+id/dulces2"
@@ -142,11 +146,13 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="29dp"
-        android:layout_marginTop="658dp"
+        android:layout_marginTop="540dp"
         android:gravity="top"
         android:lineSpacingExtra="-7sp"
         android:text="@string/dulces2"
-        android:textAppearance="@style/dulces2" />
+        android:textAppearance="@style/ParagraphStyleBlack"
+        android:textSize="10dp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/es_un_caram"
@@ -155,11 +161,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="696dp"
+        android:layout_marginTop="580dp"
         android:gravity="top"
         android:lineSpacingExtra="-3sp"
         android:text="@string/es_un_caram"
-        android:textAppearance="@style/es_un_caram" />
+        android:textSize="10dp"
+        android:textAppearance="@style/ParagraphStyleBlack" />
 
     <TextView
         android:id="@+id/price"
@@ -168,11 +175,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="305dp"
-        android:layout_marginTop="637dp"
+        android:layout_marginTop="540dp"
         android:gravity="right|center_vertical"
         android:lineSpacingExtra="-14sp"
         android:text="@string/price"
-        android:textAppearance="@style/price" />
+        android:textAppearance="@style/SubtitleStyleBlack" />
 
     <View
         android:id="@+id/subtract"
@@ -191,11 +198,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="56dp"
-        android:layout_marginTop="750dp"
+        android:layout_marginTop="620dp"
         android:gravity="center_vertical"
         android:lineSpacingExtra="1sp"
         android:text="@string/comentarios"
-        android:textAppearance="@style/comentarios" />
+        android:textAppearance="@style/SubtitleStyleBlack" />
 
     <View
         android:id="@+id/like"
@@ -204,30 +211,23 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="326dp"
-        android:layout_marginTop="746dp"
+        android:layout_marginTop="510dp"
         android:background="@drawable/like" />
 
-    <View
+    <Button
         android:id="@+id/rectangle_99"
         android:layout_width="343dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
+        android:background="@color/roseRed"
+        android:textStyle="bold"
+        android:text="Añadir"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="31dp"
-        android:layout_marginTop="794dp"
-        android:background="@drawable/rectangle_99" />
+        android:layout_marginTop="650dp"
+         />
 
-    <TextView
-        android:id="@+id/btnPago"
-        android:layout_width="199dp"
-        android:layout_height="25dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="109dp"
-        android:layout_marginTop="801dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/a_adir"
-        android:textAppearance="@style/a_adir" />
+
 
 
 </RelativeLayout>
