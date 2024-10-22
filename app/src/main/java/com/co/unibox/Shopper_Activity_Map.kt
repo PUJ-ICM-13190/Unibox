@@ -94,7 +94,7 @@ class Shopper_Activity_Map : AppCompatActivity(), OnMapReadyCallback, GoogleMap.
         // Obtener la ubicación actual del cliente
         map.setOnMyLocationChangeListener { location ->
             currentLocation = LatLng(location.latitude, location.longitude)
-            map.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 16.0f))
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 18.0f))
 
             updateMarkers(currentLocation)
         }
