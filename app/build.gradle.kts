@@ -50,6 +50,7 @@ dependencies {
     implementation("androidx.biometric:biometric:1.2.0-alpha04")
     implementation ("androidx.drawerlayout:drawerlayout:1.1.1")
     implementation ("com.google.android.material:material:1.6.1")
+    implementation("com.google.maps.android:android-maps-utils:2.2.5")
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)

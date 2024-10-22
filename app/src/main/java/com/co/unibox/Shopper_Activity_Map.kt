@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.location.Location
+import android.os.AsyncTask
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -16,27 +17,29 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
-import com.google.android.gms.maps.model.MapStyleOptions
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.Marker
-import com.google.android.gms.maps.model.MarkerOptions
+import com.google.maps.android.PolyUtil
 import org.json.JSONObject
-import java.io.IOException
 import java.io.InputStream
+import java.net.HttpURLConnection
+import java.net.URL
 
 class Shopper_Activity_Map : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private lateinit var binding: ShopperActivityMapBinding
-
     private lateinit var map: GoogleMap
     private lateinit var sellerData: JSONObject
     private lateinit var currentLocation: LatLng // Variable para almacenar la ubicación actual del cliente
 
     // Lista para mantener referencias de los marcadores
     private val markerList = mutableListOf<Marker>()
+    private var selectedMarker: Marker? = null
+    private var polyline: Polyline? = null
+    private var apiKey = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val applicationInfo = packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA)
+        val metaData = applicationInfo.metaData
+        apiKey = metaData?.getString("com.google.android.geo.API_KEY") ?: ""
         super.onCreate(savedInstanceState)
         binding = ShopperActivityMapBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -53,20 +56,21 @@ class Shopper_Activity_Map : AppCompatActivity(), OnMapReadyCallback, GoogleMap.
 
         // Configurar el RecyclerView
         binding.recyclerViewProducts.layoutManager = LinearLayoutManager(this)
+
+        // Listener para el botón de mostrar la ruta
+        binding.btnShowRoute.setOnClickListener {
+            selectedMarker?.let { marker ->
+                drawRouteToMarker(marker)
+            }
+        }
+
+        binding.btnCloseCard.setOnClickListener {
+            binding.cardViewEmprendimientos.visibility = View.GONE
+        }
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
-
-        val success = map.setMapStyle(
-            MapStyleOptions.loadRawResourceStyle(
-                this, R.raw.style // Archivo style.json en la carpeta raw
-            )
-        )
-        if (!success) {
-            println("Error al aplicar el estilo del mapa.")
-        }
-
 
         // Pedir permisos de localización
         if (ActivityCompat.checkSelfPermission(
@@ -99,7 +103,7 @@ class Shopper_Activity_Map : AppCompatActivity(), OnMapReadyCallback, GoogleMap.
 
     private fun updateMarkers(currentLocation: LatLng) {
         // Remover los marcadores que están fuera del rango
-        val maxDistance = 120
+        val maxDistance = 150
         val iterator = markerList.iterator()
 
         while (iterator.hasNext()) {
@@ -172,6 +176,7 @@ class Shopper_Activity_Map : AppCompatActivity(), OnMapReadyCallback, GoogleMap.
     }
 
     override fun onMarkerClick(marker: Marker): Boolean {
+        selectedMarker = marker
         val cajita = marker.tag as? JSONObject
 
         if (cajita != null) {
@@ -205,19 +210,55 @@ class Shopper_Activity_Map : AppCompatActivity(), OnMapReadyCallback, GoogleMap.
         return true
     }
 
+    private fun drawRouteToMarker(marker: Marker) {
+        val origin = "${currentLocation.latitude},${currentLocation.longitude}"
+        val destination = "${marker.position.latitude},${marker.position.longitude}"
+        val url = "https://maps.googleapis.com/maps/api/directions/json?origin=$origin&destination=$destination&key=$apiKey"
+
+        RouteTask().execute(url)
+    }
+
+    inner class RouteTask : AsyncTask<String, Void, String>() {
+        override fun doInBackground(vararg params: String?): String? {
+            return getHttpResponse(params[0] ?: "")
+        }
+
+        override fun onPostExecute(result: String?) {
+            if (result != null) {
+                val polylineOptions = parseRoute(result)
+                polyline?.remove() // Remover la ruta anterior
+                polyline = map.addPolyline(polylineOptions) // Dibujar la nueva ruta
+            }
+        }
+    }
+
+    private fun parseRoute(jsonResponse: String): PolylineOptions {
+        val jsonObject = JSONObject(jsonResponse)
+        val routes = jsonObject.getJSONArray("routes")
+        val overviewPolyline = routes.getJSONObject(0)
+            .getJSONObject("overview_polyline")
+            .getString("points")
+
+        val decodedPath = PolyUtil.decode(overviewPolyline)
+        // Color rojo y grosor de la línea
+        return PolylineOptions().addAll(decodedPath).color(resources.getColor(R.color.red)).width(8f)
+    }
+
+    private fun getHttpResponse(urlString: String): String? {
+        val url = URL(urlString)
+        val connection = url.openConnection() as HttpURLConnection
+        connection.connect()
+        val inputStream = connection.inputStream
+        return inputStream.bufferedReader().use { it.readText() }
+    }
+
     // Método para cargar el JSON desde la carpeta assets
     private fun loadJSONFromAsset(fileName: String): String? {
-        var json: String? = null
-        try {
-            val inputStream: InputStream = assets.open(fileName)
-            val size = inputStream.available()
-            val buffer = ByteArray(size)
-            inputStream.read(buffer)
-            inputStream.close()
-            json = String(buffer, Charsets.UTF_8)
-        } catch (ex: IOException) {
-            ex.printStackTrace()
-        }
-        return json
+        val inputStream: InputStream = assets.open(fileName)
+        val size = inputStream.available()
+        val buffer = ByteArray(size)
+        inputStream.read(buffer)
+        inputStream.close()
+        return String(buffer, Charsets.UTF_8)
     }
 }

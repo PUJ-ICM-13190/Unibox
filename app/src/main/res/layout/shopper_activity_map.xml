@@ -12,14 +12,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <!-- Fragment del mapa -->
         <fragment
             android:id="@+id/mapFragment"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <!-- Contenedor para el botón de regresar y el título encima del mapa -->
         <LinearLayout
             android:id="@+id/header"
             android:layout_width="match_parent"
@@ -28,7 +26,8 @@
             android:orientation="horizontal"
             android:background="@android:color/transparent"
             android:layout_gravity="top"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:layout_marginStart="8dp">
 
             <ImageView
                 android:id="@+id/btnRegresar"
@@ -45,12 +44,12 @@
             android:layout_margin="16dp"
             app:cardCornerRadius="16dp"
             app:cardElevation="8dp"
-            android:visibility="gone"> <!-- Oculto inicialmente -->
+            app:cardBackgroundColor="@color/magnolia"
+            android:visibility="gone">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:orientation="vertical"
+                android:layout_height="260dp"
                 android:padding="16dp">
 
                 <TextView
@@ -59,23 +58,44 @@
                     android:layout_height="wrap_content"
                     android:text="Productos"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
-                <!-- Aquí irá la lista de productos -->
+                <ImageView
+                    android:id="@+id/btn_close_card"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/ic_close"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_view_products"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone" />
+                    android:layout_height="130dp"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/title_productos"/>
 
-                <Button
+                <!-- Botón de Material Design para ver la ruta -->
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_show_route"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mostrar Ruta" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+                    android:text="@string/mostrar_ruta"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="8dp"
+                    app:backgroundTint="@color/roseRed"
+                    app:icon="@drawable/ic_route"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"/>
 
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
 
     </FrameLayout>
 
