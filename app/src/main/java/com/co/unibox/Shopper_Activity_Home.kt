@@ -27,11 +27,6 @@ class Shopper_Activity_Home : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.btnDaniPostres.setOnClickListener {
-            val intent = Intent(this, Shopper_Activity_ListDaniPostres::class.java)
-            startActivity(intent)
-        }
-
         binding.btnLupa.setOnClickListener {
             val intent = Intent(this, Shopper_Activity_Search_All::class.java)
             startActivity(intent)
