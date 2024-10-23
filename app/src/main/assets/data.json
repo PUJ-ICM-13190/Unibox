@@ -2,15 +2,15 @@
   "sellers": [
     {
       "id": 1,
-      "name": "Juan's Empanadas",
-      "email": "juan@empanadas.com",
+      "name": "Empanaditas",
+      "email": "empanaditas@empanadas.com",
       "password": "123456",
       "role": "Seller",
       "cajitas": [
         {
           "id": 1,
-          "name": "Empanada Box",
-          "description": "A box with different types of empanadas",
+          "name": "Empanadas de la Casa",
+          "description": "Caja con variedad de empanadas clásicas",
           "ubication": {
             "latitude": 4.6285,
             "longitude": -74.0647
@@ -18,41 +18,48 @@
           "products": [
             {
               "id": 1,
-              "name": "Beef Empanada",
+              "name": "Empanada de Carne",
               "description": "Crispy empanada filled with seasoned beef",
               "category": "Empanadas",
-              "price": 3.99,
+              "price": 3000,
               "stock": 50,
-              "image": "beef_empanada.jpg"
+              "image": "empanada_carne.jpg"
             },
             {
               "id": 2,
-              "name": "Chicken Empanada",
+              "name": "Empanada de Pollo",
               "description": "Crispy empanada filled with seasoned chicken",
               "category": "Empanadas",
-              "price": 3.49,
+              "price": 3000,
               "stock": 40,
-              "image": "chicken_empanada.jpg"
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "name": "Engineering Box",
-          "description": "Snacks for engineering students",
-          "ubication": {
-            "latitude": 4.6268,
-            "longitude": -74.0626
-          },
-          "products": [
+              "image": "empanada_pollo.jpg"
+            },
             {
               "id": 3,
-              "name": "Energy Bar",
-              "description": "Perfect for a quick boost",
-              "category": "Snacks",
-              "price": 2.50,
+              "name": "Empanada de Carne y Arroz",
+              "description": "Empanada filled with beef and rice",
+              "category": "Empanadas",
+              "price": 3000,
               "stock": 30,
-              "image": "energy_bar.jpg"
+              "image": "empanada_carne_arroz.jpg"
+            },
+            {
+              "id": 4,
+              "name": "Empanada de Pollo y Arroz",
+              "description": "Empanada filled with chicken and rice",
+              "category": "Empanadas",
+              "price": 3000,
+              "stock": 30,
+              "image": "empanada_pollo_arroz.jpg"
+            },
+            {
+              "id": 5,
+              "name": "Empanada de Pollo y Papa",
+              "description": "Empanada filled with chicken and potato",
+              "category": "Empanadas",
+              "price": 3000,
+              "stock": 25,
+              "image": "empanada_pollo_papa.jpg"
             }
           ]
         }
@@ -60,57 +67,84 @@
     },
     {
       "id": 2,
-      "name": "Maria's Sweets",
-      "email": "maria@sweets.com",
+      "name": "DaniPostres",
+      "email": "dani@postres.com",
       "password": "654321",
       "role": "Seller",
       "cajitas": [
         {
           "id": 3,
-          "name": "Dessert Box",
-          "description": "A box filled with delicious sweets",
+          "name": "Caja de Postres Especiales",
+          "description": "Caja con una variedad de postres deliciosos",
           "ubication": {
             "latitude": 4.6345,
             "longitude": -74.0678
           },
           "products": [
             {
-              "id": 4,
-              "name": "Chocolate Cake",
-              "description": "Rich and moist chocolate cake",
-              "category": "Desserts",
-              "price": 5.00,
-              "stock": 25,
-              "image": "chocolate_cake.jpg"
+              "id": 6,
+              "name": "Pie de Limón",
+              "description": "Delicious lemon pie",
+              "category": "Postres",
+              "price": 6000,
+              "stock": 30,
+              "image": "pie_limon.jpg"
             },
             {
-              "id": 5,
-              "name": "Lemon Pie",
-              "description": "Tangy lemon pie with a crispy crust",
-              "category": "Desserts",
-              "price": 4.50,
+              "id": 7,
+              "name": "Postre de Oreo",
+              "description": "Delicious Oreo dessert",
+              "category": "Postres",
+              "price": 6000,
               "stock": 30,
-              "image": "lemon_pie.jpg"
+              "image": "postre_oreo.jpg"
+            },
+            {
+              "id": 8,
+              "name": "Postre de Frutos Rojos",
+              "description": "Delicious red fruits dessert",
+              "category": "Postres",
+              "price": 6000,
+              "stock": 25,
+              "image": "postre_frutos_rojos.jpg"
+            },
+            {
+              "id": 9,
+              "name": "Postre Maravilla",
+              "description": "Delicious dessert full of flavors",
+              "category": "Postres",
+              "price": 6000,
+              "stock": 20,
+              "image": "postre_maravilla.jpg"
+            },
+            {
+              "id": 10,
+              "name": "Tiramisú",
+              "description": "Classic Italian dessert",
+              "category": "Postres",
+              "price": 6000,
+              "stock": 15,
+              "image": "tiramisu.jpg"
             }
           ]
         },
         {
           "id": 4,
-          "name": "Felix Restrepo Box",
-          "description": "A variety of sweets near Felix Restrepo",
+          "name": "Caja Bebidas Dulces",
+          "description": "Bebidas refrescantes y dulces",
           "ubication": {
             "latitude": 4.6288,
             "longitude": -74.0641
           },
           "products": [
             {
-              "id": 6,
-              "name": "Brownie",
-              "description": "Delicious chocolate brownie",
-              "category": "Desserts",
-              "price": 3.00,
-              "stock": 40,
-              "image": "brownie.jpg"
+              "id": 11,
+              "name": "Limonada de Coco",
+              "description": "Refreshing coconut lemonade",
+              "category": "Bebidas",
+              "price": 6000,
+              "stock": 50,
+              "image": "limonada_coco.jpg"
             }
           ]
         }
@@ -118,48 +152,55 @@
     },
     {
       "id": 3,
-      "name": "Carlos' Snacks",
-      "email": "carlos@snacks.com",
+      "name": "Carpinchos",
+      "email": "carpinchos@snacks.com",
       "password": "password123",
       "role": "Seller",
       "cajitas": [
         {
           "id": 5,
-          "name": "Baron Box",
-          "description": "Snacks for a quick energy boost",
+          "name": "Caja de Ensaladas Saludables",
+          "description": "Caja con variedad de ensaladas frescas",
           "ubication": {
             "latitude": 4.6267,
             "longitude": -74.0648
           },
           "products": [
             {
-              "id": 7,
-              "name": "Protein Bar",
-              "description": "Healthy protein bar",
-              "category": "Snacks",
-              "price": 2.00,
-              "stock": 50,
-              "image": "protein_bar.jpg"
-            }
-          ]
-        },
-        {
-          "id": 6,
-          "name": "Centro Deportivo Box",
-          "description": "Snacks near the sports center",
-          "ubication": {
-            "latitude": 4.6263,
-            "longitude": -74.0626
-          },
-          "products": [
+              "id": 12,
+              "name": "Ensalada César",
+              "description": "Classic Caesar salad",
+              "category": "Ensaladas",
+              "price": 8000,
+              "stock": 30,
+              "image": "ensalada_cesar.jpg"
+            },
             {
-              "id": 8,
-              "name": "Granola Bar",
-              "description": "Healthy granola bar",
-              "category": "Snacks",
-              "price": 1.80,
-              "stock": 60,
-              "image": "granola_bar.jpg"
+              "id": 13,
+              "name": "Ensalada con Pollo",
+              "description": "Fresh salad with chicken",
+              "category": "Ensaladas",
+              "price": 12000,
+              "stock": 20,
+              "image": "ensalada_pollo.jpg"
+            },
+            {
+              "id": 14,
+              "name": "Ensalada con Huevo",
+              "description": "Fresh salad with boiled egg",
+              "category": "Ensaladas",
+              "price": 12000,
+              "stock": 20,
+              "image": "ensalada_huevo.jpg"
+            },
+            {
+              "id": 15,
+              "name": "Ensalada con Atún",
+              "description": "Fresh salad with tuna",
+              "category": "Ensaladas",
+              "price": 12000,
+              "stock": 20,
+              "image": "ensalada_atun.jpg"
             }
           ]
         }
@@ -167,106 +208,67 @@
     },
     {
       "id": 4,
-      "name": "Luis' Drinks",
-      "email": "luis@drinks.com",
-      "password": "luisdrinks321",
+      "name": "Pontigomitas",
+      "email": "pontigomitas@drinks.com",
+      "password": "pontigomitas321",
       "role": "Seller",
       "cajitas": [
         {
           "id": 7,
-          "name": "Jorge Hoyos Box",
-          "description": "Refreshing drinks near Jorge Hoyos",
+          "name": "Caja de Gomas y Dulces",
+          "description": "Caja con gomas y dulces deliciosos",
           "ubication": {
             "latitude": 4.6269,
             "longitude": -74.0639
           },
           "products": [
             {
-              "id": 9,
-              "name": "Iced Tea",
-              "description": "Cool and refreshing iced tea",
-              "category": "Drinks",
-              "price": 1.50,
+              "id": 16,
+              "name": "Gomas",
+              "description": "Delicious gummies",
+              "category": "Dulces",
+              "price": 2000,
               "stock": 100,
-              "image": "iced_tea.jpg"
+              "image": "gomas.jpg"
+            },
+            {
+              "id": 17,
+              "name": "Nucitas",
+              "description": "Chocolate and hazelnut treat",
+              "category": "Dulces",
+              "price": 500,
+              "stock": 150,
+              "image": "nucitas.jpg"
             }
           ]
         },
         {
           "id": 8,
-          "name": "Hospital San Ignacio Box",
-          "description": "Drinks for those visiting the hospital",
+          "name": "Caja Revolconera",
+          "description": "Snacks dulces perfectos para disfrutar",
           "ubication": {
             "latitude": 4.6279,
             "longitude": -74.0651
           },
           "products": [
             {
-              "id": 10,
-              "name": "Bottled Water",
-              "description": "Fresh bottled water",
-              "category": "Drinks",
-              "price": 1.00,
+              "id": 18,
+              "name": "Revolcones",
+              "description": "Crispy and tangy snack",
+              "category": "Dulces",
+              "price": 500,
               "stock": 150,
-              "image": "bottled_water.jpg"
+              "image": "revolcones.jpg"
+            },
+            {
+              "id": 19,
+              "name": "Galletas",
+              "description": "Delicious cookies",
+              "category": "Dulces",
+              "price": 1000,
+              "stock": 100,
+              "image": "galletas.jpg"
             }
-          ]
-        },
-        {
-          "id": 9,
-          "name": "Box 67",
-          "description": "Drinks and snacks near building 67",
-          "ubication": {
-            "latitude": 4.6305,
-            "longitude": -74.0641
-          },
-          "products": [
-            {
-              "id": 11,
-              "name": "Energy Drink",
-              "description": "Boost your energy with this drink",
-              "category": "Drinks",
-              "price": 2.50,
-              "stock": 80,
-              "image": "energy_drink.jpg"
-            },
-            {
-              "id": 12,
-              "name": "Gaseosa",
-              "description": "Boost your energy with this drink",
-              "category": "Drinks",
-              "price": 2.50,
-              "stock": 80,
-              "image": "energy_drink.jpg"
-            },
-            {
-              "id": 13,
-              "name": "Gaseosa",
-              "description": "Boost your energy with this drink",
-              "category": "Drinks",
-              "price": 2.50,
-              "stock": 80,
-              "image": "energy_drink.jpg"
-            },
-            {
-              "id": 14,
-              "name": "Gaseosa",
-              "description": "Boost your energy with this drink",
-              "category": "Drinks",
-              "price": 2.50,
-              "stock": 80,
-              "image": "energy_drink.jpg"
-            },
-            {
-              "id": 16,
-              "name": "Gaseosa",
-              "description": "Boost your energy with this drink",
-              "category": "Drinks",
-              "price": 2.50,
-              "stock": 80,
-              "image": "energy_drink.jpg"
-            }
-
           ]
         }
       ]
@@ -276,22 +278,27 @@
     {
       "id": 1,
       "name": "Empanadas",
-      "products": [1, 2]
+      "products": [1, 2, 3, 4, 5]
     },
     {
       "id": 2,
-      "name": "Desserts",
-      "products": [3, 4, 5, 6]
+      "name": "Postres",
+      "products": [6, 7, 8, 9, 10]
     },
     {
       "id": 3,
-      "name": "Snacks",
-      "products": [7, 8]
+      "name": "Bebidas",
+      "products": [11]
     },
     {
       "id": 4,
-      "name": "Drinks",
-      "products": [9, 10, 11]
+      "name": "Ensaladas",
+      "products": [12, 13, 14, 15]
+    },
+    {
+      "id": 5,
+      "name": "Dulces",
+      "products": [16, 17, 18, 19]
     }
   ]
 }
