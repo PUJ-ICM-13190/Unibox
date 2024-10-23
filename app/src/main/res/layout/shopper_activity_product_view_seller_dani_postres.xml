@@ -215,13 +215,13 @@
         android:background="@drawable/like" />
 
     <Button
-        android:id="@+id/rectangle_99"
+        android:id="@+id/btnPago"
         android:layout_width="343dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:background="@color/roseRed"
         android:textStyle="bold"
-        android:text="Añadir"
+        android:text="Pagar"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="31dp"
         android:layout_marginTop="650dp"

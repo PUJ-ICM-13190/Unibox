@@ -80,7 +80,7 @@
         android:textAppearance="@style/ParagraphStyleBlack" />
 
     <Button
-        android:id="@+id/rectangle10"
+        android:id="@+id/btnChat"
         android:layout_width="296dp"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"

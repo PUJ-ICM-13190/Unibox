@@ -13,9 +13,10 @@
         android:layout_width="0dp"
         android:layout_height="248dp"
         android:background="#C9284F"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/rectangle_9"
@@ -54,6 +55,7 @@
         android:gravity="center_vertical"
         android:lineSpacingExtra="-7sp"
         android:text="Tu perfil "
+        android:textSize="20dp"
         android:textAppearance="@style/SubtitleStyleBlack"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
@@ -79,7 +81,6 @@
         android:backgroundTint="#E9E9E9"
         android:text="Mi Cuenta"
         android:textColor="@color/black"
-        android:textAppereance="@style/ParagraphStyleBlack"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -144,6 +145,7 @@
         android:gravity="top"
         android:lineSpacingExtra="0sp"
         android:text="@string/user"
+        android:textSize="15dp"
         android:textAppearance="@style/TitleStyleBlack"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
@@ -208,7 +210,6 @@
         android:layout_marginTop="590dp"
         android:text="Terminos y Condiciones"
         android:textSize="20sp"
-        android:textAppereance="@style/ParagraphStyleBlack"
         android:textColor="@color/black"
         android:backgroundTint="#E9E9E9"
         app:layout_constraintTop_toTopOf="parent"
@@ -231,7 +232,6 @@
         android:layout_marginTop="655dp"
         android:gravity="center_vertical"
         android:text="Cerrar sesión"
-        android:textAppereance="@style/ParagraphStyleBlack"
         android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"

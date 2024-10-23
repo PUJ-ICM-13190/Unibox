@@ -45,7 +45,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="417dp"
         android:text="@string/bombon"
-        android:textAppearance="@style/bombon"
+        android:textAppearance="@style/TitleStyleBlack"
         android:lineSpacingExtra="-14sp"
         android:gravity="center_vertical"
         />
@@ -61,7 +61,8 @@
         android:gravity="top"
         android:lineSpacingExtra="-7sp"
         android:text="@string/dulceComment"
-        android:textAppearance="@style/dulceComment" />
+        android:textAppearance="@style/SubtitleStyleBlack"
+        android:textSize="15dp"/>
 
     <View
         android:id="@+id/group_8715"
@@ -84,7 +85,8 @@
         android:gravity="center_vertical"
         android:lineSpacingExtra="0sp"
         android:text="@string/describe_tu"
-        android:textAppearance="@style/describe_tu" />
+        android:textAppearance="@style/SubtitleStyleBlack"
+        android:textSize="15dp" />
 
     <View
         android:id="@+id/rectangle_1"
@@ -117,7 +119,8 @@
         android:gravity="top"
         android:lineSpacingExtra="2sp"
         android:text="@string/tu_feedback"
-        android:textAppearance="@style/tu_feedback"
+        android:textAppearance="@style/SubtitleStyleBlack"
+        android:textSize="12dp"
         android:translationY="-0.8sp" />
 
     <TextView
@@ -130,6 +133,6 @@
         android:layout_marginTop="810dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/publicar_co"
-        android:textAppearance="@style/publicar_co" />
+        android:textAppearance="@style/ParagraphStyleBlack" />
 
 </RelativeLayout>
