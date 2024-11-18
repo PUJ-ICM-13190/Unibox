@@ -8,6 +8,7 @@ import android.provider.MediaStore
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -28,10 +29,11 @@ class Shopper_Activity_Pay : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Botón de WhatsApp
-        val btnwhat = findViewById<ImageView>(R.id.btnwhat)
-        btnwhat.setOnClickListener {
-            val intent = Intent(this, Shopper_Activity_WhatsApp::class.java)
+        val chat = findViewById<TextView>(R.id.chat)
+        chat.setOnClickListener {
+            val intent = Intent(this, Shopper_Activity_Chat::class.java).apply {
+                putExtra("RECEIVER_ID", "VE1R5leJjDdtqALlhsAlN2x4mfg2") //Usuario movil@gmail.com
+            }
             startActivity(intent)
         }
 

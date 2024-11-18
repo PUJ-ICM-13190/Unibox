@@ -39,6 +39,7 @@
                     android:layout_marginStart="8dp"
                     android:gravity="center"
                     android:text="Realiza tu pago"
+                    android:textStyle="bold"
                     android:textAppearance="@style/SubtitleStyleBlack"
                     android:textColor="#FFFFFF"
                     android:textSize="25sp"
@@ -86,6 +87,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="3213734809"
+                        android:textStyle="bold"
                         android:textColor="#000000"
                         android:textSize="23sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -102,6 +104,7 @@
                     android:backgroundTint="#C9284F"
                     android:text="PAGAR"
                     android:textColor="#FFFFFF"
+                    android:textStyle="bold"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.496"
@@ -120,25 +123,19 @@
                     app:layout_constraintTop_toBottomOf="@id/btnPagar">
 
                     <TextView
+                        android:id="@+id/chat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="44dp"
                         android:text="Comunicate con el vendedor"
-                        android:textColor="#000000"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
+                        android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/btnwhat"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:id="@+id/btnwhat"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginStart="8dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/whatsapp" />
+                        app:layout_constraintVertical_bias="0.0" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <ImageView
