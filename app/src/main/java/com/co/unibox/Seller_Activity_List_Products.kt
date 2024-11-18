@@ -4,25 +4,42 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.helper.widget.MotionEffect.TAG
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.co.unibox.adaptador.ProductAdapter
+import com.co.unibox.data.Product
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class Seller_Activity_List_Products : AppCompatActivity() {
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: ProductAdapter
+    private val productList = mutableListOf<Product>()
+    private val database = FirebaseDatabase.getInstance().reference
+    private val auth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.seller_activity_list_products)
 
-        configureBackButton()
-        configureAddButton()
-        configureEditButton()
-    }
+        recyclerView = findViewById(R.id.recyclerView_products)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-    private fun configureBackButton() {
-        val btnVolver = findViewById<ImageButton>(R.id.btn_back)
-        btnVolver.setOnClickListener {
-            finish()
+        adapter = ProductAdapter(productList) { product ->
+            val intent = Intent(this, Seller_Activity_Edit_Product::class.java)
+            intent.putExtra("productId", product.id)
+            startActivity(intent)
         }
+        recyclerView.adapter = adapter
+
+        loadProducts()
+        configureAddButton()
     }
 
     private fun configureAddButton() {
@@ -39,37 +56,24 @@ class Seller_Activity_List_Products : AppCompatActivity() {
         }
     }
 
-    private fun configureEditButton() {
-        val btnEditarMaracuya = findViewById<ImageButton>(R.id.btn_edit_image)
-        val btnEditarLimon = findViewById<ImageButton>(R.id.btn_edit_image_limon)
-        val btnEditarLulo = findViewById<ImageButton>(R.id.btn_edit_image_lulo)
-        val btnEditarOreo = findViewById<ImageButton>(R.id.btn_edit_image_oreo)
-        val btnEditarMango = findViewById<ImageButton>(R.id.btn_edit_image_mango)
-        val btnEditarTira = findViewById<ImageButton>(R.id.btn_edit_image_tiramisu)
 
-        btnEditarMaracuya.setOnClickListener {
-            val intent = Intent(this, Seller_Activity_Edit_Product::class.java)
-            startActivity(intent)
-        }
-        btnEditarLimon.setOnClickListener {
-            val intent = Intent(this, Seller_Activity_Edit_Product::class.java)
-            startActivity(intent)
-        }
-        btnEditarLulo.setOnClickListener {
-            val intent = Intent(this, Seller_Activity_Edit_Product::class.java)
-            startActivity(intent)
-        }
-        btnEditarOreo.setOnClickListener {
-            val intent = Intent(this, Seller_Activity_Edit_Product::class.java)
-            startActivity(intent)
-        }
-        btnEditarMango.setOnClickListener {
-            val intent = Intent(this, Seller_Activity_Edit_Product::class.java)
-            startActivity(intent)
-        }
-        btnEditarTira.setOnClickListener {
-            val intent = Intent(this, Seller_Activity_Edit_Product::class.java)
-            startActivity(intent)
-        }
+
+    private fun loadProducts() {
+        val userId = auth.currentUser?.uid ?: return
+        database.child("products").child(userId)
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    productList.clear()
+                    for (productSnapshot in snapshot.children) {
+                        val product = productSnapshot.getValue(Product::class.java)
+                        if (product != null) productList.add(product)
+                    }
+                    adapter.notifyDataSetChanged()
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(this@Seller_Activity_List_Products, "Error: ${error.message}", Toast.LENGTH_SHORT).show()
+                }
+            })
     }
 }

@@ -1,4 +1,4 @@
-package com.co.unibox
+package com.co.unibox.data
 
 data class User(
     val username: String = "",
@@ -6,4 +6,3 @@ data class User(
     val email: String = "",
     val type: String = ""
 )
-
