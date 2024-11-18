@@ -32,7 +32,7 @@ class Shopper_Activity_Pay : AppCompatActivity() {
         val chat = findViewById<TextView>(R.id.chat)
         chat.setOnClickListener {
             val intent = Intent(this, Shopper_Activity_Chat::class.java).apply {
-                putExtra("RECEIVER_ID", "VE1R5leJjDdtqALlhsAlN2x4mfg2") //Usuario movil@gmail.com
+                putExtra("RECEIVER_ID", "QBYyYXrCNtQ2s0PnAOF9dwntlyw2")
             }
             startActivity(intent)
         }
