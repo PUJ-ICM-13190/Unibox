@@ -79,6 +79,27 @@
             android:textColor="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/spineTipo"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="@string/telefono"
+        style="@style/TextInputStyle"
+        app:layout_constraintTop_toBottomOf="@id/phoneInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <Spinner
+            android:id="@+id/spine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:entries="@array/tipo"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <!-- Email -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailInputLayout"
@@ -86,7 +107,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/email"
         style="@style/TextInputStyle"
-        app:layout_constraintTop_toBottomOf="@id/phoneInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/spineTipo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp">
