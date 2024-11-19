@@ -1,11 +1,14 @@
 package com.co.unibox.data
 
 data class Product(
-    val id: String,
-    val name: String = "",
-    val category: String = "",
-    val quantity: Int? = 0,
-    val price: Double = 0.0,
-    val description: String = "",
-    val imageUrl: String = ""
+    val id: String? = null,
+    val name: String? = null,
+    val category: String? = null,
+    val quantity: Int? = null,
+    val price: Double? = null,
+    val description: String? = null,
+    val imageUrl: String? = null
 )
+{
+
+}
