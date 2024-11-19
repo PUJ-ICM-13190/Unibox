@@ -1,6 +1,9 @@
 package com.co.unibox
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -9,7 +12,6 @@ import com.co.unibox.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-
 
 class Activity_Main : AppCompatActivity() {
 
@@ -20,6 +22,13 @@ class Activity_Main : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Solicitar permisos para notificaciones en Android 13+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 1)
+            }
+        }
 
         // Inicializar Firebase Auth
         auth = Firebase.auth
@@ -39,6 +48,16 @@ class Activity_Main : AppCompatActivity() {
                 signIn(email, password)
             } else {
                 Toast.makeText(this, "Por favor, ingrese email y contraseña", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        // Lógica del botón para probar notificaciones
+        binding.btnSellerHome.setOnClickListener {
+            try {
+                NotificationService.scheduleNotificationService(this)
+                Toast.makeText(this, "Prueba de notificación iniciada", Toast.LENGTH_SHORT).show()
+            } catch (e: Exception) {
+                Toast.makeText(this, "Error al programar notificación: ${e.message}", Toast.LENGTH_LONG).show()
             }
         }
     }
@@ -70,4 +89,20 @@ class Activity_Main : AppCompatActivity() {
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == 1) {
+            if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                Toast.makeText(this, "Permiso concedido para notificaciones", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Permiso denegado para notificaciones", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
 }
+

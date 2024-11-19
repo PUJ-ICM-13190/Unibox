@@ -51,6 +51,8 @@ dependencies {
     implementation ("androidx.drawerlayout:drawerlayout:1.1.1")
     implementation ("com.google.android.material:material:1.6.1")
     implementation("com.google.maps.android:android-maps-utils:2.2.5")
+    implementation("androidx.work:work-runtime-ktx:2.8.1") // Para WorkManager
+    implementation("androidx.core:core-splashscreen:1.0.1") // Opcional
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
