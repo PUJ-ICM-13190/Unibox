@@ -98,48 +98,42 @@
         android:background="@drawable/rectanglegris"
         android:padding="10dp" />
 
-    <!-- Botones: Ubicación, Productos, Transacciones -->
-    <LinearLayout
+    <Spinner
+        android:id="@+id/spinner_productos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="546dp"
-        android:padding="20dp">
+        android:layout_margin="16dp"
+        android:layout_below="@id/txt_ventas_del_dia"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!-- Botones: Ubicación, Productos, Transacciones -->
+
 
         <!-- Botones Ubicación y Productos en la misma fila -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_ubicacion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ubicación"
-                android:backgroundTint="@color/salmon"
-                android:textColor="@color/white"
-                android:layout_marginEnd="16dp" />
-
-            <Button
-                android:id="@+id/btn_productos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Productos"
-                android:backgroundTint="@color/salmon"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        <!-- Botón Transacciones debajo -->
         <Button
-            android:id="@+id/btn_transacciones"
+            android:id="@+id/btn_ubicacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Transacciones"
+            android:text="Ubicación"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/spinner_productos"
             android:backgroundTint="@color/salmon"
             android:textColor="@color/white"
-            android:layout_marginTop="16dp" />
-    </LinearLayout>
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/btn_guardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/btn_ubicacion"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/salmon"
+            android:textColor="@color/white" />
+
+
 </RelativeLayout>
 

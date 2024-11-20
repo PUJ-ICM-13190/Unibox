@@ -84,4 +84,16 @@
         <item>Comprador</item>
         <item>Vendedor</item>
     </string-array>
+    <string-array name="cajitas">
+        <item>Caja 1</item>
+        <item>Caja 2</item>
+        <item>Caja 3</item>
+        <item>Caja 4</item>
+        <item>Caja 5</item>
+        <item>Caja 6</item>
+        <item>Caja 7</item>
+        <item>Caja 8</item>
+        <item>Caja 9</item>
+        <item>Caja 10</item>
+    </string-array>
 </resources>

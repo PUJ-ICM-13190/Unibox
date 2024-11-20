@@ -3,7 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
@@ -22,8 +26,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unibox"
         tools:targetApi="31">
-
-        <!-- Meta-data for Google Maps API Key -->
+        <activity
+            android:name=".MapaCajitaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Add_Cajita"
+            android:exported="false" /> <!-- Meta-data for Google Maps API Key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD7P0JGn3HQtwoVhqwUtu8lytE3gKssBvw" />
@@ -31,21 +39,18 @@
         <activity
             android:name=".Seller_Activity_List_Products"
             android:exported="false" />
-
         <activity
             android:name=".Activity_Main"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Activity_Register" />
-        <activity
-            android:name=".Seller_Activity_Edit_Product"/>
-        <activity
-            android:name=".Seller_Activity_Add_Product"/>
+        <activity android:name=".Seller_Activity_Edit_Product" />
+        <activity android:name=".Seller_Activity_Add_Product" />
         <activity android:name=".Seller_Activity_Home" />
         <activity android:name=".Seller_Activity_My_Cajitas" />
         <activity android:name=".Shopper_Activity_Home" />
@@ -68,12 +73,10 @@
         <activity android:name=".Seller_Activity_Chat_List" />
         <activity android:name=".Seller_Activity_Schedule_Location" />
 
-
         <service
             android:name=".NotificationService"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            android:exported="true" />
-
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
 
 </manifest>
