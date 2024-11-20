@@ -3,12 +3,12 @@ package com.co.unibox
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.co.unibox.data.Cajita
 
 class Seller_Activity_Cajita_Adapter(
-    private val cajitas: List<Pair<String, String>>,
+    private val cajitas: MutableList<Cajita>,
     private val onItemClick: (Int) -> Unit
 ) : RecyclerView.Adapter<Seller_Activity_Cajita_Adapter.CajitaViewHolder>() {
 
@@ -29,9 +29,9 @@ class Seller_Activity_Cajita_Adapter(
         private val nombreTextView: TextView = itemView.findViewById(R.id.nombreCajita)
         private val descripcionTextView: TextView = itemView.findViewById(R.id.descripcionCajita)
 
-        fun bind(cajita: Pair<String, String>) {
-            nombreTextView.text = cajita.first
-            descripcionTextView.text = cajita.second
+        fun bind(cajita: Cajita) {
+            nombreTextView.text = cajita.nombre
+            descripcionTextView.text = cajita.descripcion
         }
     }
 }

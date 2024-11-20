@@ -16,7 +16,6 @@ class Seller_Activity_Details_Cajita : AppCompatActivity(), SensorEventListener 
 
     private lateinit var sensorManager: SensorManager
     private var accelerometer: Sensor? = null
-    private var lastX: Float = 0.0f
     private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
 
@@ -24,7 +23,7 @@ class Seller_Activity_Details_Cajita : AppCompatActivity(), SensorEventListener 
     private lateinit var btnUbicacion: Button
     private lateinit var btnGuardar: Button
 
-    private var cajaId: String? = null // ID de la cajita
+    private var cajaNombre: String? = null // Nombre único de la cajita
     private var userLat: Double = 0.0
     private var userLon: Double = 0.0
 
@@ -36,120 +35,111 @@ class Seller_Activity_Details_Cajita : AppCompatActivity(), SensorEventListener 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference
 
-        // Recibir el ID de la caja desde la actividad anterior
-        val cajaNombre = intent.getStringExtra("cajaNombre")
+        // Recibir datos de la actividad anterior
+        cajaNombre = intent.getStringExtra("nombre")
+        val descripcion = intent.getStringExtra("descripcion") ?: "Sin descripción"
+        val latitud = intent.getDoubleExtra("latitud", 0.0)
+        val longitud = intent.getDoubleExtra("longitud", 0.0)
 
         if (cajaNombre == null) {
-            Toast.makeText(this, "No se pudo cargar la información de la caja", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Error: Nombre de la caja no encontrado", Toast.LENGTH_SHORT).show()
             finish()
             return
         }
+
+        // Mostrar los datos en la interfaz
+        val txtNombreCaja = findViewById<TextView>(R.id.txt_nombre_caja)
+        val edtDescripcionCaja = findViewById<EditText>(R.id.edt_descripcion_caja)
+        txtNombreCaja.text = cajaNombre
+        edtDescripcionCaja.setText(descripcion)
 
         // Inicializar elementos de la UI
         spinnerProductos = findViewById(R.id.spinner_productos)
         btnUbicacion = findViewById(R.id.btn_ubicacion)
         btnGuardar = findViewById(R.id.btn_guardar)
 
-        // Configurar sensores
-        sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
-        accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
-        accelerometer?.let {
-            sensorManager.registerListener(this, it, SensorManager.SENSOR_DELAY_NORMAL)
+        // Configurar botón de ubicación para abrir el mapa
+        btnUbicacion.setOnClickListener {
+            val intent = Intent(this, MapaCajitaActivity::class.java).apply {
+                putExtra("latitud", latitud)
+                putExtra("longitud", longitud)
+            }
+            startActivity(intent)
         }
-
-        // Mostrar detalles de la caja
-        mostrarDetallesCajita(cajaNombre)
 
         // Cargar productos del usuario en el Spinner
         cargarProductosUsuario()
-
-        // Configurar botón de ubicación
-        btnUbicacion.setOnClickListener {
-            abrirMapaConUbicacion()
-        }
 
         // Configurar botón de guardar
         btnGuardar.setOnClickListener {
             guardarDetalles()
         }
+
+        // Configurar sensores
+        configurarSensor()
     }
 
-    private fun mostrarDetallesCajita(cajaNombre: String) {
-        val txtNombreCaja = findViewById<TextView>(R.id.txt_nombre_caja)
-        val edtDescripcionCaja = findViewById<EditText>(R.id.edt_descripcion_caja)
-        val edtCantidadProductos = findViewById<EditText>(R.id.edt_cantidad_productos)
-
-        // Consultar Firebase usando el nombre de la caja
-        database.child("cajitas").child(cajaNombre).addListenerForSingleValueEvent(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()) {
-                    txtNombreCaja.text = snapshot.child("nombre").getValue(String::class.java) ?: "Sin nombre"
-                    edtDescripcionCaja.setText(snapshot.child("descripcion").getValue(String::class.java) ?: "")
-                    edtCantidadProductos.setText(snapshot.child("cantidad").getValue(Int::class.java)?.toString() ?: "0")
-                } else {
-                    Toast.makeText(this@Seller_Activity_Details_Cajita, "No se encontraron datos para esta caja", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@Seller_Activity_Details_Cajita, "Error al cargar detalles: ${error.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
+    private fun configurarSensor() {
+        sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+        accelerometer?.let {
+            sensorManager.registerListener(this, it, SensorManager.SENSOR_DELAY_NORMAL)
+        }
     }
-
 
     private fun cargarProductosUsuario() {
         val productos = mutableListOf<String>()
-        val userId = auth.currentUser?.uid
 
-        if (userId == null) {
-            Toast.makeText(this, "Usuario no autenticado", Toast.LENGTH_SHORT).show()
+        if (cajaNombre == null) {
+            Toast.makeText(this, "Error: Nombre de la cajita no encontrado", Toast.LENGTH_SHORT).show()
             return
         }
 
-        database.child("users").child(userId).child("productos").addListenerForSingleValueEvent(object : ValueEventListener {
+        // Consultar el usuario asociado a la cajita
+        database.child("cajitas").child(cajaNombre!!).child("usuario").addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                productos.clear()
-                for (productoSnapshot in snapshot.children) {
-                    productos.add(productoSnapshot.getValue(String::class.java) ?: "Producto desconocido")
+                val userId = snapshot.getValue(String::class.java)
+
+                if (userId == null) {
+                    Toast.makeText(this@Seller_Activity_Details_Cajita, "No se encontró el usuario asociado a esta cajita", Toast.LENGTH_SHORT).show()
+                    return
                 }
 
-                val adapter = ArrayAdapter(this@Seller_Activity_Details_Cajita, android.R.layout.simple_spinner_item, productos)
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-                spinnerProductos.adapter = adapter
+                // Consultar los productos del usuario en el nodo products/{userId}
+                database.child("products").child(userId).addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onDataChange(productSnapshot: DataSnapshot) {
+                        productos.clear()
+                        for (productoSnapshot in productSnapshot.children) {
+                            // Leer el atributo "name" de cada producto
+                            val nombreProducto = productoSnapshot.child("name").getValue(String::class.java)
+                            if (nombreProducto != null) {
+                                productos.add(nombreProducto)
+                            }
+                        }
+
+                        if (productos.isEmpty()) {
+                            Toast.makeText(this@Seller_Activity_Details_Cajita, "Este usuario no tiene productos asociados", Toast.LENGTH_SHORT).show()
+                        }
+
+                        // Llenar el Spinner con los productos
+                        val adapter = ArrayAdapter(this@Seller_Activity_Details_Cajita, android.R.layout.simple_spinner_item, productos)
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                        spinnerProductos.adapter = adapter
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        Toast.makeText(this@Seller_Activity_Details_Cajita, "Error al cargar productos: ${error.message}", Toast.LENGTH_SHORT).show()
+                    }
+                })
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@Seller_Activity_Details_Cajita, "Error al cargar productos: ${error.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@Seller_Activity_Details_Cajita, "Error al obtener el usuario de la cajita: ${error.message}", Toast.LENGTH_SHORT).show()
             }
         })
     }
 
-    private fun abrirMapaConUbicacion() {
-        val userId = auth.currentUser?.uid
 
-        if (userId == null) {
-            Toast.makeText(this, "Usuario no autenticado", Toast.LENGTH_SHORT).show()
-            return
-        }
-
-        database.child("users").child(userId).child("ubicacion").addListenerForSingleValueEvent(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                userLat = snapshot.child("latitud").getValue(Double::class.java) ?: 0.0
-                userLon = snapshot.child("longitud").getValue(Double::class.java) ?: 0.0
-
-                val intent = Intent(this@Seller_Activity_Details_Cajita, MapaCajitaActivity::class.java).apply {
-                    putExtra("latitud", userLat)
-                    putExtra("longitud", userLon)
-                }
-                startActivity(intent)
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@Seller_Activity_Details_Cajita, "Error al obtener ubicación: ${error.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
-    }
 
     private fun guardarDetalles() {
         val edtDescripcionCaja = findViewById<EditText>(R.id.edt_descripcion_caja)
@@ -157,14 +147,25 @@ class Seller_Activity_Details_Cajita : AppCompatActivity(), SensorEventListener 
         val descripcion = edtDescripcionCaja.text.toString()
         val cantidad = edtCantidadProductos.text.toString().toIntOrNull() ?: 0
 
-        cajaId?.let { id ->
-            database.child("cajitas").child(id).updateChildren(
+        val productoSeleccionado = spinnerProductos.selectedItem?.toString()
+        if (productoSeleccionado == null) {
+            Toast.makeText(this, "Selecciona un producto", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // Guardar los detalles en Firebase
+        cajaNombre?.let { nombre ->
+            val cajaRef = database.child("cajitas").child(nombre)
+            cajaRef.updateChildren(
                 mapOf(
                     "descripcion" to descripcion,
-                    "cantidad" to cantidad
+                    "cantidad" to cantidad,
+                    "producto" to productoSeleccionado
                 )
             ).addOnSuccessListener {
                 Toast.makeText(this, "Detalles guardados exitosamente", Toast.LENGTH_SHORT).show()
+                finish()
+
             }.addOnFailureListener {
                 Toast.makeText(this, "Error al guardar detalles", Toast.LENGTH_SHORT).show()
             }
@@ -176,4 +177,18 @@ class Seller_Activity_Details_Cajita : AppCompatActivity(), SensorEventListener 
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}
+
+    override fun onPause() {
+        super.onPause()
+        // Detener la escucha del sensor cuando la actividad esté pausada
+        sensorManager.unregisterListener(this)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Registrar de nuevo el sensor cuando la actividad se reanude
+        accelerometer?.let {
+            sensorManager.registerListener(this, it, SensorManager.SENSOR_DELAY_NORMAL)
+        }
+    }
 }
