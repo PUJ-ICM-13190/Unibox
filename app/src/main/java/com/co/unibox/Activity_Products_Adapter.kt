@@ -1,6 +1,7 @@
 package com.co.unibox
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +13,7 @@ import com.bumptech.glide.Glide
 class Activity_Products_Adapter(private var products: ArrayList<Activity_Product_Domain>) :
     RecyclerView.Adapter<Activity_Products_Adapter.ViewHolder>() {
 
-    private var filteredProducts = ArrayList(products) // Lista de productos filtrados
+    private var filteredProducts = ArrayList(products)
     private lateinit var context: Context
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -36,21 +37,31 @@ class Activity_Products_Adapter(private var products: ArrayList<Activity_Product
             .into(holder.pic)
 
         holder.price.setBackgroundResource(R.drawable.rounded_price_background)
+
+        // Configurar el clic en el elemento
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, Activity_View_Product::class.java).apply {
+                putExtra("product_name", product.getNameProduct())
+                putExtra("product_category", product.getCategoriaProduct())
+                putExtra("product_price", product.getPrice())
+                putExtra("product_image", product.getPic())
+            }
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = filteredProducts.size
 
-    // Método para actualizar los productos filtrados
     fun filter(query: String) {
         filteredProducts = if (query.isEmpty()) {
-            ArrayList(products) // Si el query está vacío, mostrar todos los productos
+            ArrayList(products)
         } else {
             val filteredList = products.filter {
                 it.getNameProduct().toLowerCase().contains(query.toLowerCase())
             }
             ArrayList(filteredList)
         }
-        notifyDataSetChanged() // Notificar al adaptador que los datos han cambiado
+        notifyDataSetChanged()
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

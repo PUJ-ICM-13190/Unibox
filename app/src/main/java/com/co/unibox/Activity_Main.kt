@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.co.unibox.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class Activity_Main : AppCompatActivity() {
@@ -67,17 +68,48 @@ class Activity_Main : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Inicio de sesión exitoso
-                    val user = auth.currentUser
-                    Toast.makeText(this, "Login exitoso", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, Shopper_Activity_Home::class.java)
-                    startActivity(intent)
-                    finish()
+                    val userId = auth.currentUser?.uid
+
+                    if (userId != null) {
+                        redirectUserBasedOnType(userId)
+                    } else {
+                        Toast.makeText(this, "Error al obtener el ID del usuario", Toast.LENGTH_SHORT).show()
+                    }
                 } else {
                     // Si el inicio de sesión falla, muestra un mensaje al usuario.
                     showErrorDialog()
                 }
             }
     }
+
+    private fun redirectUserBasedOnType(userId: String) {
+        // Referencia a la base de datos
+        val database = Firebase.database.reference
+
+        // Recuperar el tipo de usuario desde Firebase
+        database.child("users").child(userId).get().addOnSuccessListener { snapshot ->
+            val userType = snapshot.child("type").getValue(String::class.java)
+
+            when (userType) {
+                "Comprador" -> {
+                    val intent = Intent(this, Shopper_Activity_Home::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                "Vendedor" -> {
+                    val intent = Intent(this, Seller_Activity_Home::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                else -> {
+                    Toast.makeText(this, "Tipo de usuario desconocido", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }.addOnFailureListener {
+            Toast.makeText(this, "Error al obtener datos del usuario", Toast.LENGTH_SHORT).show()
+        }
+    }
+
 
     private fun showErrorDialog() {
         val builder = AlertDialog.Builder(this)

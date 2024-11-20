@@ -41,6 +41,7 @@
         tools:layout_editor_absoluteX="-1dp">
 
         <TextView
+            android:id="@+id/productNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nombre"
@@ -54,6 +55,7 @@
             app:layout_constraintVertical_bias="0.19" />
 
         <TextView
+            android:id="@+id/priceTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0.000"
@@ -67,7 +69,7 @@
             app:layout_constraintVertical_bias="0.215" />
 
         <TextView
-            android:id="@+id/textView24"
+            android:id="@+id/categoryTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Categoria"
@@ -84,7 +86,7 @@
             android:layout_width="329dp"
             android:layout_height="41dp"
             android:layout_marginEnd="35dp"
-            android:text="Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+            android:text="Un producto delicioso, hecho con ingredientes de calidad para disfrutar con amigos."
             android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -109,9 +111,13 @@
             android:id="@+id/imageView18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/like"
-            tools:layout_editor_absoluteX="340dp"
-            tools:layout_editor_absoluteY="170dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.89"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.586"
+            app:srcCompat="@drawable/like" />
 
         <ImageView
             android:id="@+id/imageView12"
@@ -129,9 +135,13 @@
             android:id="@+id/textView26"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="num comentarios"
-            tools:layout_editor_absoluteX="71dp"
-            tools:layout_editor_absoluteY="180dp" />
+            android:text="Comentarios"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.201"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.601" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="329dp"
@@ -145,9 +155,10 @@
             app:layout_constraintVertical_bias="0.867" >
 
             <TextView
+                android:id="@+id/compra"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Añadir"
+                android:text="Comprar"
                 android:textColor="@color/white"
                 android:textSize="22dp"
                 android:textStyle="bold"
@@ -155,19 +166,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Añadir"
-                android:textColor="@color/white"
-                android:textSize="22dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -177,8 +175,12 @@
         android:layout_width="151dp"
         android:layout_height="61dp"
         android:background="@drawable/btn_background4"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="537dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.648"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -197,7 +199,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0 unds."
+            android:text="3 unds."
             android:textColor="@color/white"
             android:textSize="24dp"
             android:textStyle="bold"
@@ -214,8 +216,12 @@
         android:layout_width="151dp"
         android:layout_height="61dp"
         android:background="@drawable/btn_background4"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="537dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.648"
         tools:ignore="MissingConstraints">
 
         <TextView

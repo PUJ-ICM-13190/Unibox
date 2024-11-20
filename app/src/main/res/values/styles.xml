@@ -84,4 +84,9 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="MessageEdit">
+        <item name="android:textColor">@color/black</item>
+        <item  name="android:background">@android:color/transparent</item>
+    </style>
+
 </resources>

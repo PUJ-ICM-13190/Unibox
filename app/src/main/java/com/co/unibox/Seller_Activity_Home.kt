@@ -48,6 +48,10 @@ class Seller_Activity_Home: AppCompatActivity(){
                 R.id.nav_ventas -> {
                     // Acción para ver las ventas
                 }
+                R.id.nav_mensajes -> {
+                    val intent = Intent(this, Seller_Activity_Chat_List::class.java)
+                    startActivity(intent)
+                }
                 R.id.nav_logout -> {
                     val intent = Intent(this, Activity_Main::class.java)
                     startActivity(intent)

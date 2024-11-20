@@ -17,6 +17,10 @@
             android:id="@+id/nav_ventas"
             android:icon="@drawable/ic_sales"
             android:title="Tus Ventas" />
+        <item
+            android:id="@+id/nav_mensajes"
+            android:icon="@drawable/ic_messages"
+            android:title="Mensajes" />
     </group>
     <item
         android:id="@+id/nav_logout"
