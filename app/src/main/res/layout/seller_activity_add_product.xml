@@ -160,7 +160,6 @@
         android:backgroundTint="@color/salmon"
         android:textColor="@color/white"
         android:padding="12dp"
-        android:textStyle="bold"
-        android:onClick="validateAndSaveProduct"/>
+        android:textStyle="bold" />
 
 </RelativeLayout>

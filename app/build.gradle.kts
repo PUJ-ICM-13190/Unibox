@@ -51,15 +51,10 @@ dependencies {
     implementation ("androidx.drawerlayout:drawerlayout:1.1.1")
     implementation ("com.google.android.material:material:1.6.1")
     implementation("com.google.maps.android:android-maps-utils:2.2.5")
-<<<<<<< HEAD
-    implementation("androidx.work:work-runtime-ktx:2.8.1") // Para WorkManager
-    implementation("androidx.core:core-splashscreen:1.0.1") // Opcional
-=======
     implementation("com.google.firebase:firebase-auth:23.0.0")
     implementation("com.google.firebase:firebase-database:21.0.0")
     implementation("com.google.firebase:firebase-storage:21.0.1")
     implementation ("com.airbnb.android:lottie:5.0.3")
->>>>>>> b03e2a683e6459375b5a6d6e532de04d4ff73bff
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)

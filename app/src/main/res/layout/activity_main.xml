@@ -32,7 +32,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-
     <!-- Usuario -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/usernameInputLayout"
@@ -104,13 +103,6 @@
         android:layout_marginTop="30dp"
         android:layout_marginHorizontal="16dp" />
 
-    <Button
-        android:id="@+id/btnSellerHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Probar Notificación" />
-
-
     <!-- Botón de Registrarse -->
     <Button
         android:id="@+id/btn_registrarse"
@@ -123,6 +115,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"
         android:layout_marginHorizontal="16dp" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
