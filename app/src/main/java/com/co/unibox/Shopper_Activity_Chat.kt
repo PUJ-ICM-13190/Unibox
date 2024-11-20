@@ -1,5 +1,6 @@
 package com.co.unibox
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.EditText
@@ -11,6 +12,7 @@ import com.co.unibox.databinding.ShopperActivityChatBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
+import com.google.firebase.database.ValueEventListener
 import java.util.Date
 
 class Shopper_Activity_Chat : AppCompatActivity() {
@@ -28,6 +30,7 @@ class Shopper_Activity_Chat : AppCompatActivity() {
     // Local Data
     private lateinit var adapter: Activity_MessageAdapter
     private lateinit var sendButton: LottieAnimationView
+    private lateinit var scheduleButton: LottieAnimationView
     private lateinit var messageEdit: EditText
     private var messages = ArrayList<Activity_Message>()
     private lateinit var messageList: ListView
@@ -68,6 +71,7 @@ class Shopper_Activity_Chat : AppCompatActivity() {
         sendButton = binding.sendButton
         messageEdit = binding.messageEdit
         messageList = binding.chatMessages
+        scheduleButton = binding.scheduleButton
 
         // Initialize Adapter
         adapter = Activity_MessageAdapter(this@Shopper_Activity_Chat, messages)
@@ -76,6 +80,14 @@ class Shopper_Activity_Chat : AppCompatActivity() {
         // Set click listener for send button
         sendButton.setOnClickListener {
             sendMessage()
+        }
+
+        scheduleButton.setOnClickListener {
+            val intent = Intent(this, Seller_Activity_Schedule_Location::class.java)
+            intent.putExtra("RECEIVER_ID", receiverUserId)
+            intent.putExtra("CURRENT_USER_ID", currentUser.uid)
+            intent.putExtra("CHAT_ROOM_ID", chatRoomId)
+            startActivityForResult(intent, 1001) // Código de solicitud único
         }
 
         // Load existing messages

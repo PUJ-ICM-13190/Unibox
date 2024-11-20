@@ -53,5 +53,15 @@
             app:lottie_loop="false"
             app:layout_constraintEnd_toEndOf="parent" />
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/scheduleButton"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:contentDescription="Agendar cita"
+            app:lottie_autoPlay="false"
+            app:lottie_rawRes="@raw/map"
+            app:lottie_loop="false"
+            app:layout_constraintEnd_toStartOf="@id/sendButton" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

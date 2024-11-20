@@ -72,6 +72,9 @@
     <string name="seleccionar_categorias">Seleccionar Categorias</string>
     <string name="registrate_como_vendedor">Registrate Como Vendedor!</string>
     <string name="mostrar_ruta">Mostrar Ruta</string>
+    <string name="confirmar_ubicacion">Confirmar ubicación</string>
+    <string name="finalizar_evento">Finalizar evento</string>
+    <string name="regresar">Regresar</string>
     <string-array name="categorias">
         <item>Comida</item>
         <item>Dulces</item>

@@ -64,6 +64,7 @@
         <activity android:name=".Seller_Activity_Products" />
         <activity android:name=".Shopper_Activity_Chat" />
         <activity android:name=".Seller_Activity_Chat_List" />
+        <activity android:name=".Seller_Activity_Schedule_Location" />
 
 
 
