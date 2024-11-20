@@ -32,13 +32,18 @@ class ProductAdapter(
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product = productList[position]
 
-        holder.productName.text = product.name
-        holder.productCategory.text = product.category
-        holder.productPrice.text = "$${product.price}"
-        Glide.with(holder.productImage.context).load(product.imageUrl).into(holder.productImage)
+        holder.productName.text = product.name ?: "Sin nombre"
+        holder.productCategory.text = product.category ?: "Sin categoría"
+        holder.productPrice.text = "$${product.price ?: 0.0}"
+        Glide.with(holder.productImage.context)
+            .load(product.imageUrl )
+            .placeholder(R.drawable.ic_products)
+            .error(R.drawable.bonbon) // Imagen en caso de error
+            .into(holder.productImage)
 
         holder.btnEdit.setOnClickListener { onEditClick(product) }
     }
+
 
     override fun getItemCount(): Int = productList.size
 }

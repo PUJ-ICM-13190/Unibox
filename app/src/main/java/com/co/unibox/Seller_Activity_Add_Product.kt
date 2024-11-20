@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -15,7 +16,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.FirebaseStorage
+import java.io.File
 import java.util.*
 
 class Seller_Activity_Add_Product : AppCompatActivity() {
@@ -39,54 +40,48 @@ class Seller_Activity_Add_Product : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         database = Firebase.database.reference
 
+        // Configurar botones
         configureBackButton()
         configureAddProductButton()
         configureAddImageButton()
+
+        // Verificar permisos de almacenamiento
+        checkPermissions()
     }
 
+    // Configurar el botón de regresar
     private fun configureBackButton() {
         val btnVolver = findViewById<ImageButton>(R.id.btn_back)
         btnVolver.setOnClickListener { finish() }
     }
 
+    // Configurar el botón de agregar producto
     private fun configureAddProductButton() {
         val btnAgregar = findViewById<Button>(R.id.btn_add_product)
-        btnAgregar.setOnClickListener { validateAndSaveProduct() }
-
+        btnAgregar.setOnClickListener {
+            Log.d("AddProduct", "Botón Agregar presionado")
+            validateAndSaveProduct()
+        }
     }
 
+    // Configurar el botón para añadir imagen
     private fun configureAddImageButton() {
         val btnAddImage = findViewById<ImageButton>(R.id.btn_add_image)
         btnAddImage.setOnClickListener {
-            if (checkPermission()) {
+            if (checkPermissions()) {
                 openGallery()
             } else {
-                requestPermission()
+                requestPermissions()
             }
         }
     }
 
-    private fun checkPermission(): Boolean {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_IMAGES) == PackageManager.PERMISSION_GRANTED
-        } else {
-            ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
-        }
-    }
-
-    private fun requestPermission() {
-        val permission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            Manifest.permission.READ_MEDIA_IMAGES
-        } else {
-            Manifest.permission.READ_EXTERNAL_STORAGE
-        }
-        requestPermissions(arrayOf(permission), 1001)
-    }
-
+    // Abrir la galería para seleccionar una imagen
     private fun openGallery() {
         getContent.launch("image/*")
     }
 
+    // Validar campos y guardar producto
     private fun validateAndSaveProduct() {
         val name = findViewById<EditText>(R.id.edit_product_name).text.toString().trim()
         val category = findViewById<Spinner>(R.id.spinner_category).selectedItem.toString()
@@ -102,10 +97,11 @@ class Seller_Activity_Add_Product : AppCompatActivity() {
         uploadImageAndSaveProduct(name, category, quantity, price, description)
     }
 
+    // Subir imagen localmente y guardar el producto en Firebase
     private fun uploadImageAndSaveProduct(
         name: String,
         category: String,
-        quantity: Int?, // Cambiado a Double para que coincida con la clase Product
+        quantity: Int?,
         price: Double,
         description: String
     ) {
@@ -114,43 +110,76 @@ class Seller_Activity_Add_Product : AppCompatActivity() {
             return
         }
 
-        // Subir imagen a Firebase Storage
-        val storageRef = FirebaseStorage.getInstance().reference.child("products/${UUID.randomUUID()}")
-        imageUri?.let { uri ->
-            storageRef.putFile(uri).addOnSuccessListener { taskSnapshot ->
-                storageRef.downloadUrl.addOnSuccessListener { imageUrl ->
-                    // Guardar los datos del producto en Realtime Database
-                    val productId = database.child("products").push().key ?: return@addOnSuccessListener
-                    val product = Product(
-                        id = productId, // Ahora aseguramos que el ID único sea usado
-                        name = name,
-                        category = category,
-                        quantity = quantity, // Mantenerlo como Double
-                        price = price,       // Mantenerlo como Double
-                        description = description,
-                        imageUrl = imageUrl.toString()
-                    )
+        val productId = UUID.randomUUID().toString()
 
-                    // Subir el producto a la base de datos
-                    database.child("products").child(userId).child(productId).setValue(product)
-                        .addOnCompleteListener { task ->
-                            if (task.isSuccessful) {
-                                Toast.makeText(this, "Producto guardado correctamente.", Toast.LENGTH_SHORT).show()
-                                val intent = Intent(this, Seller_Activity_List_Products::class.java)
-                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) // Para limpiar la pila de actividades
-                                startActivity(intent)
-                                finish()
-                            } else {
-                                Toast.makeText(this, "Error al guardar el producto.", Toast.LENGTH_SHORT).show()
-                            }
-                        }
-                }.addOnFailureListener {
-                    Toast.makeText(this, "Error al obtener la URL de la imagen.", Toast.LENGTH_SHORT).show()
+        // Guardar la imagen localmente
+        val imagePath = imageUri?.let { saveImageLocally(it) }
+
+        if (imagePath == null) {
+            Toast.makeText(this, "Error al guardar la imagen localmente.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // Crear objeto Product
+        val product = Product(
+            id = productId,
+            name = name,
+            category = category,
+            quantity = quantity,
+            price = price,
+            description = description,
+            imageUrl = imagePath // Ruta local de la imagen
+        )
+
+        // Guardar el producto en Firebase Database
+        database.child("products").child(userId).child(productId).setValue(product)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "Producto guardado correctamente.", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, Seller_Activity_List_Products::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    Log.e("AddProduct", "Error al guardar el producto: ${task.exception?.message}")
+                    Toast.makeText(this, "Error al guardar el producto.", Toast.LENGTH_SHORT).show()
                 }
-            }.addOnFailureListener {
-                Toast.makeText(this, "Error al subir la imagen.", Toast.LENGTH_SHORT).show()
             }
+    }
+
+    // Guardar imagen localmente
+    private fun saveImageLocally(uri: Uri): String? {
+        return try {
+            val inputStream = contentResolver.openInputStream(uri) ?: return null
+            val fileName = "${UUID.randomUUID()}.jpg"
+            val file = File(filesDir, fileName)
+            val outputStream = file.outputStream()
+            inputStream.copyTo(outputStream)
+            inputStream.close()
+            outputStream.close()
+            file.absolutePath
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
         }
     }
 
+    // Verificar permisos de almacenamiento
+    private fun checkPermissions(): Boolean {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_IMAGES) == PackageManager.PERMISSION_GRANTED
+        } else {
+            ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
+        }
+    }
+
+    // Solicitar permisos si no están otorgados
+    private fun requestPermissions() {
+        val permissions = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            arrayOf(Manifest.permission.READ_MEDIA_IMAGES)
+        } else {
+            arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE)
+        }
+        requestPermissions(permissions, 1001)
+    }
 }
